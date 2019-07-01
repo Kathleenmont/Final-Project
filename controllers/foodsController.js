@@ -1,12 +1,10 @@
-const db = require("../models/food");
+const db = require("../models");
 
 // const bodyParser = require("body-parser")
 
 module.exports = {
   findAll: function(req, res) {
-    db.Food.find(req.query);
-    console
-      .log(dbFood)
+    db.Food.find(req.query)
       .then(dbFood => res.json(dbFood))
       .catch(err => res.status(422).json(err));
   },

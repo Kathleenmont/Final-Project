@@ -4,7 +4,9 @@ import SearchBar from "../components/SearchBar"
 import SearchButton from "../components/SearchButton"
 import SearchResultsWrapper from "../components/SearchResultsWrapper"
 import SearchCard from "../components/SearchCard"
-let query;
+import WorldMap from "../components/WorldMap"
+import NorthAmerica from "../components/NorthAmerica"
+// let query;
 
 class Search extends Component {
   // constructor(props) {
@@ -13,7 +15,7 @@ class Search extends Component {
   // }
   state = {
     foods: [],
-    search: query,
+    // search: query,
     title: "",
     authors: [],
     description: "",
@@ -32,7 +34,7 @@ class Search extends Component {
       .then(res =>
         this.setState({
           foods: res.data,
-          search: query,
+          // search: query,
           title: "",
           authors: "",
           discription: "",
@@ -55,23 +57,23 @@ class Search extends Component {
   handleInputClick = e => {
     e.preventDefault();
     // query = e.target.value;
-    console.log(query);
+    // console.log(query);
 
     console.log("in here");
     // query = e.target.value;
     console.log("TTTAARRGGEETT =====" + e.target);
-    console.log(query);
+    // console.log(query);
     // this.loadBooks();
     this.loadFoodsEvent(e);
   };
 
-  handleInputChange = e => {
-    query = e.target.value;
-    console.log(query);
-    this.setState({
-      search: query
-    });
-  };
+  // handleInputChange = e => {
+  //   // query = e.target.value;
+  //   console.log(query);
+  //   this.setState({
+  //     search: query
+  //   });
+  // };
 
   saveButtonClick = key => {
     console.log(key);
@@ -112,11 +114,12 @@ class Search extends Component {
   render() {
     return (
       <div>
-        
+        <WorldMap />
+        <NorthAmerica />
         
         <form>
           <SearchBar
-            value={this.state.query}
+            // value={this.state.query}
             handleInputChange={this.handleInputChange}
           />
           <SearchButton

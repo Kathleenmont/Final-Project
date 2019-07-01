@@ -1,0 +1,49 @@
+
+
+.mapWrapper-north-america {
+    position: relative;
+}
+.image-container-north-america {
+    position: relative;
+
+    margin-left: 100px;
+}
+.northAmerica { 
+    max-width: 90%;
+    min-width: 90%;
+    margin: 0 auto;
+    position: relative; 
+  }
+
+/* .dot {
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+  } */
+
+  .unitedStates-dot {
+    position: absolute;
+    top: 61%;
+    left: 53%;
+    background: greenyellow;
+  }
+  .canada-dot {
+    position: absolute;
+    top: 34%;
+    left: 41%;
+    background: aqua;
+  }
+  .mexico-dot {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    background: palevioletred;
+  }
+  .puertoRico-dot {
+    position: absolute;
+    top: 88%;
+    left:79%;
+    background: purple;
+  }
