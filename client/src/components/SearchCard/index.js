@@ -9,13 +9,13 @@ const SearchCard = props => {
     <div className="container bg-light">
       <span href={props.link}>
         <div className="row row">
-          <div className="col-sm-3">
+          <div className="col-sm-4">
             <div className="card card-1">
               <div className="card-img text-center">
                 <img
                   alt={props.name}
                   src={props.image}
-                  weight="200"
+                  width="200"
                   className="image"
                 />
               </div>
@@ -23,12 +23,12 @@ const SearchCard = props => {
           </div>
         
       
-          <div className="col-sm-8">
+          <div className="col-sm-7">
             <div className="card">
               <div className="card-body" >
                 <div className="card-header text-center">
-                <p className="card-title">{props.title}</p>
-                <p className="card-text">{props.author}</p>
+                <p className="card-title">{props.country}</p>
+                <p className="card-text">{props.dishName}</p>
                 </div>
               
             

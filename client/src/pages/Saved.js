@@ -1,5 +1,5 @@
 
-// import React, { Component } from "react";
+import React, { Component } from "react";
 // import API from "../utils/API";
 // import SearchCard from "../components/SearchCard";
 // // import SearchButton from "../components/SearchButton";
@@ -8,28 +8,28 @@
 // import Jumbotron from "../components/Jumbotron"
 // let query;
 
-// class Saved extends Component {
+class Saved extends Component {
 //     constructor(props) {
 //         super(props);
 //         // this.handleInputClick = this.handleInputClick.bind(this);
 //         // this.loadBooksEvent = this.loadBooksEvent.bind(this);
 //         // this.loadBooks = this.loadBooks.bind(this);
 //       }
-//       state = {
-//         books: [],
-//         search: query,
-//         title: "",
-//         authors: [],
-//         description: "",
-//         image: "",
-//         link: "",
-//         saved: true
-//       };
+      state = {
+        foods: [],
+        // search: query,
+        title: "",
+        authors: [],
+        description: "",
+        image: "",
+        link: "",
+        saved: true
+      };
     
-//       componentDidMount() {
-//         // this.loadBooks();
-//         console.log(this.state);
-//       }
+      componentDidMount() {
+        // this.loadFoods();
+        console.log(this.state);
+      }
     
 //       loadBooksEvent = e => {
 //         console.log("in load books event");
@@ -57,6 +57,6 @@
 //           </div>
 //         )
 //     }
-// }
+}
 
-// export default Saved;
+export default Saved;

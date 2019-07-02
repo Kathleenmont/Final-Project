@@ -6,7 +6,7 @@ import SearchResultsWrapper from "../components/SearchResultsWrapper"
 import SearchCard from "../components/SearchCard"
 import WorldMap from "../components/WorldMap"
 import NorthAmerica from "../components/NorthAmerica"
-// let query;
+let query;
 
 class Search extends Component {
   // constructor(props) {
@@ -30,8 +30,10 @@ class Search extends Component {
   }
 
   loadFoods = () => {
+    console.log("WHAT")
     API.getFoods()
       .then(res =>
+        {console.log(res.data)
         this.setState({
           foods: res.data,
           // search: query,
@@ -41,7 +43,7 @@ class Search extends Component {
           image: "",
           link: ""
         
-        })
+        })}
       )
 
       .catch(err => console.log(err));
@@ -56,6 +58,7 @@ class Search extends Component {
 
   handleInputClick = e => {
     e.preventDefault();
+    console.log(e.target.getAttribute('data-search'))
     // query = e.target.value;
     // console.log(query);
 
@@ -67,13 +70,14 @@ class Search extends Component {
     this.loadFoodsEvent(e);
   };
 
-  // handleInputChange = e => {
-  //   // query = e.target.value;
-  //   console.log(query);
-  //   this.setState({
-  //     search: query
-  //   });
-  // };
+  handleInputChange = e => {
+    query = e.target
+    // .getAttribute('data-search');
+    console.log(query);
+    this.setState({
+      search: query
+    });
+  };
 
   saveButtonClick = key => {
     console.log(key);
@@ -114,8 +118,8 @@ class Search extends Component {
   render() {
     return (
       <div>
-        <WorldMap />
-        <NorthAmerica />
+        <WorldMap handleInputClick={this.handleInputClick}/>
+        <NorthAmerica handleInputClick={this.handleInputClick}/>
         
         <form>
           <SearchBar

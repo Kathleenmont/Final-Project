@@ -6,6 +6,10 @@ router.route("/")
   .get(foodsController.findAll)
   .post(foodsController.create);
 
+  router.route("/country")
+  .post(foodsController.findByCountry);
+  // .post(foodsController.create);
+
 // Matches with "/api/foods/:id"
 router
   .route("/:id")
