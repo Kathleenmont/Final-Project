@@ -6,6 +6,7 @@ import SearchResultsWrapper from "../components/SearchResultsWrapper"
 import SearchCard from "../components/SearchCard"
 import WorldMap from "../components/WorldMap"
 import NorthAmerica from "../components/NorthAmerica"
+import SouthAmerica from "../components/SouthAmerica"
 let query;
 let continent;
 let style;
@@ -188,6 +189,7 @@ class Search extends Component {
         
         />
         <NorthAmerica handleInputClick={this.handleInputClick}/>
+        <SouthAmerica handleInputClick={this.handleInputClick}/>
      
      
         <SearchResultsWrapper>
