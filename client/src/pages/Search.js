@@ -1,12 +1,17 @@
 import React, { Component } from "react";
 import API from "../utils/API";
-import SearchBar from "../components/SearchBar"
-import SearchButton from "../components/SearchButton"
+// import SearchBar from "../components/SearchBar"
+// import SearchButton from "../components/SearchButton"
 import SearchResultsWrapper from "../components/SearchResultsWrapper"
 import SearchCard from "../components/SearchCard"
 import WorldMap from "../components/WorldMap"
 import NorthAmerica from "../components/NorthAmerica"
 let query;
+let continent;
+let style;
+
+
+
 
 class Search extends Component {
   // constructor(props) {
@@ -20,12 +25,33 @@ class Search extends Component {
     authors: [],
     description: "",
     image: "",
-    link: ""
-   
+    link: "",
+    worldMap: Boolean
   };
+ 
+
+  // worldMapShow = () => {
+  //   this.state.worldMap ?  styleNone = { display : "none" } : styleBlock = { display : "block" }
+  // }
+
+  continentOnClick = (e) => {
+    e.preventDefault();
+      continent = e.target.getAttribute('data-search');
+      console.log(continent)
+      console.log(this.state.worldMap)
+      this.setState({
+        worldMap: false
+      })
+
+      // this.worldMapShow();
+      console.log(this.state.worldMap)
+  }
 
   componentDidMount() {
-    this.loadFoods();
+    // this.loadFoods();
+    this.setState({
+      worldMap: true
+    })
     console.log(this.state);
   }
 
@@ -56,28 +82,66 @@ class Search extends Component {
     this.loadFoods();
   };
 
+  apiCountrySearch = (query) => {
+    console.log("WHAT")
+    const search = {country: query}
+    API.getFoodsByCountry(search)
+      .then(res =>
+        {console.log(res.data)
+        this.setState({
+          foods: res.data,
+          // search: query,
+          continent: "",
+          country: "",
+          dishName: "",
+          description: "",
+          image: "",
+
+        
+        })}
+      )
+
+      .catch(err => console.log(err));
+    console.log(this.state.foods);
+
+  };
+
   handleInputClick = e => {
     e.preventDefault();
     console.log(e.target.getAttribute('data-search'))
-    // query = e.target.value;
-    // console.log(query);
+    query = e.target.getAttribute('data-search');
+    const search = {coun: query}
+    API.getFoodsByCountry(search)
+      .then(res =>
+        {console.log(res)
+        this.setState({
+          foods: res.data,
+          // search: query,
+          title: "",
+          authors: "",
+          discription: "",
+          image: "",
+          link: ""
+        
+        })}
+      )
 
-    console.log("in here");
-    // query = e.target.value;
-    console.log("TTTAARRGGEETT =====" + e.target);
-    // console.log(query);
+      .catch(err => console.log(err));
+    console.log(this.state.foods);
+    
     // this.loadBooks();
-    this.loadFoodsEvent(e);
+    // this.loadFoodsEvent(e);
   };
 
-  handleInputChange = e => {
-    query = e.target
-    // .getAttribute('data-search');
-    console.log(query);
-    this.setState({
-      search: query
-    });
-  };
+  
+  // handleInputChange = e => {
+  //   query = e.target
+  //   // .getAttribute('data-search');
+  //   console.log(query);
+  //   this.setState({
+  //     search: query
+  //   });
+  // };
 
   saveButtonClick = key => {
     console.log(key);
@@ -86,10 +150,7 @@ class Search extends Component {
     for (i = 0; i < this.state.books.length; i++) {
       if (key === this.state.books[i].id) {
         console.log("SAVED this passed in" +this.state.books[i].volumeInfo.title);
-        // this.setState({
-        //   saved: true
-        // });
-        // console.log("STATE" + JSON.stringify(this.state))
+       
         const newBook=
         {
           title: this.state.books[i].volumeInfo.title,
@@ -116,22 +177,19 @@ class Search extends Component {
   };
 
   render() {
+    console.log(style)
     return (
       <div>
-        <WorldMap handleInputClick={this.handleInputClick}/>
-        <NorthAmerica handleInputClick={this.handleInputClick}/>
         
-        <form>
-          <SearchBar
-            // value={this.state.query}
-            handleInputChange={this.handleInputChange}
-          />
-          <SearchButton
-            loadBooksEvent={this.loadBooksEvent}
-            handleInputClick={this.handleInputClick}
-          />
-        </form>
-        {/* </SearchBar> */}
+        <WorldMap 
+        continentOnClick={this.continentOnClick}
+        worldMap={this.state.worldMap}
+        // style={this.state.worldMap === true ? styleBlock : styleNone}
+        
+        />
+        <NorthAmerica handleInputClick={this.handleInputClick}/>
+     
+     
         <SearchResultsWrapper>
           {this.state.foods.map(food => (
             <SearchCard

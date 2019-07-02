@@ -1,15 +1,15 @@
-import React from "react";
-import "./style.css";
+// import React from "react";
+// import "./style.css";
 
-function SearchButton ({handleInputClick}) {
+// function SearchButton ({handleInputClick}) {
  
-    return (
+//     return (
         
        
-        <button className="btn btn-info" onClick={(e) => {handleInputClick(e)}}>Search</button>
+//         <button className="btn btn-info" onClick={(e) => {handleInputClick(e)}}>Search</button>
         
-    )
+//     )
     
-}
+// }
 
-export default SearchButton;
+// export default SearchButton;

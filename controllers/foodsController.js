@@ -11,20 +11,23 @@ module.exports = {
   },
   
   findByCountry: function(req, res) {
+    // console.log("inside foodsCONTROLER")
+    // console.log(req.body.coun)
   
-    db.Food.find({ country: req.params.search })
-    // console.log(req.query)
-      .then(dbFood => res.json(dbFood))
+    db.Food.find({ country: req.body.coun })
+    // console.log(dbModel)
+      .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
 
   create: function(req, res) {
-    console.log("inside boodksCONTROLER")
+    console.log("inside  create foodsCONTROLER")
     db.Food
       .create(req.body)
       .then(dbFood => res.json(dbFood))
       .catch(err => res.status(422).json(err));
   },
+
   findById: function(req, res) {
     db.Food.findById(req.params.id)
       .then(dbFood => res.json(dbFood))

@@ -7,10 +7,12 @@ const foodSchema = new Schema({
     country: { type: String, required: true },
     dishName: { type: String, required: true },
     description: { type: String, required: true },
-    image: { type: String, required: true }
+    image: { type: String, required: true },
+    tried: {type: Boolean, required: true}
     
 });
 
 const Food = mongoose.model("Food", foodSchema);
+
 
 module.exports = Food;

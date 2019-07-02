@@ -11,22 +11,22 @@ function NorthAmerica(props) {
           <span
             className="dot unitedStates-dot"
             onClick={props.handleInputClick}
-            data-search="united states"
+            data-search="United States"
           />
           <span
             className="dot canada-dot"
             onClick={props.handleInputClick}
-            data-search="canada"
+            data-search="Canada"
           />
           <span
             className="dot puertoRico-dot"
             onClick={props.handleInputClick}
-            data-search="puerto rico"
+            data-search="Puerto Rico"
           />
           <span
             className="dot mexico-dot"
             onClick={props.handleInputClick}
-            data-search="mexico"
+            data-search="Mexico"
           />
         </div>
       </div>

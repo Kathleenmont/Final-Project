@@ -18,13 +18,13 @@ export default {
 
   // Gets all books
   getFoods: function() {
-    console.log("HERE!")
+    // console.log("HERE!")
     return axios.get("/api/foods");
   },
 
   getFoodsByCountry: function(search) {
     console.log("HERE!")
-    return axios.post("/api/foods", search);
+    return axios.post("/api/foods/country", search);
   }
 
 
