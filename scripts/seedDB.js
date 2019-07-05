@@ -413,7 +413,7 @@ const foodSeed = [
   {
     continent: "Africa",
     country: "Nigeria",
-    dishName: "Ogbono (or apon)",
+    dishName: "Ogbono (or Apon)",
     description:
       "A soup made from ground ogbono (African mango) seeds plus palm oil, stock and spices. It's usually eaten with staples like eba, fufu, pounded yam or amala.",
     image:
@@ -432,8 +432,8 @@ const foodSeed = [
   },
   {
     continent: "Africa",
-    country: "Ethiopia",
-    dishName: "Nigeria",
+    country: "Nigeria",
+    dishName: "Banga",
     description:
       "A palm fruit-based soup that is most commonly associated with the Delta region, and particularly the Urhobo ethnic group. There are variations across the country – and indeed west Africa and beyond – but they all include regional spices and all elevate fresh ingredients (fish and seafood, assorted meats, the palm fruit itself) above all things.",
     image:
@@ -510,7 +510,7 @@ const foodSeed = [
   {
     continent: "Europe",
     country: "Poland",
-    dishName: "Polskie naleśniki (Polish pancakes)",
+    dishName: "Polskie Naleśniki (Polish Pancakes)",
     description:
       "Polish pancakes are very thin and they are served either with cheese, quark previously mixed with sugar, jam, fruits and powdered sugar or with meat and vegetables.",
     image: "https://www.nalesniki.eu/wp-content/uploads/2015/02/nalesniki_z_serem.jpg",
@@ -528,7 +528,7 @@ const foodSeed = [
   {
     continent: "Europe",
     country: "Poland",
-    dishName: "Śledź w oleju z cebulą (herring in oil with onion)",
+    dishName: "Śledź w Oleju z Cebulą (Herring in Oil with Onion)",
     description:
       "Herring is a fish you can prepare in various ways. However in Poland, there are two traditional ways of serving the herring, either with sour cream and pickled onions or with oil and garlic.",
     image: "https://s3.przepisy.pl/przepisy3ii/img/variants/767x0/sledzie-w-oleju.jpg",
@@ -537,7 +537,7 @@ const foodSeed = [
   {
     continent: "Europe",
     country: "Poland",
-    dishName: "Rosół (broth/ chicken soup)",
+    dishName: "Rosół (Broth/ Chicken Soup)",
     description:
       "Rosół is the most common soup served in Poland. Commonly served with homemade noodles. The ingredients are chicken, onion, small leek, green celery, parsley, cabbage, salt and pepper.",
     image: "https://api.culture.pl/sites/default/files/styles/1920_auto/public/images/imported/KUCHNIA/rosol/rosol_east_news_.jpg?itok=ptdZNATd",
@@ -581,11 +581,92 @@ const foodSeed = [
   },
   {
     continent: "Europe",
-    country: "Spain",
-    dishName: "Bocadillos",
+    country: "Greece",
+    dishName: "Moussaka",
     description:
-      "A bocadillos is a sandwich made with Spanish bread. You’ll find them filled with potatos, cheese, ham, and pork loin.",
-    image: "https://jetsettimes.com/wp-content/uploads/2014/05/bocadillo-cisabroad-com.jpg",
+      "One of Greece‘s most famous dishes, moussaka consists of layers of fried aubergine, minced meat and potatoes, topped with a creamy béchamel sauce and then baked until golden brown.",
+    image: "https://i2.wp.com/greekerthanthegreeks.com/wp-content/uploads/2014/09/82c89323cdf900b7dab573268825c338.jpg?fit=564%2C467&ssl=1",
+    tried: false
+  },
+  {
+    continent: "Europe",
+    country: "Greece",
+    dishName: "Fasolatha",
+    description:
+      "Fasolatha is a classic white bean soup. It’s a simple, yet hearty affair consisting of beans, crushed tomatoes, and vegetables such as onions, carrots and celery. It’s often flavoured with thyme, parsley and bay leaves.",
+    image: "http://www.mygreekdish.com/wp-content/uploads/2014/01/Traditional-Greek-bean-soup-recipe-Fasolada-800x534.jpg",
+    tried: false
+  },
+  {
+    continent: "Europe",
+    country: "Greece",
+    dishName: "Loukoumades",
+    description:
+      "A Greek delicacy loved by children and adults alike, loukoumades are small fried doughnut-like balls drenched in honey syrup and sprinkled with various toppings such as cinnamon or crushed walnuts. People usually order a large plate of them to share with friends or family.",
+    image: "http://www.mygreekdish.com/wp-content/uploads/2013/05/Loukoumades-recipe-Greek-Donuts-with-Honey-and-Walnuts-800x553.jpg",
+    tried: false
+  },
+  {
+    continent: "Europe",
+    country: "Greece",
+    dishName: "Spanakopita",
+    description:
+      "Spanakopita is phyllo pastry layered with feta cheese and spinach and flavoured with dill",
+    image: "https://www.olivetomato.com/wp-content/uploads/2016/02/spanakopita-spinach-pie.jpg",
+    tried: false
+  },
+  {
+    continent: "Europe",
+    country: "Greece",
+    dishName: "Kolokythokeftedes (Courgette balls)",
+    description:
+      "Sometimes a patty, sometimes a lightly fried ball. The fritter is usually made from grated or puréed courgette blended with dill, mint, or other top-secret spice combinations. Paired with tzatziki, for its cooling freshness.",
+    image: "https://www.olivetomato.com/wp-content/uploads/2016/02/spanakopita-spinach-pie.jpg",
+    tried: false
+  },
+  {
+    continent: "Asia",
+    country: "Korea",
+    dishName: "Yukgaejang",
+    description:
+      "Spicy shredded beef stew with bean sprouts and fernbrake eaten with rice.",
+    image: "https://i.ytimg.com/vi/Azu-ZJ324ck/maxresdefault.jpg",
+    tried: false
+  },
+  {
+    continent: "Asia",
+    country: "Korea",
+    dishName: "Jjajangmyeon",
+    description:
+      "Chewy noodles and fermented black sauce are a match made in noodle heaven. Korean chinese fusion, this dish is the most popular takeout item in Korea.",
+    image: "httphttps://www.koreanbapsang.com/wp-content/uploads/2011/05/jajangmyeon-e1447380359794.jpgs://i.ytimg.com/vi/Azu-ZJ324ck/maxresdefault.jpg",
+    tried: false
+  },
+  {
+    continent: "Asia",
+    country: "Korea",
+    dishName: "Kimchi jjigae",
+    description:
+      "Kimchi stew is one of the most-loved and most popular of all the stews in Korean cuisine. Made with ripe kimchi, onion, green onion, tofu, and pork or tuna.",
+    image: "https://www.koreanbapsang.com/wp-content/uploads/2014/03/DSC_5089.jpg",
+    tried: false
+  },
+  {
+    continent: "Asia",
+    country: "Korea",
+    dishName: "Gamjatang",
+    description:
+      "Gamja-tang (감자탕) is a spicy Korean soup made from the spine or neck bones of a pig. It often contains potatoes, dried radish greens, perilla leaves and seeds, green onions, hot peppers and ground sesame seeds.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/4/45/Gamja-tang_3.jpg",
+    tried: false
+  },
+  {
+    continent: "Asia",
+    country: "Korea",
+    dishName: "Haemul Pajeon",
+    description:
+      "Pan fried seafood pancake searved with a savory dipping sauce.",
+    image: "http://lh3.googleusercontent.com/clJvwaqR66hIQODlsO5nvLvn_5Yl35Z22SsvP1RsljXHBqO9PNL3FVj_jq-LdABuJJMlOSvZ_k4HzCemNNiiJm8=s800",
     tried: false
   },
 ];

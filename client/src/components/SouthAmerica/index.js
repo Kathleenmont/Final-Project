@@ -1,10 +1,13 @@
 import React from "react";
 import "./style.css";
 import SA from "../../images/south_america.png";
+const styleNone = { display : "none" };
+
+const styleBlock = { display : "block" };
 
 function SouthAmerica(props) {
   return (
-    <div className="mapWrapper-south-america">
+    <div className="mapWrapper-south-america" style={props.continent === "south america" ? styleBlock : styleNone}>
       <div className="image-container-south-america">
         <img className="southAmerica" src={SA} alt="south america map" />
         <div>

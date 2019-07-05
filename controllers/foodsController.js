@@ -5,7 +5,7 @@ const db = require("../models");
 module.exports = {
 
   findAll: function(req, res) {
-    db.Food.find(req.query)
+    db.Food.findAll({})(req.query)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
@@ -14,7 +14,7 @@ module.exports = {
     // console.log("inside foodsCONTROLER")
     // console.log(req.body.coun)
   
-    db.Food.find({ country: req.body.coun })
+    db.Food.findAll({ where: {country: req.body.coun} })
     // console.log(dbModel)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));

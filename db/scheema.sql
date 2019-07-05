@@ -1,0 +1,15 @@
+DROP DATABASE IF EXISTS fooddb;
+CREATE DATABASE fooddb;
+
+use fooddb;
+
+CREATE TABLE Food(
+	id INT NOT NULL AUTO_INCREMENT,
+    continent VARCHAR(50) NOT NULL,
+    country VARCHAR(50) NOT NULL,
+	dishName VARCHAR(150) NOT NULL,
+    description VARCHAR(250) NOT NULL,
+    image VARCHAR(150) NOT NULL,
+    tried BOOLEAN NOT NULL,
+    PRIMARY KEY(id)
+);

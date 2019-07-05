@@ -191,32 +191,16 @@ class Search extends Component {
         <WorldMap
           continentOnClick={this.continentOnClick}
           worldMap={this.state.worldMap}
+          getContinent={this.getContinent}
           // style={this.state.worldMap === true ? styleBlock : styleNone}
         />
-      
-        {function getContinent() {
-          console.log(this.state.continent)
-          
-              {(function() {
-                switch (this.state.continent) {
-                  case "North America":
-                    return <NorthAmerica handleInputClick={this.handleInputClick} />;
-                  case "South America":
-                    return <SouthAmerica handleInputClick={this.handleInputClick} />;
-                  case "Africa":
-                    return <Africa handleInputClick={this.handleInputClick} />;
-                  default:
-                    return null;
-                }
-              })()}
-        
-         } }
+    
 
         {/* {this.getContinent()} */}
 
-        {/* <NorthAmerica handleInputClick={this.handleInputClick} />
-        <SouthAmerica handleInputClick={this.handleInputClick} />
-        <Africa handleInputClick={this.handleInputClick} /> */}
+        <NorthAmerica handleInputClick={this.handleInputClick} continent={this.state.continent}/>
+        <SouthAmerica handleInputClick={this.handleInputClick} continent={this.state.continent}/>
+        <Africa handleInputClick={this.handleInputClick} continent={this.state.continent}/>
 
         <SearchResultsWrapper>
           {this.state.foods.map(food => (
