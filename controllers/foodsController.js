@@ -11,8 +11,8 @@ module.exports = {
   },
   
   findByCountry: function(req, res) {
-    // console.log("inside foodsCONTROLER")
-    // console.log(req.body.coun)
+    console.log("inside foodsCONTROLER")
+    console.log(req.body.coun)
   
     db.Food.findAll({ where: {country: req.body.coun} })
     // console.log(dbModel)

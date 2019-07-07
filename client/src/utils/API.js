@@ -18,7 +18,7 @@ export default {
 
   // Gets all books
   getFoods: function() {
-    // console.log("HERE!")
+     console.log("HERE get foods!")
     return axios.get("/api/foods");
   },
 

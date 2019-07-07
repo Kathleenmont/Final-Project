@@ -8,6 +8,7 @@ import WorldMap from "../components/WorldMap";
 import NorthAmerica from "../components/NorthAmerica";
 import SouthAmerica from "../components/SouthAmerica";
 import Africa from "../components/Africa";
+import Europe from "../components/Europe";
 let query;
 // let continent;
 let style;
@@ -201,6 +202,7 @@ class Search extends Component {
         <NorthAmerica handleInputClick={this.handleInputClick} continent={this.state.continent}/>
         <SouthAmerica handleInputClick={this.handleInputClick} continent={this.state.continent}/>
         <Africa handleInputClick={this.handleInputClick} continent={this.state.continent}/>
+        <Europe handleInputClick={this.handleInputClick} continent={this.state.continent}/>
 
         <SearchResultsWrapper>
           {this.state.foods.map(food => (

@@ -1,0 +1,35 @@
+
+.mapWrapper-europe {
+    position: relative;
+}
+.image-container-europe {
+    position: relative;
+
+    margin-left: 200px;
+}
+.europe { 
+    max-width: 80%;
+    min-width: 80%;
+    margin: 0 auto;
+    position: relative; 
+  }
+
+  .Spain-dot {
+    position: absolute;
+    top: 78%;
+    left: 7%;
+    background: greenyellow;
+  }
+  .Greece-dot {
+    position: absolute;
+    top: 89%;
+    left: 37%;
+    background: aqua;
+  }
+  .Poland-dot {
+    position: absolute;
+    top: 60%;
+    left: 38%;
+    background: palevioletred;
+  }
+ 

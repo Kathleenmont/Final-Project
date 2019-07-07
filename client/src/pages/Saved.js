@@ -1,7 +1,8 @@
 
 import React, { Component } from "react";
-// import API from "../utils/API";
-// import SearchCard from "../components/SearchCard";
+import API from "../utils/API";
+import SearchCard from "../components/SearchCard";
+import SearchResultsWrapper from "../components/SearchResultsWrapper";
 // // import SearchButton from "../components/SearchButton";
 // // import SearchBar from "../components/SearchBar";
 // // import Nav from "../components/Nav";
@@ -27,36 +28,57 @@ class Saved extends Component {
       };
     
       componentDidMount() {
-        // this.loadFoods();
+        this.loadFoods();
         console.log(this.state);
       }
-    
-//       loadBooksEvent = e => {
-//         console.log("in load books event");
-//         e.preventDefault();
-//         this.loadBooks();
-//       };
 
-//     render() {
-//         return (
-//             <div>
-//               <Jumbotron />
-//             {this.state.books.map(book => (
-//               <SearchCard
-//                 // saveButtonClick={this.saveButtonClick}
-//                 key={book.id}
-//                 id={book.id}
-//                 title={book.volumeInfo.title}
-//                 author={book.volumeInfo.authors}
-//                 description={book.volumeInfo.description}
-//                 image={book.volumeInfo.imageLinks.thumbnail}
-//                 link={book.saleInfo.buyLink}
-//                 saved={book.saved}
-//               />
-//             ))}
-//           </div>
-//         )
-//     }
+      loadFoods = () => {
+        console.log("WHAT");
+        API.getFoods()
+          .then(res => {
+            console.log(res.data);
+            this.setState({
+              foods: res.data,
+              // search: query,
+              continent: "",
+              country: "",
+              dishName: "",
+              description: "",
+              image: ""
+            });
+          })
+          .catch(err => console.log(err));
+          console.log(this.state.foods);
+        };
+    
+    
+    //   loadBooksEvent = e => {
+    //     console.log("in load books event");
+    //     e.preventDefault();
+    //     this.loadBooks();
+    //   };
+
+    render() {
+        return (
+            <div>
+              {/* <Jumbotron /> */}
+              <SearchResultsWrapper>
+          {this.state.foods.map(food => (
+            <SearchCard
+              saveButtonClick={this.saveButtonClick}
+              key={food._id}
+              id={food._id}
+              continent={food.continent}
+              country={food.country}
+              dishName={food.dishName}
+              description={food.description}
+              image={food.image}
+            />
+          ))}
+        </SearchResultsWrapper>
+          </div>
+        )
+    }
 }
 
 export default Saved;

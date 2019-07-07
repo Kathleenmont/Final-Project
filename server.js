@@ -2,6 +2,7 @@ const express = require("express");
 // const path = require("path");
 // const mongoose = require("mongoose");
 const bodyParser = require("body-parser")
+const router = require("express").Router();
 const routes = require("./routes");
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -19,7 +20,7 @@ app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// app.use(express.static("public"));
+app.use(express.static("public"));
 
 // passport__________________________________
 // We need to use sessions to keep track of our user's login status
@@ -35,7 +36,28 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-app.use(routes);
+// app.use(routes);
+
+router.use(function(req, res) {
+
+  res.sendFile(path.join(__dirname, "../client/build/index.html"));
+});
+
+// -------test route
+app.get("/api/foods", function (req, res) {
+  db.Food.findAll({}).then(function (dbPost) {
+    res.json(dbPost);
+  });
+})
+
+app.post("/api/foods/country", function (req, res) {
+  db.Food.findAll({ where: {country: req.body.coun}}).then(function (dbPost) {
+    res.json(dbPost);
+  });
+})
+
+
+// test over
 
 var syncOptions = { force: false };
 
@@ -60,9 +82,9 @@ db.sequelize.sync(syncOptions).then(function() {
 
 
 
-app.listen(PORT, () => {
-  console.log(`🌎 ==> API server now on port ${PORT}!`);
-});
+// app.listen(PORT, () => {
+//   console.log(`🌎 ==> API server now on port ${PORT}!`);
+// });
 
 
 

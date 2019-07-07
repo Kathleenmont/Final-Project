@@ -2,20 +2,20 @@ const router = require("express").Router();
 const foodRoutes = require("./foods");
 var db = require("../../models");
 var passport = require("../../config/passport");
-//var signupRoutes= requre("./signup");
+var signupRoutes= requre("./signup");
 
 
 
-module.exports = function(router) {
+module.exports = function() {
 //food routes
-router.use("/foods", foodRoutes);
+// router.use("/foods", foodRoutes);
 //router.use("/passport. passportRoute);
 
 };
 // module.exports = router;
 
 
-// PASSPORT
+// PASSPORT-------------------------------------------
 
 module.exports = function(app) {
     // Using the passport.authenticate middleware with our local strategy.

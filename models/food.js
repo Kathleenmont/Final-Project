@@ -56,8 +56,8 @@ module.exports = function(sequelize, DataTypes) {
         defaultValue: false
         
       }
-      
-    });
+    
+    }, {timestamps: false});
   
     // connects to User table
     Food.associate = function(models) {
