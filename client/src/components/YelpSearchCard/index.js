@@ -1,6 +1,6 @@
-import React from "react";
+import React from "./node_modules/react";
 import "./style.css";
-import ViewButton from "../ViewButton";
+import ViewButton from "../YelpButton";
 // import SaveButton from "../SaveButton";
 
 const YelpSearchCard = props => {

@@ -22,6 +22,11 @@ export default {
     return axios.get("/api/foods");
   },
 
+  checkUserLogin: function (userInfo) {
+    console.log("in check userinfo" + JSON.stringify(userInfo))
+    return axios.post("/api/user", userInfo)
+  },
+
   getFoodsByCountry: function(search) {
     console.log("HERE!")
     return axios.post("/api/foods/country", search);

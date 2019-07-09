@@ -62,6 +62,13 @@ app.post("/api/foods/country", function (req, res) {
   });
 })
 
+app.post("/api/user", function (req, res) {
+  console.log(JSON.stringify(req.body))
+  db.User.findOne({where: {userName: req.body.user, password: req.body.password}}).then(function (dbPost) {
+    res.json(dbPost);
+  });
+})
+
 app.post("/search", (req, res) => {
   axios.get("https://api.yelp.com/v3/businesses/search?term=" + req.body.search + "&limit=6&location=philadelphia", {
     headers: {
@@ -156,7 +163,6 @@ app.get("/user_data", function(req, res) {
     });
   }
 });
-
 
 
 // test over

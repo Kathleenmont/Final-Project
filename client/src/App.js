@@ -5,8 +5,10 @@ import Saved from "./pages/Saved";
 import Nav from "./components/Nav";
 import PrivateRoute from "./components/PrivateRoute"
 import Login from "./components/Login";
+import AuthButton from "./components/AuthButton";
 // import NoMatch from "./pages/NoMatch";
 import "./App.css";
+
 // make state with
 // userName 
 
@@ -19,6 +21,7 @@ class App extends Component {
     return (
       <div>
         <Router>
+          <AuthButton />
           <div>
             <Nav />
             <Switch>
