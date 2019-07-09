@@ -13,3 +13,12 @@ CREATE TABLE Food(
     tried BOOLEAN NOT NULL,
     PRIMARY KEY(id)
 );
+
+
+CREATE TABLE User(
+	id INT NOT NULL AUTO_INCREMENT,
+    userName VARCHAR(100) NOT NULL,
+    email VARCHAR(150) NOT NULL,
+	password VARCHAR(150) NOT NULL,
+    PRIMARY KEY(id)
+);

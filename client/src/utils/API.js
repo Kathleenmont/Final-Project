@@ -25,7 +25,23 @@ export default {
   getFoodsByCountry: function(search) {
     console.log("HERE!")
     return axios.post("/api/foods/country", search);
-  }
+  },
+
+    search: function(searchItem) {
+        // const search = {
+        //     searchItem
+        // }
+    // return axios.post("/search", search, (bookResults) => {
+    //   console.log(bookResults);
+    //   return bookResults;
+    // });
+
+    return axios.post("/search", searchItem, (yelpResults) => {
+      console.log(yelpResults);
+      return yelpResults;
+    });
+  
+  },
 
 
 

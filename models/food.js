@@ -41,7 +41,7 @@ module.exports = function(sequelize, DataTypes) {
         }
       },
       description: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING(550),
         allowNull: false,
         len: [1]
       },
@@ -63,7 +63,7 @@ module.exports = function(sequelize, DataTypes) {
     Food.associate = function(models) {
       Food.belongsTo(models.User, {
         foreignKey: {
-          allowNull: false
+          allowNull: true
         }
       });
     };

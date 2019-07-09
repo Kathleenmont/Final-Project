@@ -20,31 +20,19 @@ class Search extends Component {
   // }
   state = {
     foods: [],
+    yelp:[],
     // search: query,
     continent: "",
     country: "",
     dishName: "",
     description: "",
     image: "",
-    worldMap: Boolean
+    worldMap: Boolean,
+    showSearch: Boolean,
+    showYelp: Boolean
   };
 
-  // worldMapShow = () => {
-  //   this.state.worldMap ?  styleNone = { display : "none" } : styleBlock = { display : "block" }
-  // }
 
-  // getContinent() {
-  //   switch (this.state.continent) {
-  //     case "North America":
-  //       return <NorthAmerica handleInputClick={this.handleInputClick} />;
-  //     case "South America":
-  //       return <SouthAmerica handleInputClick={this.handleInputClick} />;
-  //     case "Africa":
-  //       return <Africa handleInputClick={this.handleInputClick} />;
-  //     default:
-  //       return null;
-  //   }
-  // }
 
   continentOnClick = e => {
     e.preventDefault();
@@ -64,7 +52,9 @@ class Search extends Component {
   componentDidMount() {
     // this.loadFoods();
     this.setState({
-      worldMap: true
+      worldMap: true,
+      showSearch: false,
+      showYelp: false
     });
     console.log(this.state);
   }
@@ -95,26 +85,26 @@ class Search extends Component {
     this.loadFoods();
   };
 
-  apiCountrySearch = query => {
-    console.log("WHAT");
-    const search = { country: query };
-    API.getFoodsByCountry(search)
-      .then(res => {
-        console.log(res.data);
-        this.setState({
-          foods: res.data,
-          // search: query,
-          continent: "",
-          country: "",
-          dishName: "",
-          description: "",
-          image: ""
-        });
-      })
+  // apiCountrySearch = query => {
+  //   console.log("WHAT");
+  //   const search = { country: query };
+  //   API.getFoodsByCountry(search)
+  //     .then(res => {
+  //       console.log(res.data);
+  //       this.setState({
+  //         foods: res.data,
+  //         // search: query,
+  //         continent: "",
+  //         country: "",
+  //         dishName: "",
+  //         description: "",
+  //         image: ""
+  //       });
+  //     })
 
-      .catch(err => console.log(err));
-    console.log(this.state.foods);
-  };
+  //     .catch(err => console.log(err));
+  //   console.log(this.state.foods);
+  // };
 
   handleInputClick = e => {
     e.preventDefault();
@@ -126,6 +116,7 @@ class Search extends Component {
         console.log(res);
         this.setState({
           foods: res.data,
+          showSearch: true,
           // search: query,
           title: "",
           authors: "",
@@ -136,11 +127,41 @@ class Search extends Component {
       })
 
       .catch(err => console.log(err));
-    console.log(this.state.foods);
+    console.log(this.state);
 
     // this.loadBooks();
     // this.loadFoodsEvent(e);
   };
+
+
+
+  handleInputClickYelp = e => {
+    e.preventDefault();
+    const search = { search: "jjajangmyun" };
+    console.log(e.target.getAttribute("data-search"));
+    // query = e.target.getAttribute("data-search");
+    // const search = { coun: query };
+    API.search(search)
+      .then(res => {
+        console.log(res);
+        this.setState({
+          yelp: res.data,
+          // search: query,
+          title: "",
+          authors: "",
+          discription: "",
+          image: "",
+          link: ""
+        });
+      })
+
+      .catch(err => console.log(err));
+    console.log(this.state.yelp);
+
+    // this.loadBooks();
+    // this.loadFoodsEvent(e);
+  };
+
 
   // handleInputChange = e => {
   //   query = e.target
@@ -190,9 +211,11 @@ class Search extends Component {
     return (
       <div>
         <WorldMap
+          handleInputClick={this.handleInputClick}
           continentOnClick={this.continentOnClick}
           worldMap={this.state.worldMap}
           getContinent={this.getContinent}
+          handleInputClickYelp={this.handleInputClickYelp}
           // style={this.state.worldMap === true ? styleBlock : styleNone}
         />
     
@@ -204,11 +227,11 @@ class Search extends Component {
         <Africa handleInputClick={this.handleInputClick} continent={this.state.continent}/>
         <Europe handleInputClick={this.handleInputClick} continent={this.state.continent}/>
 
-        <SearchResultsWrapper>
+        <SearchResultsWrapper showSearch={this.state.showSearch} handleInputClick={this.handleInputClick}>
           {this.state.foods.map(food => (
             <SearchCard
               saveButtonClick={this.saveButtonClick}
-              key={food._id}
+              key={food.id}
               id={food._id}
               continent={food.continent}
               country={food.country}

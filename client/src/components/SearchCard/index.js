@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import ViewButton from "../ViewButton";
+import YelpButton from "../YelpButton";
 // import SaveButton from "../SaveButton";
 
 const SearchCard = props => {
@@ -39,7 +39,7 @@ const SearchCard = props => {
           <div className="col-sm-1">
             <button data-id={props.id} onClick={() => {props.saveButtonClick(props.id)}} className="btn btn-info save-btn">Save</button>
             {/* <SaveButton data-id={props.id} key={props.key} SaveButtonClick={props.SaveButtonClick}/> */}
-            <ViewButton link={props.link}/>
+            <YelpButton link={props.link}/>
           </div>
           </div>
       </span>

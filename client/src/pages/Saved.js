@@ -59,24 +59,32 @@ class Saved extends Component {
     //   };
 
     render() {
+        // return (
+        //     <div>
+        //       {/* <Jumbotron /> */}
+        //       <SearchResultsWrapper>
+        //   {this.state.foods.map(food => (
+        //     <SearchCard
+        //       saveButtonClick={this.saveButtonClick}
+        //       key={food._id}
+        //       id={food._id}
+        //       continent={food.continent}
+        //       country={food.country}
+        //       dishName={food.dishName}
+        //       description={food.description}
+        //       image={food.image}
+        //     />
+        //   ))}
+        //   <h1>SAVED!!!!!!!!!!!!</h1>
+        // </SearchResultsWrapper>
+        //   </div>
+        // )
         return (
-            <div>
-              {/* <Jumbotron /> */}
-              <SearchResultsWrapper>
-          {this.state.foods.map(food => (
-            <SearchCard
-              saveButtonClick={this.saveButtonClick}
-              key={food._id}
-              id={food._id}
-              continent={food.continent}
-              country={food.country}
-              dishName={food.dishName}
-              description={food.description}
-              image={food.image}
-            />
-          ))}
-        </SearchResultsWrapper>
+          <div>
+            <h1>SAVWED!</h1>
+            <a href="/login">Login</a>
           </div>
+
         )
     }
 }

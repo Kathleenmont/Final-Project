@@ -1,8 +1,14 @@
 import React from "react";
 import "./style.css";
+const styleNone = { display : "none" };
+
+const styleBlock = { display : "block" };
 
 const SearchResultsWrapper = (props) => {
-return <div className="container container-fluid wrapper bg-dark">{props.children}</div>
+    console.log(props)
+return( 
+<div onClick={props.handleInputClick} className="container container-fluid wrapper bg-dark" style={props.showSearch === true ? styleBlock : styleNone}>{props.children}</div>
+)
 }
 
 export default SearchResultsWrapper;

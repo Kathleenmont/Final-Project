@@ -16,7 +16,7 @@ function WorldMap(props) {
         <img className="worldMap" src={map} alt="world map" />
         <div>
           <span
-            onClick={props.continentOnClick}
+            onClick={props.handleInputClickYelp}
             className="dot northAmerica-dot"
             data-search="north america"
           />
