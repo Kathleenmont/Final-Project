@@ -8,7 +8,7 @@ CREATE TABLE Food(
     continent VARCHAR(50) NOT NULL,
     country VARCHAR(50) NOT NULL,
 	dishName VARCHAR(150) NOT NULL,
-    description VARCHAR(250) NOT NULL,
+    description VARCHAR(550) NOT NULL,
     image VARCHAR(150) NOT NULL,
     tried BOOLEAN NOT NULL,
     PRIMARY KEY(id)
