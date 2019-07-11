@@ -26,7 +26,7 @@ INSERT INTO Food (continent, country, dishName, description, image, tried)
 VALUES("North America", "Canada", "Peameal Bacon", "This Canadian style bacon is made from lean boneless pork loin, which is trimmed, wet-cured and then rolled in cornmeal, giving it its distinctive yellow crust. It’s juicier than American-style bacon, but also leaner.",  "https://www.cbc.ca/stevenandchris/content/images/_full/roasted_peameal_bacon_sandwich.jpg", false); 
 
 INSERT INTO Food (continent, country, dishName, description, image, tried)
-VALUES("North America", "Canada", "Pouding chômeur", 'Literally translated to "the unemployment pudding", this French Canadian dessert was created during the Great Depression. Made up of cake batter topped with hot syrup.', "https://chefcuisto.com/files/2018/12/pouding-chomeur-grand-maman.jpg", false); 
+VALUES("North America", "Canada", "Pouding chomeur", 'Literally translated to "the unemployment pudding", this French Canadian dessert was created during the Great Depression. Made up of cake batter topped with hot syrup.', "https://chefcuisto.com/files/2018/12/pouding-chomeur-grand-maman.jpg", false); 
 
 INSERT INTO Food (continent, country, dishName, description, image, tried)
 VALUES("North America", "United States", "chicken and waffles", "A southern dish, fried chicken over a waffle with butter and syrup", "https://www.lovelesscafe.com/uploads/recipeimages/CHICKEN_N_WAFFLES-ALT.jpg", false); 
@@ -122,7 +122,7 @@ INSERT INTO Food (continent, country, dishName, description, image, tried)
 VALUES("Africa", "Nigeria", "Bean and Plantain Pottage", "A thick and seasoned bean and plantain stew.", "https://wejacksonites.files.wordpress.com/2017/09/how-to-cook-beans-and-plantain-porridge.jpg?w=748", false); 
 
 INSERT INTO Food (continent, country, dishName, description, image, tried)
-VALUES("Africa", "Nigeria", "Ogbono (or Apon)", "A soup made from ground ogbono (African mango) seeds plus palm oil, stock and spices. It's usually eaten with staples like eba, fufu, pounded yam or amala.", "http://glooneevents.com/wp-content/uploads/2018/04/Abak-Atama-Soup.jpeg", false); 
+VALUES("Africa", "Nigeria", "Ogbono", "A soup made from ground ogbono (African mango) seeds plus palm oil, stock and spices. It's usually eaten with staples like eba, fufu, pounded yam or amala.", "http://glooneevents.com/wp-content/uploads/2018/04/Abak-Atama-Soup.jpeg", false); 
 
 INSERT INTO Food (continent, country, dishName, description, image, tried)
 VALUES("Africa", "Nigeria", "Suya", "Skewers of intricately spiced cuts of meat, grilled to perfection over an open flame. Often served with sharp, raw chopped onions.", "https://i2.wp.com/www.nigeriaserve.com/wp-content/uploads/2018/02/Beef_1suya.jpg?resize=450%2C300&ssl=1", false); 
@@ -134,7 +134,7 @@ INSERT INTO Food (continent, country, dishName, description, image, tried)
 VALUES("Africa", "Nigeria", "Efo riro", 'A literal translation from the Yoruba is "mixed greens" and while they are the star of this rich, fragrant vegetable stew, there is so much goodness besides: blended scotch bonnets, bell pepper, onions and locust beans. This is a classic Yoruba dish.', "https://guardian.ng/wp-content/uploads/2017/09/efo-riro-2-e1504465628981.jpg", false); 
 
 INSERT INTO Food (continent, country, dishName, description, image, tried)
-VALUES("Africa", "Egypt", "Ful Medammes", "Ful is the most common traditional breakfast, it’s a staple in every Egyptians’ diet. Ful is made of fava beans cooked with oil and salt. Ful is commonly eaten as a dish with eggs, cheese, pita bread.", "https://www.seriouseats.com/recipes/images/20090407fulmedames.jpg", false); 
+VALUES("Africa", "Egypt", "Ful", "Ful is the most common traditional breakfast, it’s a staple in every Egyptians’ diet. Ful is made of fava beans cooked with oil and salt. Ful is commonly eaten as a dish with eggs, cheese, pita bread.", "https://www.seriouseats.com/recipes/images/20090407fulmedames.jpg", false); 
 
 INSERT INTO Food (continent, country, dishName, description, image, tried)
 VALUES("Africa", "Egypt", "Koshari", "Koshary or koshari is one of the most traditional Egyptian foods. A layering of rice, macaroni, lentils, and chickpeas topped off with caramelized onions, thick red sauce, and a garlic/chili/vinegar/ sauce.", "https://www.archanaskitchen.com/images/archanaskitchen/1-Author/Sapana_Behl/Egyptian_Koshari.jpg", false); 
@@ -149,19 +149,19 @@ INSERT INTO Food (continent, country, dishName, description, image, tried)
 VALUES("Africa", "Egypt", "Macaroni Béchamel", "Made with rigatoni noodles, minced meat cooked in chopped onion and tomato paste, topped with the classic béchamel sauce. It’s hard to not go for seconds!", "https://tarasmulticulturaltable.com/wp-content/uploads/2019/01/Macarona-Bechamel-Egyptian-Baked-Pasta-6-of-7.jpg", false); 
 
 INSERT INTO Food (continent, country, dishName, description, image, tried)
-VALUES("Europe", "Poland", "Gołąbki (Cabbage Roll)", "Gołąbki is a typical traditional Polish food made of minced pork with some rice, onion, mushrooms, wrapped in white cabbage leaves. There are also other variations of fillings such as poultry, mutton or without meat. Before serving they are simmered / fried.", "https://static.gotujmy.pl/ZDJECIE_PRZEPISU_ETAP/golabki-z-mlodej-kapusty-z-miesem-i-kasza-418565.jpg", false); 
+VALUES("Europe", "Poland", "Golabki", "Gołąbki is a typical traditional Polish food made of minced pork with some rice, onion, mushrooms, wrapped in white cabbage leaves. There are also other variations of fillings such as poultry, mutton or without meat. Before serving they are simmered / fried.", "https://static.gotujmy.pl/ZDJECIE_PRZEPISU_ETAP/golabki-z-mlodej-kapusty-z-miesem-i-kasza-418565.jpg", false); 
 
 INSERT INTO Food (continent, country, dishName, description, image, tried)
-VALUES("Europe", "Poland", "Polskie Naleśniki (Polish Pancakes)", "Polish pancakes are very thin and they are served either with cheese, quark previously mixed with sugar, jam, fruits and powdered sugar or with meat and vegetables.", "https://www.nalesniki.eu/wp-content/uploads/2015/02/nalesniki_z_serem.jpg", false); 
+VALUES("Europe", "Poland", "Polskie Nalesniki", "Polish pancakes are very thin and they are served either with cheese, quark previously mixed with sugar, jam, fruits and powdered sugar or with meat and vegetables.", "https://www.nalesniki.eu/wp-content/uploads/2015/02/nalesniki_z_serem.jpg", false); 
 
 INSERT INTO Food (continent, country, dishName, description, image, tried)
-VALUES("Europe", "Poland", "Łazanki z kapustą i grzybami", "This is a dish consisting cabbage, pork meat, homemade pasta noodles and vegetables (chopped onions and sliced carrot).", "https://palcelizac.pl/wp-content/uploads/2015/12/DSC08609.jpg", false); 
+VALUES("Europe", "Poland", "Lazanki z kapusta i grzybami", "This is a dish consisting cabbage, pork meat, homemade pasta noodles and vegetables (chopped onions and sliced carrot).", "https://palcelizac.pl/wp-content/uploads/2015/12/DSC08609.jpg", false); 
 
 INSERT INTO Food (continent, country, dishName, description, image, tried)
-VALUES("Europe", "Poland", "Śledź w Oleju z Cebulą (Herring in Oil with Onion)", "Herring is a fish you can prepare in various ways. However in Poland, there are two traditional ways of serving the herring, either with sour cream and pickled onions or with oil and garlic.", "https://s3.przepisy.pl/przepisy3ii/img/variants/767x0/sledzie-w-oleju.jpg", false); 
+VALUES("Europe", "Poland", "Sledz w Oleju z Cebula", "Herring is a fish you can prepare in various ways. However in Poland, there are two traditional ways of serving the herring, either with sour cream and pickled onions or with oil and garlic.", "https://s3.przepisy.pl/przepisy3ii/img/variants/767x0/sledzie-w-oleju.jpg", false); 
 
 INSERT INTO Food (continent, country, dishName, description, image, tried)
-VALUES("Europe", "Poland", "Rosół (Broth/ Chicken Soup)", "Rosół is the most common soup served in Poland. Commonly served with homemade noodles. The ingredients are chicken, onion, small leek, green celery, parsley, cabbage, salt and pepper.", "https://api.culture.pl/sites/default/files/styles/1920_auto/public/images/imported/KUCHNIA/rosol/rosol_east_news_.jpg?itok=ptdZNATd", false); 
+VALUES("Europe", "Poland", "Rosol", "Rosół is the most common soup served in Poland. Commonly served with homemade noodles. The ingredients are chicken, onion, small leek, green celery, parsley, cabbage, salt and pepper.", "https://api.culture.pl/sites/default/files/styles/1920_auto/public/images/imported/KUCHNIA/rosol/rosol_east_news_.jpg?itok=ptdZNATd", false); 
 
 INSERT INTO Food (continent, country, dishName, description, image, tried)
 VALUES("Europe", "Spain", "Tortilla Española", "This is the Spanish version of omelets and made of eggs, potatoes, and onions. After slow frying the potatoes and onions in olive oil, you beat the eggs to make a delicious dish. Like any omelet, you can add ingredients to your taste.", "https://www.goya.com/media/3816/tortilla-espan-ola-potato-omelet.jpg?quality=80",false); 
@@ -188,7 +188,7 @@ INSERT INTO Food (continent, country, dishName, description, image, tried)
 VALUES("Europe", "Greece", "Spanakopita", "Spanakopita is phyllo pastry layered with feta cheese and spinach and flavoured with dill", "https://www.olivetomato.com/wp-content/uploads/2016/02/spanakopita-spinach-pie.jpg", false); 
 
 INSERT INTO Food (continent, country, dishName, description, image, tried)
-VALUES("Europe", "Greece", "Kolokythokeftedes (Courgette balls)", "Sometimes a patty, sometimes a lightly fried ball. The fritter is usually made from grated or puréed courgette blended with dill, mint, or other top-secret spice combinations. Paired with tzatziki, for its cooling freshness.", "https://www.olivetomato.com/wp-content/uploads/2016/02/spanakopita-spinach-pie.jpg", false); 
+VALUES("Europe", "Greece", "Kolokythokeftedes", "Sometimes a patty, sometimes a lightly fried ball. The fritter is usually made from grated or puréed courgette blended with dill, mint, or other top-secret spice combinations. Paired with tzatziki, for its cooling freshness.", "https://www.closetcooking.com/wp-content/uploads/2009/09/Kolokythokeftedes-Zucchini-and-Feta-Balls-1-500.jpg", false); 
 
 INSERT INTO Food (continent, country, dishName, description, image, tried)
 VALUES("Asia", "Korea", "Yukgaejang", "Spicy shredded beef stew with bean sprouts and fernbrake eaten with rice.", "https://i.ytimg.com/vi/Azu-ZJ324ck/maxresdefault.jpg", false); 

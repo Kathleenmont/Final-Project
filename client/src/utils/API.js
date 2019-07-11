@@ -1,54 +1,53 @@
 import axios from "axios";
 
-// const BASEURL = "https://www.googleapis.com/books/v1/volumes?q=";
-
-// const APIKEY = ":keyes&key=AIzaSyB3gUc9O6Z0fR929v3f2B3ahDTY5hYqG74";
-
-// GET "https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes&key=yourAPIKey"
-
 export default {
-  // getFoods: function(query) {
-  //   return axios.get(BASEURL + query + APIKEY);
-  //   //  return axios.get("/api/books");
-  // },
-
-  // getSavedFoods: function() {
-  //   return axios.post();
-  // },
+  getFoodsSaved: function() {
+    return axios.get("/api/foods/saved");
+  },
 
   // Gets all books
   getFoods: function() {
-     console.log("HERE get foods!")
+    console.log("HERE get foods!");
     return axios.get("/api/foods");
   },
 
-  checkUserLogin: function (userInfo) {
-    console.log("in check userinfo" + JSON.stringify(userInfo))
-    return axios.post("/api/user", userInfo)
+  getSavedFood: function(userId) {
+    console.log("HERE get foods!");
+    return axios.post("/api/getsaved", userId);
+  },
+
+  checkUserLogin: function(userInfo) {
+    console.log("in check userinfo" + JSON.stringify(userInfo));
+    return axios.post("/api/user", userInfo);
+  },
+
+  checkForUserName: function(userInfo) {
+    console.log("in check userName" + JSON.stringify(userInfo));
+    return axios.post("/api/username", userInfo);
+  },
+
+  signUpUser: function(userInfo) {
+    console.log("in user sign up" + JSON.stringify(userInfo));
+    return axios.post("/api/signup", userInfo);
   },
 
   getFoodsByCountry: function(search) {
-    console.log("HERE!")
+    console.log("HERE!");
     return axios.post("/api/foods/country", search);
   },
 
-    search: function(searchItem) {
-        // const search = {
-        //     searchItem
-        // }
-    // return axios.post("/search", search, (bookResults) => {
-    //   console.log(bookResults);
-    //   return bookResults;
-    // });
-
-    return axios.post("/search", searchItem, (yelpResults) => {
-      console.log(yelpResults);
+  search: function(search) {
+    console.log("in API SEARCH: " + JSON.stringify(search))
+    return axios.post("/search", search, yelpResults => {
+      console.log("in API SEARCH: " + yelpResults);
       return yelpResults;
     });
-  
   },
 
-
+  saveFood: function(foodId) {
+    console.log("IN SAVE FOOD!" + JSON.stringify(foodId));
+    return axios.post("/api/foods/save", foodId);
+  }
 
   // Gets the book with the given id
   // getFood: function(id) {
@@ -65,5 +64,4 @@ export default {
   // deleteBook: function(id) {
   //   return axios.delete("/api/food/" + id);
   // }
- 
 };

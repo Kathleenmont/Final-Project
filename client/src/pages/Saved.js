@@ -1,6 +1,7 @@
 
 import React, { Component } from "react";
 import API from "../utils/API";
+// import auth from "../utils/auth";
 import SearchCard from "../components/SearchCard";
 import SearchResultsWrapper from "../components/SearchResultsWrapper";
 // // import SearchButton from "../components/SearchButton";
@@ -19,12 +20,13 @@ class Saved extends Component {
       state = {
         foods: [],
         // search: query,
-        title: "",
-        authors: [],
+        continent: "",
+        country: "",
+        dishName: "",
         description: "",
         image: "",
-        link: "",
-        saved: true
+        userName: this.props.auth.userName,
+        userId: this.props.auth.userId
       };
     
       componentDidMount() {
@@ -34,7 +36,9 @@ class Saved extends Component {
 
       loadFoods = () => {
         console.log("WHAT");
-        API.getFoods()
+        console.log(this.state.userId)
+        let id = { userId: this.state.userId};
+       API.getSavedFood(id)
           .then(res => {
             console.log(res.data);
             this.setState({
@@ -59,32 +63,32 @@ class Saved extends Component {
     //   };
 
     render() {
-        // return (
-        //     <div>
-        //       {/* <Jumbotron /> */}
-        //       <SearchResultsWrapper>
-        //   {this.state.foods.map(food => (
-        //     <SearchCard
-        //       saveButtonClick={this.saveButtonClick}
-        //       key={food._id}
-        //       id={food._id}
-        //       continent={food.continent}
-        //       country={food.country}
-        //       dishName={food.dishName}
-        //       description={food.description}
-        //       image={food.image}
-        //     />
-        //   ))}
-        //   <h1>SAVED!!!!!!!!!!!!</h1>
-        // </SearchResultsWrapper>
-        //   </div>
-        // )
         return (
+            <div>
+              {/* <Jumbotron /> */}
+              <SearchResultsWrapper>
+          {this.state.foods.map(food => (
+            <SearchCard
+              saveButtonClick={this.saveButtonClick}
+              key={food._id}
+              id={food._id}
+              continent={food.continent}
+              country={food.country}
+              dishName={food.dishName}
+              description={food.description}
+              image={food.image}
+            />
+          ))}
+          
+        </SearchResultsWrapper>
+        
+        
+       
           <div>
             <h1>SAVWED!</h1>
             <a href="/login">Login</a>
           </div>
-
+            </div>
         )
     }
 }

@@ -6,7 +6,7 @@ function YelpButton (props) {
     return (
         
        
-        <a href={props.link}><button className="btn btn-info" >View</button></a>
+        <button className="btn btn-info" data-name={props.dishName} onClick={props.yelp}>Search Near You</button>
         
     )
     

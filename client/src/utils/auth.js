@@ -1,22 +1,29 @@
-import React from "react";
-// import login from "../components/Login"
+import API from "./API";
+
 export default  {
-    isAuthenticated: false,
-    // add ui stuff to this function 
-    
+    isAuthenticated: false,  
+    userId: "",
     userName: "",
     password: "",
-    email: "",
-    // email
-    // the job of authenticate function is to populate these propterties 
-    // should make into state
-    authenticate( cb, userName) {
-      this.isAuthenticated = true;
-      console.log(userName)
-      this.userName = "kathleen";
-      this.email =  "k@k.com";
-      setTimeout(cb, 100) // fake async
+    
+    authenticate(userName, password, cb) {
+      let userInfo = { userName: userName, password: password };
+      API.checkUserLogin(userInfo)
+      .then(res => {
+        console.log(res.data);
+        if(res.data !== null) {
+          this.userId = res.data.id;
+          this.userName = userName;
+          this.password = password;
+          this.isAuthenticated = true;
+          cb(null)
+        }
+        else {
+          cb(-1)
+        }
+      })
     },
+
     signout(cb) {
       this.isAuthenticated = false
       setTimeout(cb, 100) // fake async

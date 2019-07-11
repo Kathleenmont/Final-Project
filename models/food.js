@@ -61,10 +61,11 @@ module.exports = function(sequelize, DataTypes) {
   
     // connects to User table
     Food.associate = function(models) {
-      Food.belongsTo(models.User, {
-        foreignKey: {
-          allowNull: true
-        }
+      Food.belongsToMany(models.User, {
+        through: "UsersFood",
+          as: "users",
+          foreignKey: "foodId"
+        
       });
     };
   

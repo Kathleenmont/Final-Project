@@ -39,7 +39,7 @@ const SearchCard = props => {
           <div className="col-sm-1">
             <button data-id={props.id} onClick={() => {props.saveButtonClick(props.id)}} className="btn btn-info save-btn">Save</button>
             {/* <SaveButton data-id={props.id} key={props.key} SaveButtonClick={props.SaveButtonClick}/> */}
-            <YelpButton link={props.link}/>
+            <YelpButton yelp={props.yelp} dishName={props.dishName}/>
           </div>
           </div>
       </span>

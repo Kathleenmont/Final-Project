@@ -64,9 +64,35 @@ app.post("/api/foods/country", function (req, res) {
 
 app.post("/api/user", function (req, res) {
   console.log(JSON.stringify(req.body))
-  db.User.findOne({where: {userName: req.body.user, password: req.body.password}}).then(function (dbPost) {
+  db.User.findOne({where: {userName: req.body.userName, password: req.body.password}}).then(function (dbPost) {
     res.json(dbPost);
   });
+})
+
+app.post("/api/username", function (req, res) {
+  console.log(JSON.stringify(req.body))
+  db.User.findOne({where: {userName: req.body.userName}}).then(function (dbPost) {
+    res.json(dbPost);
+  });
+})
+
+app.post("/api/foods/save", function (req, res) {
+  console.log(JSON.stringify(req.body))
+  db.UsersFood.create( {userId: req.body.userId, foodId: req.body.foodId, tried: false } ).then(function (dbPost) {
+    res.json(dbPost);
+  });
+})
+
+app.post("/api/signup", function (req, res) {
+  console.log(JSON.stringify(req.body))
+  db.User.create(req.body).then(function (dbPost) {
+    res.json(dbPost);
+  });
+})
+
+app.post("/api/getsaved", function (req, res) {
+  console.log(JSON.stringify(req.body))
+db.UsersFood.findAll({ where: {userId: req.body.userId}})
 })
 
 app.post("/search", (req, res) => {
@@ -79,6 +105,8 @@ app.post("/search", (req, res) => {
       res.json(searchResult.data);
   });
 });
+
+
 // moved from routes index.js-------------------------------------------------
 // app.get("/", function(req, res) {
 //   // If the user already has an account send them to the members page
