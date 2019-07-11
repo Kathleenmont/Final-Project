@@ -8,6 +8,9 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 const axios = require("axios");
 const path = require("path")
+require("dotenv").config();
+const tempApiKey=process.env.APIKeyYelp;
+
 // ADDED passport_________________
 // var bodyParser = require("body-parser");
 const session = require("express-session");
@@ -97,10 +100,12 @@ db.User.findAll({ where: {id: req.body.userId}, include: [{model: db.Food, as: '
 })
 })
 
+
+
 app.post("/search", (req, res) => {
   axios.get("https://api.yelp.com/v3/businesses/search?term=" + req.body.search + "&limit=6&location=philadelphia", {
     headers: {
-        Authorization: "Bearer Vg_tGwpB5bMsOR-xCjAGY2NUvCf7CUy_6QVbCD-5pV_6zMJxrrAjOgUZUtkUUvgdBr_8g_7Cva_67x-k8kxWw8vu9gKt-GTphwj6CZenIjAggvyMAqUxFXTSfsjeXHYx"
+        Authorization: tempApiKey
    },
   }).then( (searchResult) => {
       console.log(searchResult.data);
