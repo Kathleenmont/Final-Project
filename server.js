@@ -92,7 +92,9 @@ app.post("/api/signup", function (req, res) {
 
 app.post("/api/getsaved", function (req, res) {
   console.log(JSON.stringify(req.body))
-db.UsersFood.findAll({ where: {userId: req.body.userId}})
+db.User.findAll({ where: {id: req.body.userId}, include: [{model: db.Food, as: 'Food'}]}).then(function (dbPost) {
+  res.json(dbPost);
+})
 })
 
 app.post("/search", (req, res) => {

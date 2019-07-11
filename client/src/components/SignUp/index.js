@@ -8,7 +8,6 @@ class SignUp extends React.Component {
     redirectToReferrer: false,
     userName: "",
     password: "",
-    hasUserName: Boolean
   };
 
   handleInputChange = e => {
@@ -33,53 +32,62 @@ class SignUp extends React.Component {
     console.log(this.state);
     let userName = this.state.userName;
     let password = this.state.password;
-    let userInfo = { userName: userName, password: password };
+    // let userInfo = { userName: userName, password: password };
     if (!this.state.password || !this.state.userName) {
       alert("Please fill out form!");
     } else if (this.state.password.length < 6) {
       alert(`Password must be at least 6 charactors long.`);
     } else {
-      console.log(userInfo);
-      API.checkForUserName(userInfo)
-
-        .then(res => {
-          console.log(res);
-          res.data === null
-            ? this.setState({ hasUserName: false })
-            : this.setState({ hasUserName: true });
+      // console.log(userInfo);
+      this.props.auth.authenticateForSignUp(userName, password, (err) => {
+        if(!err) {
+          this.setState(() => ({
+            redirectToReferrer: true
+          }));
           console.log(this.state);
-          if (this.state.hasUserName === true) {
-            console.log(
-              "User name already taken, Login or use different username"
-            );
-            // alert(`Hello ${this.state.firstName} ${this.state.lastName}`);
-          } else {
-            API.signUpUser(userInfo)
-              .then(res => {
-                  console.log(res)
-                auth.authenticate(() => {
-                    this.setState(() => ({
-                      redirectToReferrer: true,
-                     
-                    }));
-                  }, userName);
-              })
-              .catch(err => console.log(err));
-            console.log(this.state);
-          }
-        })
-
-        .catch(err => console.log(err));
-      console.log(this.state);
+        } else {
+          alert("Sign up failed. Try again.")
+        }
+      })
     }
   };
 
+        // .then(res => {
+          // console.log(res);
+          // res.data === null
+          //   ? this.setState({ hasUserName: false })
+          //   : this.setState({ hasUserName: true });
+          // console.log(this.state);
+          // if (this.state.hasUserName === true) {
+          //   console.log(
+          //     "User name already taken, Login or use different username"
+          //   );
+          //   // alert(`Hello ${this.state.firstName} ${this.state.lastName}`);
+          // } else {
+            // API.signUpUser(userInfo)
+    //           .then(res => {
+    //               console.log(res)
+    //             auth.authenticate(() => {
+    //                 this.setState(() => ({
+    //                   redirectToReferrer: true,
+                     
+    //                 }));
+    //               }, userName);
+    //           })
+    //           .catch(err => console.log(err));
+    //         console.log(this.state);
+    //       }
+  //       })
+  //   //     .catch(err => console.log(err));
+  //   //   console.log(this.state);
+  //   }
+  // };
   render() {
     // const { from } = this.props.location.state || { from: { pathname: "/" } };
-    const { redirectToReferrer } = this.state;
+    const  redirectToReferrer  = this.state.redirectToReferrer;
   
     if (redirectToReferrer === true) {
-      return <Redirect to={"/saved"} />;
+      return <Redirect to={"/"} />;
     }
 
     return (
@@ -125,7 +133,6 @@ class SignUp extends React.Component {
               <button
                 type="submit"
                 onClick={this.signUp}
-               
                 className="btn btn-default"
               >
                 Sign Up

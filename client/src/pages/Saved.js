@@ -13,10 +13,10 @@ import SearchResultsWrapper from "../components/SearchResultsWrapper";
 class Saved extends Component {
 //     constructor(props) {
 //         super(props);
-//         // this.handleInputClick = this.handleInputClick.bind(this);
+// //         // this.handleInputClick = this.handleInputClick.bind(this);
 //         // this.loadBooksEvent = this.loadBooksEvent.bind(this);
-//         // this.loadBooks = this.loadBooks.bind(this);
-//       }
+        // this.loadBooks = this.loadBooks.bind(this);
+      // }
       state = {
         foods: [],
         // search: query,
@@ -33,6 +33,7 @@ class Saved extends Component {
         this.loadFoods();
         console.log(this.state);
       }
+      
 
       loadFoods = () => {
         console.log("WHAT");
@@ -40,9 +41,9 @@ class Saved extends Component {
         let id = { userId: this.state.userId};
        API.getSavedFood(id)
           .then(res => {
-            console.log(res.data);
+            console.log(res.data[0].Food);
             this.setState({
-              foods: res.data,
+              foods: res.data[0].Food,
               // search: query,
               continent: "",
               country: "",
@@ -50,10 +51,13 @@ class Saved extends Component {
               description: "",
               image: ""
             });
+            console.log(this.state.foods);
           })
           .catch(err => console.log(err));
-          console.log(this.state.foods);
+          
         };
+
+       
     
     
     //   loadBooksEvent = e => {
@@ -66,12 +70,12 @@ class Saved extends Component {
         return (
             <div>
               {/* <Jumbotron /> */}
-              <SearchResultsWrapper>
+              {/* <SearchResultsWrapper> */}
           {this.state.foods.map(food => (
             <SearchCard
-              saveButtonClick={this.saveButtonClick}
-              key={food._id}
-              id={food._id}
+              // saveButtonClick={this.saveButtonClick}
+              key={food.id}
+              id={food.id}
               continent={food.continent}
               country={food.country}
               dishName={food.dishName}
@@ -80,7 +84,7 @@ class Saved extends Component {
             />
           ))}
           
-        </SearchResultsWrapper>
+        {/* </SearchResultsWrapper> */}
         
         
        

@@ -23,7 +23,7 @@ class App extends Component {
     return (
       <div>
         <Router>
-          <AuthButton userName={this.state.userName}/>
+          <AuthButton userName={this.state.auth.userName}/>
           <div>
             <Nav />
             <Switch>
@@ -31,7 +31,7 @@ class App extends Component {
               <PrivateRoute exact path="/saved" component={Saved} auth={this.state.auth} />
               <Route exact path="/login" 
                            render={(props) => <Login {...props} auth={this.state.auth} />} />
-              <Route exact path="/signup" component={SignUp} name="userName"
+              <Route exact path="/signup" render={(props) => <SignUp {...props} auth={this.state.auth} />}
                    />
             </Switch>
           </div>

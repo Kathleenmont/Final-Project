@@ -12,7 +12,7 @@ export default {
   },
 
   getSavedFood: function(userId) {
-    console.log("HERE get foods!");
+    console.log("HERE get foods saved!" + JSON.stringify(userId));
     return axios.post("/api/getsaved", userId);
   },
 
