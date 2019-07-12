@@ -4,6 +4,7 @@ import API from "../utils/API";
 import SearchCard from "../components/SearchCard";
 import SearchResultsWrapper from "../components/SearchResultsWrapper";
 import YelpCard from "../components/YelpCard";
+import TriedCard from "../components/TriedCard";
 
 
 class Saved extends Component {
@@ -19,17 +20,20 @@ class Saved extends Component {
     image: "",
     userName: this.props.auth.userName,
     userId: this.props.auth.userId,
-    rating: 4
+    rating: ""
   };
 
   componentDidMount() {
     this.loadFoods();
+    // this.loadTriedFoods();
     console.log(this.state);
   }
 
+ 
+
   loadFoods = () => {
     console.log("WHAT");
-    console.log(this.state.userId);
+    console.log(this.state);
     let id = { userId: this.state.userId };
     API.getSavedFood(id)
       .then(res => {
@@ -52,9 +56,11 @@ class Saved extends Component {
           });
         console.log(res.data[0].Food);
       
-        console.log(this.state.foods);
+        console.log(this.state);
       })
       .catch(err => console.log(err));
+
+      this.loadTriedFoods();
   };
 
   deleteButtonClick = key => {
@@ -75,6 +81,29 @@ class Saved extends Component {
       }
     }
     this.loadFoods();
+    // this.loadTriedFoods();
+    
+  }
+
+  deleteTriedButtonClick = key => {
+    console.log(key);
+    let i;
+    for (i = 0; i < this.state.foodsTried.length; i++) {
+      if (key === this.state.foodsTried[i].id) {
+        console.log(
+          "food to delete" + this.state.foodsTried[i]
+        );
+        API.deleteFood({
+          foodId: this.state.foodsTried[i].id,
+          userId: this.state.userId
+        })
+        
+          .catch(err => console.log(err));
+
+      }
+    }
+    this.loadFoods();
+    // this.loadTriedFoods();
     
   }
 
@@ -102,9 +131,8 @@ class Saved extends Component {
   
         }
       }
-     this.loadFoods()
-     
-  
+     this.loadFoods();
+    //  this.loadTriedFoods();
     }
 
   handleInputClickYelp = e => {
@@ -131,10 +159,44 @@ class Saved extends Component {
     console.log(this.state.yelp);
   };
 
+
+  loadTriedFoods = () => {
+    console.log("WHAT");
+    console.log(this.state.userId);
+    let id = { userId: this.state.userId };
+    API.getSavedFood(id)
+      .then(res => {
+       let triedFoodsArray = []
+       let i;
+       for (i = 0; i < res.data[0].Food.length; i++) {
+         if (res.data[0].Food[i].UsersFood.tried === true) {
+           console.log(res.data[0].Food[i])
+           triedFoodsArray.push(res.data[0].Food[i])
+      
+         }
+       }
+          this.setState({
+            foodsTried: triedFoodsArray,
+            // search: query,
+            continent: "",
+            country: "",
+            dishName: "",
+            description: "",
+            image: ""
+          });
+        console.log(res.data[0].Food);
+      
+        console.log(this.state);
+      })
+      .catch(err => console.log(err));
+  };
+
+
   render() {
     return (
       <div>
         <div className="want-to-try">
+          <h1>Dishes to TRY!</h1>
         {/* <Jumbotron /> */}
         {/* <SearchResultsWrapper> */}
         {this.state.foods.map(food => (
@@ -167,20 +229,22 @@ class Saved extends Component {
           ))}
         </div>
         <div className="tried">
-        {/* {this.state.foods.map(food => (
-          <SearchCard
+        <h1>Dishes I've Tried</h1>
+        {this.state.foodsTried.map(foodTried => (
+          <TriedCard
             // saveButtonClick={this.saveButtonClick}
-            key={food.id}
-            id={food.id}
-            continent={food.continent}
-            country={food.country}
-            dishName={food.dishName}
-            description={food.description}
-            image={food.image}
+            key={foodTried.id}
+            id={foodTried.id}
+            continent={foodTried.continent}
+            country={foodTried.country}
+            dishName={foodTried.dishName}
+            description={foodTried.description}
+            image={foodTried.image}
+            rating={foodTried.UsersFood.rating}
             yelp={this.handleInputClickYelp}
-            delete={this.deleteButtonClick}
+            delete={this.deleteTriedButtonClick}
           />
-        ))} */}
+        ))}
         </div>
        
       </div>

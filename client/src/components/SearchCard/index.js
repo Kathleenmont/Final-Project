@@ -5,7 +5,7 @@ import TriedButton from "../TriedButton";
 // import SaveButton from "../SaveButton";
 import DeleteButton from "../DeleteButton";
 import ModalRating from "../ModalRating";
-import forwardRef from '@restart/context/forwardRef'
+
 
 const SearchCard = props => {
 
@@ -43,7 +43,7 @@ const SearchCard = props => {
           <div className="col-sm-1">
             {/* <TriedButton id={props.id} tried={props.tried}/> */}
             <ModalRating tried={props.tried} {...props} />
-            <button data-id={props.id} onClick={() => {props.saveButtonClick(props.id)}} className="btn btn-info save-btn">Save</button>
+            <button data-id={props.id} onClick={() => {props.saveButtonClick(props.id)}} className="btn btn-dark save-btn">Save</button>
             {/* <SaveButton data-id={props.id} key={props.key} SaveButtonClick={props.SaveButtonClick}/> */}
             <YelpButton yelp={props.yelp} dishName={props.dishName}/>
             <DeleteButton delete={props.delete} id={props.id}/>

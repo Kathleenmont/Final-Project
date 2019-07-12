@@ -40,11 +40,11 @@ function WorldMap(props) {
             className="dot asia-dot"
             data-search="asia"
           />
-          <span
+          {/* <span
             onClick={props.continentOnClick}
             className="dot australia-dot"
             data-search="australia"
-          />
+          /> */}
         </div>
       </div>
     </div>

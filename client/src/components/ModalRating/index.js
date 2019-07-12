@@ -39,7 +39,7 @@ class ModalRating extends React.Component {
     console.log(this.state);
     return (
       <>
-        <Button variant="primary" onClick={this.handleShow}>
+        <Button variant="dark" onClick={this.handleShow}>
           Tried
         </Button>
 
@@ -76,7 +76,7 @@ class ModalRating extends React.Component {
             </form>
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" onClick={this.handleClose}>
+            <Button variant="dark" onClick={this.handleClose}>
               Close
             </Button>
             <Button

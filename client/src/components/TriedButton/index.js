@@ -5,7 +5,7 @@ import "./style.css";
 const TriedButton = props => {
     // console.log(props)
     return (
-        <button className="btn btn-info save-btn" data-id={props.id} onClick={() => {props.tried(props.id)}}>Tried It</button>
+        <button className="btn btn-dark save-btn" data-id={props.id} onClick={() => {props.tried(props.id)}}>Tried It</button>
     )
 }
 
