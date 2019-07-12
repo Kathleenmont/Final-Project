@@ -47,6 +47,16 @@ export default {
   saveFood: function(foodId) {
     console.log("IN SAVE FOOD!" + JSON.stringify(foodId));
     return axios.post("/api/foods/save", foodId);
+  },
+
+  deleteFood: function(foodId) {
+    console.log("IN delete FOOD!" + JSON.stringify(foodId));
+    return axios.post("/api/foods/delete", foodId);
+  },
+
+  triedFood: function(foodId) {
+    console.log("In tried FOOD " + JSON.stringify(foodId));
+    return axios.post("/api/foods/tried", foodId)
   }
 
   // Gets the book with the given id

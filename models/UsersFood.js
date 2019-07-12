@@ -14,6 +14,10 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: false,
         default: false
       },
+      rating: {
+        type: DataTypes.INTEGER,
+        allowNull: true
+      },
       foodId: {
         type: DataTypes.INTEGER,
         allowNull: false,
@@ -25,7 +29,13 @@ module.exports = function(sequelize, DataTypes) {
    
     }, {timestamps: false});
    
-    
+    // UsersFood.associate = function(models) {
+    //   UsersFood.belongsToMany(models.User, {
+    //     through: "User",
+    //       as: "tried",
+    //       foreignKey: "tried"
+    //   });
+    // };
     return UsersFood;
   };
   

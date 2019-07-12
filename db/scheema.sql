@@ -11,6 +11,7 @@ CREATE TABLE Food(
     description VARCHAR(550) NOT NULL,
     image VARCHAR(150) NOT NULL,
     tried BOOLEAN NOT NULL,
+
     PRIMARY KEY(id)
 );
 
@@ -27,5 +28,6 @@ CREATE TABLE UsersFood(
     userId VARCHAR(100) NOT NULL,
 	tried VARCHAR(150) NOT NULL,
     foodId VARCHAR(150) NOT NULL,
+    rating VARCHAR (100),
     PRIMARY KEY(id)
 );
