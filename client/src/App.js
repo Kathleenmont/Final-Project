@@ -13,10 +13,35 @@ import auth from "./utils/auth";
 import "./App.css";
 
 class App extends Component {
+  constructor(props){
+    super(props);
+  this.state = {
+    auth: auth,
+    currentMap: "world map",
+    showSearch: false,
+    showYelp: false
 
-  state = {
-    auth: auth
   };
+}
+// handleWorldMap() {
+//   this.setState((state) => {
+//     // Important: read `state` instead of `this.state` when updating.
+//     return {
+//       currentMap: "world map",
+//       showSearch: false
+//     }
+//   });
+
+//   console.log(this.state)
+// };
+//   onSearchClick = () => {
+//     this.handleWorldMap()
+//     // this.setState({
+//     //   currentMap: "world map",
+//     //   showSearch: false
+//     // });
+// console.log("WORKED!!!!" + JSON.stringify(this.state))
+//   }
 
   render() {
     
@@ -25,9 +50,9 @@ class App extends Component {
         <Router>
           <AuthButton userName={this.state.auth.userName}/>
           <div>
-            <Nav />
+            {/* <Nav click={this.onSearchClick} currentMap={this.state.currentMap}/> */}
             <Switch>
-              <PrivateRoute exact path="/" component={Search} auth={this.state.auth} />
+              <PrivateRoute exact path="/" component={Search} auth={this.state.auth} currentMap={this.state.currentMap} searchClick={this.onSearchClick}/>
               <PrivateRoute exact path="/saved" component={Saved} auth={this.state.auth} />
               <Route exact path="/login" 
                            render={(props) => <Login {...props} auth={this.state.auth} />} />

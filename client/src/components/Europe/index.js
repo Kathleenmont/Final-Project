@@ -7,7 +7,7 @@ const styleBlock = { display : "block" };
 
 function Europe(props) {
   return (
-    <div className="mapWrapper-europe" style={props.continent === "europe" ? styleBlock : styleNone}>
+    <div className="mapWrapper-europe continent" style={props.currentMap === "europe" ? styleBlock : styleNone}>
       <div className="image-container-europe">
         <img className="europe" src={Eur} alt="Europe Map" />
         <div>

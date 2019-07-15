@@ -7,9 +7,9 @@ const styleBlock = { display : "block" };
 
 function Asia(props) {
   return (
-    <div className="mapWrapper-asia" style={props.continent === "asia" ? styleBlock : styleNone}>
+    <div className="mapWrapper-asia continent" style={props.currentMap === "asia" ? styleBlock : styleNone}>
       <div className="image-container-asia">
-        <img className="africa" src={Afr} alt="Asia Map" />
+        <img className="asia" src={Afr} alt="Asia Map" />
         <div>
           <span
             className="dot Korea-dot"

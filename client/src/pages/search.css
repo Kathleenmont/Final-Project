@@ -1,0 +1,21 @@
+a {
+    color: pink;
+}
+
+.link-container {
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.link-container .scroll {
+    text-decoration: none;
+}
+
+#search-page-container {
+    width: 100%
+}
+
+#search-page-container .scroll-section {
+position: relative;
+width: 100%;
+}

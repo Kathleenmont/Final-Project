@@ -7,7 +7,7 @@ const styleBlock = { display : "block" };
 
 function SouthAmerica(props) {
   return (
-    <div className="mapWrapper-south-america" style={props.continent === "south america" ? styleBlock : styleNone}>
+    <div className="mapWrapper-south-america continent" style={props.currentMap === "south america" ? styleBlock : styleNone}>
       <div className="image-container-south-america">
         <img className="southAmerica" src={SA} alt="south america map" />
         <div>

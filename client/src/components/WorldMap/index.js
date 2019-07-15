@@ -11,7 +11,7 @@ function WorldMap(props) {
 
 
   return (
-    <div className="mapWrapper" style={props.worldMap === true ? styleBlock : styleNone}>
+    <div className="mapWrapper" style={props.currentMap === "world map" ? styleBlock : styleNone}>
       <div className="image-container">
         <img className="worldMap" src={map} alt="world map" />
         <div>

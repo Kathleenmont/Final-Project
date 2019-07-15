@@ -3,32 +3,35 @@
 }
 .image-container-south-america {
   position: relative;
-
-  margin-left: 350px;
+  margin-left: 0px;
+  margin-bottom: 15px;
 }
 .southAmerica {
-  max-width: 65%;
-  min-width: 65%;
-  margin: 0 auto;
+  max-width: 45%;
+  min-width: 45%;
   position: relative;
+  display: flex; 
+  margin: auto;
+  left: 0;  
+  right: 0;
 }
 
 .Brazil-dot {
   position: absolute;
   top: 35%;
-  left: 47%;
+  left: 57%;
   background: greenyellow;
 }
 .Colombia-dot {
   position: absolute;
-  top: 8%;
-  left: 14%;
+  top: 9%;
+  left: 35%;
   background: aqua;
 }
 .Peru-dot {
   position: absolute;
   top: 30%;
-  left: 8%;
+  left: 33%;
   background: palevioletred;
 }
 

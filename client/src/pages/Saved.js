@@ -5,6 +5,7 @@ import SearchCard from "../components/SearchCard";
 import SearchResultsWrapper from "../components/SearchResultsWrapper";
 import YelpCard from "../components/YelpCard";
 import TriedCard from "../components/TriedCard";
+import Nav from "../components/Nav";
 
 
 class Saved extends Component {
@@ -194,7 +195,9 @@ class Saved extends Component {
 
   render() {
     return (
-      <div>
+     
+      <div id="search-page-container">
+         <Nav click={this.onSearchClick} currentMap={this.state.currentMap}/>
         <div className="want-to-try">
           <h1>Dishes to TRY!</h1>
         {/* <Jumbotron /> */}

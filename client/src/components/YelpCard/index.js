@@ -2,8 +2,11 @@ import React from "react";
 import "./style.css";
 
 const YelpCard = props => {
+  const styleNone = { display : "none" };
+
+const styleBlock = { display : "block" };
     return (
-      <div className="container bg-light">
+      <div className="container bg-light" style={props.showYelp === true ? styleBlock : styleNone}>
         <a href={props.yelpLink} target="_blank" rel="noopener noreferrer">
           <div className="card yelpCard">
             <div className="card-body">

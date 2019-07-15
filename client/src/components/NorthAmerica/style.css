@@ -6,36 +6,39 @@
 .image-container-north-america {
     position: relative;
 
-    margin-left: 100px;
+    margin-left: 0;
+    margin-top: 15px;
 }
 .northAmerica { 
-    max-width: 90%;
-    min-width: 90%;
-    margin: 0 auto;
-    position: relative; 
+    max-width: 65%;
+    min-width: 65%;
+    display: flex; 
+    margin: auto;
+    left: 0;  
+    right: 0;
   }
 
   .unitedStates-dot {
     position: absolute;
-    top: 61%;
-    left: 53%;
+    top: 63%;
+    left: 54%;
     background: greenyellow;
   }
   .canada-dot {
     position: absolute;
-    top: 34%;
-    left: 41%;
+    top: 38%;
+    left: 46%;
     background: aqua;
   }
   .mexico-dot {
     position: absolute;
-    top: 80%;
-    left: 50%;
+    top: 82%;
+    left: 54%;
     background: palevioletred;
   }
   .puertoRico-dot {
     position: absolute;
     top: 88%;
-    left:79%;
+    left:75%;
     background: purple;
   }

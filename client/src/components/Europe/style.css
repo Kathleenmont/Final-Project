@@ -4,32 +4,39 @@
 }
 .image-container-europe {
     position: relative;
-
-    margin-left: 200px;
+    margin-left: 0px;
+    margin-bottom: 15px;
 }
 .europe { 
-    max-width: 80%;
-    min-width: 80%;
-    margin: 0 auto;
+    max-width: 52%;
+    min-width: 52%;
     position: relative; 
+    display: flex; 
+    margin: auto;
+    left: 0;  
+    right: 0;
   }
+
+  .continent> .active {
+    border-bottom: 20px solid #333;
+}
 
   .Spain-dot {
     position: absolute;
     top: 78%;
-    left: 7%;
+    left: 28%;
     background: greenyellow;
   }
   .Greece-dot {
     position: absolute;
-    top: 89%;
-    left: 37%;
+    top: 88%;
+    left: 48.5%;
     background: aqua;
   }
   .Poland-dot {
     position: absolute;
-    top: 60%;
-    left: 38%;
+    top: 61%;
+    left: 49%;
     background: palevioletred;
   }
  

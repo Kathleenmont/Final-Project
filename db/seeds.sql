@@ -225,7 +225,7 @@ INSERT INTO Food (continent, country, dishName, description, image, tried)
 VALUES("Asia", "China", "La Zi Ji", "La Zi Ji usually refers to Chongqing chicken with chili peppers the spicy taste) and Sichuan peppercorns (numb feeling ). In Chinese, we call the dish La-zi-ji, which mainly mean dried chili pepper chicken.", "https://i.pinimg.com/originals/ac/71/7c/ac717cf305ec7c8d956c76c279eaaa6d.jpg", false); 
 
 INSERT INTO Food (continent, country, dishName, description, image, tried)
-VALUES("Asia", "China", "Xiao Long Bao", 'Xiao Long Bao, or literally, "little basket bun", is the delicate steamed dumpling filled with pork and soup often thought to have originated in Shanghai.", "https://www.chinasichuanfood.com/wp-content/uploads/2014/09/xiao-long-bao-25-500x375.jpg', false); 
+VALUES("Asia", "China", "Xiao Long Bao", 'Xiao Long Bao, or literally, "little basket bun", is the delicate steamed dumpling filled with pork and soup often thought to have originated in Shanghai.', "https://www.chinasichuanfood.com/wp-content/uploads/2014/09/xiao-long-bao-25-500x375.jpg", false); 
 
 INSERT INTO Food (continent, country, dishName, description, image, tried)
 VALUES("Asia", "China", "Cheong Fun", 'This steamed dim sum dish is called cheong fun, or “intestine noodles,” because of its thick, ropey shape. Thin sheets of white rice noodles are wrapped around a savory filling, such as shrimp, beef or char siu.', 'https://mtc1-dydfxmh.netdna-ssl.com/wp-content/uploads/2018/03/chicken-2-1300x867.jpg', false); 
@@ -239,21 +239,6 @@ VALUES("Asia", "China", "Biang Biang Noodles", 'A specialty of Xian is a dish th
 INSERT INTO Food (continent, country, dishName, description, image, tried)
 VALUES("Asia", "China", "Congee", "Congee is a rice porridge dish that's often eaten for breakfast. It's usually eaten alongside meat, fish, salted duck eggs, or century eggs, and fried breadsticks called youtiao. Congee is the perfect dish when you're sick, or when the weather is chilly.", 'https://www.seriouseats.com/recipes/images/2014/08/20140828-ground-pork-and-corn-congee-shao-zhong-8-1500x1125.jpg', false); 
 
-
 INSERT INTO Food (continent, country, dishName, description, image, tried)
 VALUES("Asia", "China", "Congee", "Congee is a rice porridge dish that's often eaten for breakfast. It's usually eaten alongside meat, fish, salted duck eggs, or century eggs, and fried breadsticks called youtiao. Congee is the perfect dish when you're sick, or when the weather is chilly.", 'https://www.seriouseats.com/recipes/images/2014/08/20140828-ground-pork-and-corn-congee-shao-zhong-8-1500x1125.jpg', false); 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
