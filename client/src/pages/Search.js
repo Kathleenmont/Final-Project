@@ -11,20 +11,24 @@ import YelpCard from "../components/YelpCard";
 import Asia from "../components/Asia";
 import animateScrollTo from 'animated-scroll-to';
 import "./search.css";
-import ScrollableAnchor, {
-  configureAnchors,
-  goToAnchor
-} from "react-scrollable-anchor";
+// import ScrollableAnchor, {
+//   configureAnchors,
+//   goToAnchor
+// } from "react-scrollable-anchor";
 
 import Nav from "../components/Nav";
 
 let query;
-let style;
+// let style;
+const styleNone = { display : "none" };
+
+const styleBlock = { display : "block" };
 
 class Search extends Component {
   constructor(props) {
     super(props);
     this.handleInputClick = this.handleInputClick.bind(this);
+    this.saveButtonClick = this.saveButtonClick.bind(this);
     // this.state.currentMap =this.state.currentMap.bind(this)
 
     this.state = {
@@ -76,17 +80,23 @@ class Search extends Component {
     console.log(this.state);
   }
 
+  scrollToContinent() {
+    const myVar = setTimeout(this.goToContinent, 100);
+  }
+   goToContinent = () => {
+    animateScrollTo(document.querySelector('#continentMap'))
+  }
   continentOnClick = e => {
     e.preventDefault();
     let map = e.target.getAttribute("data-search");
-    console.log(this.continent);
-    console.log(this.state.worldMap);
+   
     // this.setState({
     //   continent: this.continent,
     //   currentMap: this.continent
     // });
     this.handleContinent(map);
     console.log(this.state);
+    this.scrollToContinent();
   };
 
   componentDidMount() {
@@ -96,30 +106,6 @@ class Search extends Component {
       showYelp: false
     });
   }
-
-  // loadFoods = () => {
-  //   API.getFoods()
-  //     .then(res => {
-  //       this.setState({
-  //         foods: res.data,
-  //         continent: "",
-  //         country: "",
-  //         dishName: "",
-  //         description: "",
-  //         image: ""
-  //       });
-  //     })
-
-  //     .catch(err => console.log(err));
-  // };
-
-  // loadFoodsEvent = e => {
-  //   console.log("in load books event");
-  //   e.preventDefault();
-  //   this.loadFoods();
-  // };
-
-  
 
  scrollToFoodSearch() {
   const myVar = setTimeout(this.goToFood, 300);
@@ -154,7 +140,7 @@ class Search extends Component {
   };
 
   scrollToYelpSearch() {
-    const myVar = setTimeout(this.goToYelp, 800);
+    const myVar = setTimeout(this.goToYelp, 1500);
   }
    goToYelp = () => {
     animateScrollTo(document.querySelector('#searchYelp'))
@@ -163,10 +149,15 @@ class Search extends Component {
   handleInputClickYelp = e => {
     e.preventDefault();
 
-    const search = { search: e.target.getAttribute("data-name") };
-
+    const search = { search: e.target.getAttribute("data-name"), type: e.target.getAttribute("data-type")};
+    // const type = {type: e.target.getAttribute("data-type")}
     API.search(search)
-      .then(res => {
+      
+      .then(res => 
+        {
+          // if (res.data.businesses.length <=3) {
+
+          // }
         console.log(res.data.businesses);
         this.setState({
           yelp: res.data.businesses,
@@ -221,18 +212,18 @@ class Search extends Component {
             world map{" "}
           </a>
         </div>
-        <div className="link-container">
+        {/* <div className="link-container">
           <a href="#continentMap" className="scroll">
             {" "}
             continent map{" "}
           </a>
-        </div>
-        <div className="link-container">
+        </div> */}
+        {/* <div className="link-container">
           <a href="#searchCountries" className="scroll">
             {" "}
             country search results{" "}
           </a>
-        </div>
+        </div> */}
         <div className="link-container">
           <a href="#searchYelp" className="scroll">
             {" "}
@@ -240,7 +231,7 @@ class Search extends Component {
           </a>
         </div>
         <Nav click={this.onSearchClick} currentMap={this.state.currentMap} />
-        <div id="world-map" className="scroll-section">
+        <div id="world-map" className="scroll-section" >
           <WorldMap
             handleInputClick={this.handleInputClick}
             continentOnClick={this.continentOnClick}
@@ -271,7 +262,13 @@ class Search extends Component {
           />
         </div>
 
-        <div id="searchCountries" className="scroll-section">
+        <div id="searchCountries" className="scroll-section"><br/>
+        <div className="link-container" style={this.state.showSearch ? styleBlock : styleNone}>
+          <a href="#continentMap" className="scroll">
+            {" "}
+            continent map{" "}
+          </a>
+        </div>
           <SearchResultsWrapper showSearch={this.state.showSearch}>
             {this.state.foods.map(food => (
               <SearchCard
@@ -284,12 +281,19 @@ class Search extends Component {
                 description={food.description}
                 image={food.image}
                 yelp={this.handleInputClickYelp}
+                button="save"
               />
             ))}
           </SearchResultsWrapper>
         </div>
-
-        <div id="searchYelp" className="scroll-section" >
+     
+        <div id="searchYelp" className="scroll-section" ><br/>
+        <div className="link-container">
+          <a href="#searchCountries" className="scroll" style={this.state.showYelp ? styleBlock : styleNone}>
+            {" "}
+            country search results{" "}
+          </a>
+        </div>
           {this.state.yelp.map(yel => (
             <YelpCard
             showYelp={this.state.showYelp}

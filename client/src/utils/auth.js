@@ -26,20 +26,22 @@ export default {
     let userInfo = { userName: userName, password: password };
     API.checkForUserName(userInfo).then(res => {
       console.log(res.data);
+      console.log(userInfo)
       if (res.data === null) {
         API.signUpUser(userInfo)
           .then(res => {
-            console.log(res.data);
+            console.log(res.data.id);
             this.userId = res.data.id;
             this.userName = userName;
             this.password = password;
             this.isAuthenticated = true;
           })
           .catch(err => console.log(err));
-        // this.isAuthenticated = true;
+          console.log(this.isAuthenticated)
+          // this.isAuthenticated = true;
         cb(null);
       } else {
-        alert("User name already taken try different username");
+        // alert("User name already taken try different username");
         cb(-1);
       }
     });

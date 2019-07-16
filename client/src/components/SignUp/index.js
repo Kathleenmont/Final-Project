@@ -140,7 +140,7 @@ class SignUp extends React.Component {
             </form>
             <br />
             <p>
-              Or log in <a href="/login">here</a>
+               Already a user? <a href="/login">Log in</a>
             </p>
           </div>
         </div>

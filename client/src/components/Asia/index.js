@@ -24,7 +24,7 @@ function Asia(props) {
           <span
             className="dot China-dot"
             onClick={props.handleInputClick}
-            data-search="Ethiopia"
+            data-search="China"
           />
         </div>
       </div>

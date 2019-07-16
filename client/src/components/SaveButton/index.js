@@ -1,15 +1,23 @@
-// import React from "react";
-// import "./style.css";
+import React from "react";
+import "./style.css";
 
-// function SaveButton ({saveButtonClick, id, key}) {
+const SaveButton = props => {
+console.log(props)
+
  
+    return (   
+        <button data-id={props.id} onClick={() => {props.SaveButtonClick(props.id)}} className="btn btn-info save-btn">Save</button>
+    )
+
+
+   
+}
+
+export default SaveButton;
+
+
 //     return (
-        
-       
-//         <button data-id={id} onClick={(key) => {saveButtonClick(key)}} className="btn btn-info save-btn">Save</button>
-        
+//         <button className="btn btn-dark save-btn" data-id={props.id} onClick={() => {props.tried(props.id)}}>Tried It</button>
 //     )
-    
 // }
 
-// export default SaveButton;

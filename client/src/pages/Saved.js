@@ -215,6 +215,7 @@ class Saved extends Component {
             tried={this.TriedButtonClick}
             yelp={this.handleInputClickYelp}
             delete={this.deleteButtonClick}
+            button="tried"
             
           />
         ))}

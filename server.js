@@ -114,7 +114,7 @@ app.post("/api/foods/tried", function(req, res) {
   }).then(function(dbPost) {
     res.json(dbPost);
   });
-})
+});
 
 app.post("/api/signup", function(req, res) {
   console.log(JSON.stringify(req.body));
@@ -122,8 +122,6 @@ app.post("/api/signup", function(req, res) {
     res.json(dbPost);
   });
 });
-
-
 
 app.post("/api/getsaved", function(req, res) {
   console.log(JSON.stringify(req.body));
@@ -134,8 +132,6 @@ app.post("/api/getsaved", function(req, res) {
     res.json(dbPost);
   });
 });
-
-
 
 app.post("/search", (req, res) => {
   axios
@@ -150,10 +146,57 @@ app.post("/search", (req, res) => {
       }
     )
     .then(searchResult => {
+      console.log(res.data)
+      if (res.data === undefined || res.data.businesses.length <= 3 ) {
+        axios.get(
+          "https://api.yelp.com/v3/businesses/search?term=" +
+            req.body.type +
+            "%20food" +
+            "&limit=6&location=philadelphia",
+          {
+            headers: {
+              Authorization: tempApiKey
+            }
+          }
+        ).then(searchResult => {
+          res.json(searchResult.data)
+        })
+        .catch(
+          (err) => {
+            res.status(500).send(err.message)
+          }
+        );
+
+      } else {
+        res.json(searchResult.data);
+      }
       console.log(searchResult.data);
-      res.json(searchResult.data);
-    });
+      // res.json(searchResult.data);
+    })
+    .catch(
+      (err) => {
+        res.status(500).send(err.message)
+      }
+    );
 });
+
+// app.post("/searchtype", (req, res) => {
+//   axios
+//     .get(
+//       "https://api.yelp.com/v3/businesses/search?term=" +
+//         req.body.search +
+//         "&limit=6&location=philadelphia",
+//       {
+//         headers: {
+//           Authorization: tempApiKey
+//         }
+//       }
+//     )
+//     .then(searchResult => {
+//       console.log(searchResult.data);
+//       res.json(searchResult.data);
+//     });
+// });
 
 // moved from routes index.js-------------------------------------------------
 // app.get("/", function(req, res) {

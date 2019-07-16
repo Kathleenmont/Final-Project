@@ -194,7 +194,7 @@ INSERT INTO Food (continent, country, dishName, description, image, tried)
 VALUES("Asia", "Korea", "Yukgaejang", "Spicy shredded beef stew with bean sprouts and fernbrake eaten with rice.", "https://i.ytimg.com/vi/Azu-ZJ324ck/maxresdefault.jpg", false); 
 
 INSERT INTO Food (continent, country, dishName, description, image, tried)
-VALUES("Asia", "Korea", "Jjajangmyeon", "Chewy noodles and fermented black sauce are a match made in noodle heaven. Korean chinese fusion, this dish is the most popular takeout item in Korea.", "httphttps://www.koreanbapsang.com/wp-content/uploads/2011/05/jajangmyeon-e1447380359794.jpgs://i.ytimg.com/vi/Azu-ZJ324ck/maxresdefault.jpg", false); 
+VALUES("Asia", "Korea", "Jjajangmyeon", "Chewy noodles and fermented black sauce are a match made in noodle heaven. Korean chinese fusion, this dish is the most popular takeout item in Korea.", "https://www.seriouseats.com/2019/04/20190403-black-day-jajangmyeon-joel-russo-1-1500x1125.jpg", false); 
 
 INSERT INTO Food (continent, country, dishName, description, image, tried)
 VALUES("Asia", "Korea", "Kimchi jjigae", "Kimchi stew is one of the most-loved and most popular of all the stews in Korean cuisine. Made with ripe kimchi, onion, green onion, tofu, and pork or tuna.", "https://www.koreanbapsang.com/wp-content/uploads/2014/03/DSC_5089.jpg", false); 
@@ -206,20 +206,20 @@ INSERT INTO Food (continent, country, dishName, description, image, tried)
 VALUES("Asia", "Korea", "Haemul Pajeon", "Pan fried seafood pancake searved with a savory dipping sauce.", "http://lh3.googleusercontent.com/clJvwaqR66hIQODlsO5nvLvn_5Yl35Z22SsvP1RsljXHBqO9PNL3FVj_jq-LdABuJJMlOSvZ_k4HzCemNNiiJm8=s800", false); 
 
 INSERT INTO Food (continent, country, dishName, description, image, tried)
-VALUES("Asia", "indonesia", "Nasi Goreng", "As one of the country's signature dishes, nasi goreng is definitely Indonesians' favorite. A plate of stirred fried rice complemented with eggs, prawns (and/or other meat), chilli, and veggies.", "https://www.kitchensanctuary.com/wp-content/uploads/2015/08/Indonesian-Fried-Rice-square.jpg", false); 
+VALUES("Asia", "Indonesia", "Nasi Goreng", "As one of the country's signature dishes, nasi goreng is definitely Indonesians' favorite. A plate of stirred fried rice complemented with eggs, prawns (and/or other meat), chilli, and veggies.", "https://www.kitchensanctuary.com/wp-content/uploads/2015/08/Indonesian-Fried-Rice-square.jpg", false); 
 
 INSERT INTO Food (continent, country, dishName, description, image, tried)
-VALUES("Asia", "indonesia", "Nasi Uduk", "Nasi uduk is one of Jakarta's traditional dishes. The rice is cooked in coconut milk so it becomes savory. It is then mixed with other additional dishes such as ayam goreng, omelette, fried tempe, and crispy crackers made from paddy oats.", "https://wimanahatra.files.wordpress.com/2015/03/nasiuduk.jpg", false); 
+VALUES("Asia", "Indonesia", "Nasi Uduk", "Nasi uduk is one of Jakarta's traditional dishes. The rice is cooked in coconut milk so it becomes savory. It is then mixed with other additional dishes such as ayam goreng, omelette, fried tempe, and crispy crackers made from paddy oats.", "https://wimanahatra.files.wordpress.com/2015/03/nasiuduk.jpg", false); 
 
 INSERT INTO Food (continent, country, dishName, description, image, tried)
-VALUES("Asia", "indonesia", "Bubur Ayam", "This ultimate breakfast of the country is made of rice porridge served with shredded chicken, cakwe (Chinese crullers), crispy fried shallots, and chopped scallion.", "https://2.bp.blogspot.com/-OJQbiNmNFVY/V5izEXBrxWI/AAAAAAAAExM/GIl-dr11Vvk1QsoHDod7755vEdzZMJ_EwCLcB/s1600/bubur%2Bayam%2Bala%2BIndonesia.JPG", false); 
+VALUES("Asia", "Indonesia", "Bubur Ayam", "This ultimate breakfast of the country is made of rice porridge served with shredded chicken, cakwe (Chinese crullers), crispy fried shallots, and chopped scallion.", "https://2.bp.blogspot.com/-OJQbiNmNFVY/V5izEXBrxWI/AAAAAAAAExM/GIl-dr11Vvk1QsoHDod7755vEdzZMJ_EwCLcB/s1600/bubur%2Bayam%2Bala%2BIndonesia.JPG", false); 
 
 INSERT INTO Food (continent, country, dishName, description, image, tried)
-VALUES("Asia", "indonesia", "Soto", "Soto is an Indonesian traditional soup mainly served in savory chicken broth seasoned with turmeric. Hence, the color yellow. It then added with shredded chicken, eggs, rice vermicelli, and crispy fried shallots. ", "https://i.ytimg.com/vi/8N_I9MsujDM/maxresdefault.jpg", false); 
+VALUES("Asia", "Indonesia", "Soto", "Soto is an Indonesian traditional soup mainly served in savory chicken broth seasoned with turmeric. Hence, the color yellow. It then added with shredded chicken, eggs, rice vermicelli, and crispy fried shallots. ", "https://i.ytimg.com/vi/8N_I9MsujDM/maxresdefault.jpg", false); 
 
 
 INSERT INTO Food (continent, country, dishName, description, image, tried)
-VALUES("Asia", "indonesia", "Gado Gado", "Gado-gado, is an Indonesian salad of slightly boiled, blanched or steamed vegetables and hard-boiled eggs, boiled potato, fried tofu and tempeh, and lontong (rice wrapped in a banana leaf), served with a peanut sauce dressing.", "https://media-cdn.tripadvisor.com/media/photo-s/0e/a0/5c/76/gado-gado-indonesian.jpg", false); 
+VALUES("Asia", "Indonesia", "Gado Gado", "Gado-gado, is an Indonesian salad of slightly boiled, blanched or steamed vegetables and hard-boiled eggs, boiled potato, fried tofu and tempeh, and lontong (rice wrapped in a banana leaf), served with a peanut sauce dressing.", "https://media-cdn.tripadvisor.com/media/photo-s/0e/a0/5c/76/gado-gado-indonesian.jpg", false); 
 
 INSERT INTO Food (continent, country, dishName, description, image, tried)
 VALUES("Asia", "China", "La Zi Ji", "La Zi Ji usually refers to Chongqing chicken with chili peppers the spicy taste) and Sichuan peppercorns (numb feeling ). In Chinese, we call the dish La-zi-ji, which mainly mean dried chili pepper chicken.", "https://i.pinimg.com/originals/ac/71/7c/ac717cf305ec7c8d956c76c279eaaa6d.jpg", false); 

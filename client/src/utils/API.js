@@ -44,6 +44,14 @@ export default {
     });
   },
 
+  // search2: function(search) {
+  //   console.log("in API SEARCH2: " + JSON.stringify(search))
+  //   return axios.post("/searchtype", search, yelpResults => {
+  //     console.log("in API SEARCH: " + yelpResults);
+  //     return yelpResults;
+  //   });
+  // },
+
   saveFood: function(foodId) {
     console.log("IN SAVE FOOD!" + JSON.stringify(foodId));
     return axios.post("/api/foods/save", foodId);

@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 import YelpButton from "../YelpButton";
 import TriedButton from "../TriedButton";
-// import SaveButton from "../SaveButton";
+import SaveButton from "../SaveButton";
 import DeleteButton from "../DeleteButton";
 import ModalRating from "../ModalRating";
 
@@ -42,11 +42,12 @@ const SearchCard = props => {
           </div>
           <div className="col-sm-1">
             {/* <TriedButton id={props.id} tried={props.tried}/> */}
-            <ModalRating tried={props.tried} {...props} />
-            <button data-id={props.id} onClick={() => {props.saveButtonClick(props.id)}} className="btn btn-dark save-btn">Save</button>
-            {/* <SaveButton data-id={props.id} key={props.key} SaveButtonClick={props.SaveButtonClick}/> */}
+            {/* <ModalRating tried={props.tried} {...props} /> */}
+            {props.button === "save" ? <SaveButton data-id={props.id} id={props.id} key={props.key} SaveButtonClick={props.saveButtonClick}/> : <ModalRating tried={props.tried} {...props} />}
+            {/* <button data-id={props.id} onClick={() => {props.saveButtonClick(props.id)}} className="btn btn-dark save-btn">Save</button> */}
+            {/* <SaveButton data-id={props.id} id={props.id} key={props.key} SaveButtonClick={props.saveButtonClick}/> */}
             <YelpButton yelp={props.yelp} dishName={props.dishName}/>
-            <DeleteButton delete={props.delete} id={props.id}/>
+             {props.button !== "save" ? <DeleteButton delete={props.delete} id={props.id}/> : null}
           </div>
           </div>
       </span>

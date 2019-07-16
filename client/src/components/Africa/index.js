@@ -15,16 +15,20 @@ function Africa(props) {
             className="dot Nigeria-dot"
             onClick={props.handleInputClick}
             data-search="Nigeria"
+            data-type="Nigerian"
           />
           <span
             className="dot Egypt-dot"
             onClick={props.handleInputClick}
             data-search="Egypt"
+            data-type="Egyptian"
+
           />
           <span
             className="dot Ethiopia-dot"
             onClick={props.handleInputClick}
             data-search="Ethiopia"
+            data-type="Ethiopia"
           />
         </div>
       </div>

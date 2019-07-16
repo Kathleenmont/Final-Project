@@ -100,7 +100,7 @@ class Login extends React.Component {
               </form>
               <br />
               <p>
-                Or sign up <a>here</a>
+              Not a user? <a href="/signup">Sign Up</a>
               </p>
             </div>
           </div>
