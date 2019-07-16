@@ -6,6 +6,8 @@ import SearchResultsWrapper from "../components/SearchResultsWrapper";
 import YelpCard from "../components/YelpCard";
 import TriedCard from "../components/TriedCard";
 import Nav from "../components/Nav";
+import SaveCard from "../components/SaveCard";
+import "./saved.css";
 
 
 class Saved extends Component {
@@ -198,12 +200,13 @@ class Saved extends Component {
      
       <div id="search-page-container">
          <Nav click={this.onSearchClick} currentMap={this.state.currentMap}/>
-        <div className="want-to-try">
-          <h1>Dishes to TRY!</h1>
+         <h1>Dishes to TRY!</h1>
+        <div className="want-to-try-div container-fluid saved-wrapper">
+         
         {/* <Jumbotron /> */}
         {/* <SearchResultsWrapper> */}
         {this.state.foods.map(food => (
-          <SearchCard
+          <SaveCard
             // saveButtonClick={this.saveButtonClick}
             key={food.id}
             id={food.id}

@@ -47,7 +47,7 @@ INSERT INTO Food (continent, country, dishName, description, image, tried)
 VALUES("North America", "Puerto Rico", "Mofongo", "A mix of mashed plantains, seasonings, and an unlimited choice of fillings—including vegetables, shrimp, steak, pork, and seafood. The plantains themselves are picked green, then fried, then mashed to form a ball around a savory middle.", "https://i.pinimg.com/originals/aa/28/f7/aa28f74b0533b2c08b2a6c5287f4fbea.jpg", false); 
 
 INSERT INTO Food (continent, country, dishName, description, image, tried)
-VALUES("North America", "Puerto Rico", "Lechón Asado", "This dish is prepared by slow roasting the whole pig— with salt, pepper, oregano, garlic, and ajíes dulces (small sweet cooking peppers)—over a wood charcoal fire and is commonly served cafeteria style with people taking their place in line to sample their favorite cuts.",  "https://media-cdn.tripadvisor.com/media/photo-s/0f/ae/b0/cd/roast-pork-rice-with.jpg", false); 
+VALUES("North America", "Puerto Rico", "Lechon Asado", "This dish is prepared by slow roasting the whole pig— with salt, pepper, oregano, garlic, and ajíes dulces (small sweet cooking peppers)—over a wood charcoal fire and is commonly served cafeteria style with people taking their place in line to sample their favorite cuts.",  "https://media-cdn.tripadvisor.com/media/photo-s/0f/ae/b0/cd/roast-pork-rice-with.jpg", false); 
 
 INSERT INTO Food (continent, country, dishName, description, image, tried)
 VALUES("North America", "Puerto Rico", "Pollo Guisado", "A one-pot chicken stew, Dark meat chicken is browned and cooked down with Adobo, sofrito, achiote, garlic, cilantro, oregano, and other seasonings.", "https://i.ytimg.com/vi/nGDrrGUoR_k/maxresdefault.jpg", false); 
@@ -56,10 +56,10 @@ INSERT INTO Food (continent, country, dishName, description, image, tried)
 VALUES("North America", "Puerto Rico", "Pasteles", "Pasteles combine soft vegetable dough and meat filling, steamed in banana leaves for a flavorful little pack of delicious food. The dough is a seasoned mixture of grated green plantains, green bananas, malanga/yutía (a root vegetable similar to yuca), and potato or pumpkin with milk.", "https://cdn.shopify.com/s/files/1/2396/9693/products/pasteles4_530x@2x.jpg?v=1553715055", false); 
 
 INSERT INTO Food (continent, country, dishName, description, image, tried)
-VALUES("North America", "Puerto Rico", "Pastelón", "Pastelón a classic Puerto Rican dish made with layers of thinly-sliced plantains, ground beef, and cheese! ", "https://images-gmi-pmc.edge-generalmills.com/7a47adaa-7a31-458a-a2b6-b052ae6066ee.jpg", false); 
+VALUES("North America", "Puerto Rico", "Pastelon", "Pastelón a classic Puerto Rican dish made with layers of thinly-sliced plantains, ground beef, and cheese! ", "https://images-gmi-pmc.edge-generalmills.com/7a47adaa-7a31-458a-a2b6-b052ae6066ee.jpg", false); 
 
 INSERT INTO Food (continent, country, dishName, description, image, tried)
-VALUES("South America", "Peru", "Lomo Saltado", "this dish represents a fusion of Chinese stir frying and classic Peruvian ingredients. Juicy strips of soy-marinated beef (or alpaca), onions, tomatoes, aji chilies, and other spices are stir-fried until the beef is just cooked and the tomatoes and onions start to form a robust, meaty gravy.",  "https://dinnerthendessert.com/wp-content/uploads/2015/05/Lomo-Saltado-Side.jpg", false); 
+VALUES("South America", "Peru", "Lomo Saltado", "This dish represents a fusion of Chinese stir frying and classic Peruvian ingredients. Juicy strips of soy-marinated beef (or alpaca), onions, tomatoes, aji chilies, and other spices are stir-fried until the beef is just cooked and the tomatoes and onions start to form a robust, meaty gravy.",  "https://dinnerthendessert.com/wp-content/uploads/2015/05/Lomo-Saltado-Side.jpg", false); 
 
 INSERT INTO Food (continent, country, dishName, description, image, tried)
 VALUES("South America", "Peru", "Aji de Gallina", "Shredded chicken in a thick sauce made with cream, ground walnuts, cheese, and aji amarillo.", "https://okdiario.com/img/2018/10/10/receta-de-aji-de-gallina-655x368.jpg", false); 
@@ -98,10 +98,10 @@ INSERT INTO Food (continent, country, dishName, description, image, tried)
 VALUES("South America",  "Brazil", "Coxinhas", 'Little raindrops of fried goodness usually filled with chicken and a very creamy cheese called "catupiry."', "https://guiadacozinha.com.br/wp-content/uploads/2017/03/coxinha-de-frango-cremosa.jpg", false); 
 
 INSERT INTO Food (continent, country, dishName, description, image, tried)
-VALUES("South America",  "Brazil", "Salpicão", "A salad made of chicken, ham, raisins, carrots, apples, olives, and mayonnaise, and topped with shoestring potatoes.", "https://www.receitasdecomidas.com.br/wp-content/uploads/2016/12/salpic%C3%A3o-420x279.jpg", false); 
+VALUES("South America",  "Brazil", "Salpicao", "A salad made of chicken, ham, raisins, carrots, apples, olives, and mayonnaise, and topped with shoestring potatoes.", "https://www.receitasdecomidas.com.br/wp-content/uploads/2016/12/salpic%C3%A3o-420x279.jpg", false); 
 
 INSERT INTO Food (continent, country, dishName, description, image, tried)
-VALUES("South America",  "Brazil", "Empadão", "A baked casserole usually made with chicken, olives, hearts of palm, corn, and other fillings.", "https://guiadacozinha.com.br/wp-content/uploads/2018/09/empadao-fricasse-frango.jpg", false); 
+VALUES("South America",  "Brazil", "Empadao", "A baked casserole usually made with chicken, olives, hearts of palm, corn, and other fillings.", "https://guiadacozinha.com.br/wp-content/uploads/2018/09/empadao-fricasse-frango.jpg", false); 
 
 INSERT INTO Food (continent, country, dishName, description, image, tried)
 VALUES("Africa", "Ethiopia", "Tibs", 'The country’s "go-to meat dish," as Curtis describes it, is usually made from beef cut into small chunks and sautéed in butter or oil with onions, garlic, hot pepper and rosemary. Served with injera.', "https://cdn-image.foodandwine.com/sites/default/files/styles/medium_2x/public/201211-xl-ethiopian-spiced-lamb-stew.jpg?itok=3N4wF3cb", false); 
@@ -116,7 +116,7 @@ INSERT INTO Food (continent, country, dishName, description, image, tried)
 VALUES("Africa", "Ethiopia", "Doro Wat", "This red stew gets its deep red hue from berbere, and the richness is often offset with an accompaniment of fresh cheese and gomen (stewed greens). ", "https://www.seriouseats.com/recipes/images/2014/03/20140327-287489-cook-the-book-doro-wat.jpg", false); 
 
 INSERT INTO Food (continent, country, dishName, description, image, tried)
-VALUES("Africa", "Ethiopia", "Fir-Fir ", "The most typical Ethiopian breakfast is fir-fir, shredded leftover injera that’s stir-fried with berbere and kibbe. The spicy, carb-y morning meal might be mixed with leftover shiro or meat stews.", "https://d339dxqzr61e5.cloudfront.net/system/recipe_pictures/24305/medium/965e1d9d21012b4e19a750a1798f02ec.jpg?1495234359", false); 
+VALUES("Africa", "Ethiopia", "Fir Fir ", "The most typical Ethiopian breakfast is fir-fir, shredded leftover injera that’s stir-fried with berbere and kibbe. The spicy, carb-y morning meal might be mixed with leftover shiro or meat stews.", "https://d339dxqzr61e5.cloudfront.net/system/recipe_pictures/24305/medium/965e1d9d21012b4e19a750a1798f02ec.jpg?1495234359", false); 
 
 INSERT INTO Food (continent, country, dishName, description, image, tried)
 VALUES("Africa", "Nigeria", "Bean and Plantain Pottage", "A thick and seasoned bean and plantain stew.", "https://wejacksonites.files.wordpress.com/2017/09/how-to-cook-beans-and-plantain-porridge.jpg?w=748", false); 
@@ -146,7 +146,7 @@ INSERT INTO Food (continent, country, dishName, description, image, tried)
 VALUES("Africa", "Egypt", "Fattah", "Fattah goes all the way back to ancient Egypt where it was served in big feasts, celebrations such as weddings and the birth of a new baby. Still today fattah is a main dish in the first day of the Islamic feast (Eid-al-adha). It is a combination of crispy bread, rice, meat and vinegar/tomato sauce.", "http://www.egypttoday.com/images/larg/48380.jpg", false); 
 
 INSERT INTO Food (continent, country, dishName, description, image, tried)
-VALUES("Africa", "Egypt", "Macaroni Béchamel", "Made with rigatoni noodles, minced meat cooked in chopped onion and tomato paste, topped with the classic béchamel sauce. It’s hard to not go for seconds!", "https://tarasmulticulturaltable.com/wp-content/uploads/2019/01/Macarona-Bechamel-Egyptian-Baked-Pasta-6-of-7.jpg", false); 
+VALUES("Africa", "Egypt", "Macaroni Bechamel", "Made with rigatoni noodles, minced meat cooked in chopped onion and tomato paste, topped with the classic béchamel sauce. It’s hard to not go for seconds!", "https://tarasmulticulturaltable.com/wp-content/uploads/2019/01/Macarona-Bechamel-Egyptian-Baked-Pasta-6-of-7.jpg", false); 
 
 INSERT INTO Food (continent, country, dishName, description, image, tried)
 VALUES("Europe", "Poland", "Golabki", "Gołąbki is a typical traditional Polish food made of minced pork with some rice, onion, mushrooms, wrapped in white cabbage leaves. There are also other variations of fillings such as poultry, mutton or without meat. Before serving they are simmered / fried.", "https://static.gotujmy.pl/ZDJECIE_PRZEPISU_ETAP/golabki-z-mlodej-kapusty-z-miesem-i-kasza-418565.jpg", false); 
@@ -164,7 +164,7 @@ INSERT INTO Food (continent, country, dishName, description, image, tried)
 VALUES("Europe", "Poland", "Rosol", "Rosół is the most common soup served in Poland. Commonly served with homemade noodles. The ingredients are chicken, onion, small leek, green celery, parsley, cabbage, salt and pepper.", "https://api.culture.pl/sites/default/files/styles/1920_auto/public/images/imported/KUCHNIA/rosol/rosol_east_news_.jpg?itok=ptdZNATd", false); 
 
 INSERT INTO Food (continent, country, dishName, description, image, tried)
-VALUES("Europe", "Spain", "Tortilla Española", "This is the Spanish version of omelets and made of eggs, potatoes, and onions. After slow frying the potatoes and onions in olive oil, you beat the eggs to make a delicious dish. Like any omelet, you can add ingredients to your taste.", "https://www.goya.com/media/3816/tortilla-espan-ola-potato-omelet.jpg?quality=80",false); 
+VALUES("Europe", "Spain", "Cochinillo Asado", "Cochinillo asado, or roast suckling pig, is one of the most typical dishes in the cuisine of Castilla, Spain, especially in the city of Segovia. Chefs take pride in the tenderness of their roast pigs and prove how delicate the meat is by cutting the pig with a plate instead of a knife.", "https://www.hogarmania.com/archivos/201108/cochinillo-asado-xl.jpg",false); 
 
 INSERT INTO Food (continent, country, dishName, description, image, tried)
 VALUES("Europe", "Spain", "Pisto", "This is a great starter or side dish. It’s the Spanish version of ratatouille, and you can find it in most places. You’ll also commonly find it served with fried eggs or chorizo.", "https://spanishsabores.com/wp-content/uploads/2016/01/Pisto-javier-flickr.jpg", false); 
@@ -235,9 +235,6 @@ VALUES("Asia", "China", "Hainan Chicken", 'Named after the balmy tropical island
 
 INSERT INTO Food (continent, country, dishName, description, image, tried)
 VALUES("Asia", "China", "Biang Biang Noodles", 'A specialty of Xian is a dish that is made with wide noodles and served with toppings of eggs, tomatoes, and beef.', 'https://www.seriouseats.com/images/2014/01/140119-280457-Biang-noodles.JPG', false); 
-
-INSERT INTO Food (continent, country, dishName, description, image, tried)
-VALUES("Asia", "China", "Congee", "Congee is a rice porridge dish that's often eaten for breakfast. It's usually eaten alongside meat, fish, salted duck eggs, or century eggs, and fried breadsticks called youtiao. Congee is the perfect dish when you're sick, or when the weather is chilly.", 'https://www.seriouseats.com/recipes/images/2014/08/20140828-ground-pork-and-corn-congee-shao-zhong-8-1500x1125.jpg', false); 
 
 INSERT INTO Food (continent, country, dishName, description, image, tried)
 VALUES("Asia", "China", "Congee", "Congee is a rice porridge dish that's often eaten for breakfast. It's usually eaten alongside meat, fish, salted duck eggs, or century eggs, and fried breadsticks called youtiao. Congee is the perfect dish when you're sick, or when the weather is chilly.", 'https://www.seriouseats.com/recipes/images/2014/08/20140828-ground-pork-and-corn-congee-shao-zhong-8-1500x1125.jpg', false); 

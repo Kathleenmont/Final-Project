@@ -146,8 +146,8 @@ app.post("/search", (req, res) => {
       }
     )
     .then(searchResult => {
-      console.log(res.data)
-      if (res.data === undefined || res.data.businesses.length <= 3 ) {
+      // console.log("res.data" + res.data.businesses)
+      if (searchResult.data === undefined || searchResult.data.businesses.length < 3 ) {
         axios.get(
           "https://api.yelp.com/v3/businesses/search?term=" +
             req.body.type +
@@ -159,6 +159,7 @@ app.post("/search", (req, res) => {
             }
           }
         ).then(searchResult => {
+          console.log(searchResult.data + "yes undefined or less than 3")
           res.json(searchResult.data)
         })
         .catch(
@@ -168,9 +169,10 @@ app.post("/search", (req, res) => {
         );
 
       } else {
+        // console.log(res.data + "else not undefined or less than 3")
         res.json(searchResult.data);
       }
-      console.log(searchResult.data);
+      // console.log(searchResult.data);
       // res.json(searchResult.data);
     })
     .catch(

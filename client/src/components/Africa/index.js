@@ -28,7 +28,7 @@ function Africa(props) {
             className="dot Ethiopia-dot"
             onClick={props.handleInputClick}
             data-search="Ethiopia"
-            data-type="Ethiopia"
+            data-type="Ethiopian"
           />
         </div>
       </div>

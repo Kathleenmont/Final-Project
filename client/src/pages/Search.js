@@ -17,6 +17,7 @@ import "./search.css";
 // } from "react-scrollable-anchor";
 
 import Nav from "../components/Nav";
+import { throws } from "assert";
 
 let query;
 // let style;
@@ -117,6 +118,7 @@ class Search extends Component {
     e.preventDefault();
     console.log(e.target.getAttribute("data-search"));
     query = e.target.getAttribute("data-search");
+    const type = e.target.getAttribute("data-type");
     const search = { coun: query };
     API.getFoodsByCountry(search)
       .then(res => {
@@ -125,6 +127,7 @@ class Search extends Component {
           foods: res.data,
           showSearch: true,
           continent: this.continent,
+          type: type,
           country: "",
           dishName: "",
           description: "",
@@ -148,8 +151,8 @@ class Search extends Component {
 
   handleInputClickYelp = e => {
     e.preventDefault();
-
-    const search = { search: e.target.getAttribute("data-name"), type: e.target.getAttribute("data-type")};
+console.log(e.target)
+    const search = { search: e.target.getAttribute("data-name"), type: this.state.type};
     // const type = {type: e.target.getAttribute("data-type")}
     API.search(search)
       
