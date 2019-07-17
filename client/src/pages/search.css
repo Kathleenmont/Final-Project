@@ -11,15 +11,25 @@ a {
     text-decoration: none;
 }
 
-/* #search-page-container {
+#search-page-container {
     width: 100%
 } */
 
-/* #search-page-container .scroll-section {
+ #search-page-container .scroll-section {
 position: relative;
 width: 100%;
   
-} */
+} 
+.flex-row > [class*='col-'] {
+    display: flex;
+    /* flex-direction: column; */
+    flex-direction: row; /* new */
+    flex-wrap: wrap; /* new */
+    align-content: space-between; /* new */
+}
+.core-values-left > div {
+    flex: 1; /* new */
+}
 
 /* .search-area {
     /* padding-top: 50px; */

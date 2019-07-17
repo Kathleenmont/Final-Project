@@ -260,8 +260,8 @@ console.log(e.target)
             continent map{" "}
           </a>
         </div>
-        <div  className="scroll-section tried-container container-fluid  search-area saved-wrapper"  onClick={this.handleInputClick} style={this.state.showSearch === true ? styleFlex : styleNone}><br/>
-       
+        {/* <div  className="scroll-section tried-container container-fluid  search-area saved-wrapper"  onClick={this.handleInputClick} style={this.state.showSearch === true ? styleFlex : styleNone}><br/> */}
+      <div className="tried-container container-fluid saved-wrapper">
      
           {/* <SearchResultsWrapper showSearch={this.state.showSearch}> */}
             {this.state.foods.map(food => (
@@ -278,9 +278,9 @@ console.log(e.target)
                 button="save"
               />
             ))}
-       
+       </div>
           {/* </SearchResultsWrapper> */}
-        </div>
+        {/* </div> */}
      
         <div id="searchYelp" className="scroll-section" ><br/>
         <div className="link-container">

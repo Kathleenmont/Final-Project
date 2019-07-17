@@ -1,15 +1,37 @@
-.container {
+/* .container {
     /* position: relative; */
-    width: 100%;
+    /* width: 100%;
     margin: 0 auto;
     padding: 30px;
     
 }
 .container-fluid {
     width: 100%
-  }
+  } */
 
   /* .wrapper {
       max-width: 100%;
       max-width: 1000px;
-  } */
+  } */ 
+
+  .tried-container {
+    background: white;
+    height: 100%;
+    width: 100%;
+    /* margin: 10px; */
+    display: flex;
+    flex-flow: row wrap;
+    padding: 20px;
+    justify-content: space-around;
+    align-content: flex-start;
+    overflow: auto;
+}
+
+.container-fluid {
+    width: 100%
+  }
+
+  .saved-wrapper {
+    max-width: 100%;
+    /* min-width: 1000px; */
+}

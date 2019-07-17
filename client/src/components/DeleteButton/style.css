@@ -2,3 +2,8 @@
     background: black;
     color: white;
 }
+
+.delete-btn:hover {
+    background: #DB3636;
+    color: black;
+}

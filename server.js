@@ -46,10 +46,10 @@ router.use(function(req, res) {
   res.sendFile(path.join(__dirname, "../client/build/index.html"));
 });
 
-// -------test route
-app.get("/blah", function(req, res) {
-  res.json("blah route");
-});
+// -------test route---------
+// app.get("/blah", function(req, res) {
+//   res.json("blah route");
+// });
 
 app.get("/api/foods", function(req, res) {
   db.Food.findAll({}).then(function(dbPost) {

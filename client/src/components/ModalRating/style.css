@@ -3,3 +3,50 @@
     color: black;
     border: 3px solid black;
 }
+.tried-btn:hover {
+    background: #4ED3B0;
+    color: black;
+}
+
+.modal-header {
+    background: black;
+    color: white;
+    text-align: center;
+}
+
+.modal-title {
+    color: #4ED3B0;
+    text-align: center;
+}
+
+input[type=checkbox], input[type=radio] {
+    margin-right: 10px;
+    /* size: b4; */
+    width: 2rem;
+}
+
+
+.modal-footer {
+    background: black;
+}
+
+.close-btn {
+background: white;
+color: black;
+}
+.close-btn:hover {
+    background: #A51C5C
+}
+
+.rate-btn {
+    background: white;
+    color: black;
+    border: 2px black;
+}
+
+.rate-btn:hover {
+    background: #4ED3B0;
+}
+/* .radio3 {
+    width: 5px;
+} */

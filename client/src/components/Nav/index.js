@@ -16,6 +16,9 @@ function Nav(props) {
       <Link className="navbar-brand" to="/saved">
         My List
       </Link>
+      <Link className="navbar-brand" to="/tried">
+        Tried
+      </Link>
       </div>
       
       {/* <div className="welcome-text-container"> */}

@@ -147,6 +147,6 @@
     /* background: yellow; */
     background: #D61D6A;
   }
-span:hover {
+.dot:hover {
   opacity: .7;
 }

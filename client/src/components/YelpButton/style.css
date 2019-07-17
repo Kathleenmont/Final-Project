@@ -4,3 +4,7 @@
    border: 3px solid black;
 }
 
+.yelp-btn:hover {
+   background: #A51C5C;
+}
+

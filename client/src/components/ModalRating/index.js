@@ -63,7 +63,7 @@ class ModalRating extends React.Component {
               </div>
               <div className="radio radio-3">
                 <label>
-                  <input type="radio" name="optradio" data-id="3" value="3"  onChange={this.handleOptionChange} checked={this.state.selectedOption === "3"}/>
+                  <input type="radio" name="optradio" className="radio3" data-id="3" value="3"  onChange={this.handleOptionChange} checked={this.state.selectedOption === "3"}/>
                   3 - Would like to have again
                 </label>
               </div>
@@ -76,10 +76,11 @@ class ModalRating extends React.Component {
             </form>
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="dark" onClick={this.handleClose}>
+            <Button variant="dark" className="close-btn" onClick={this.handleClose}>
               Close
             </Button>
             <Button
+              className="rate-btn"
               variant="primary"
               type="submit"
               onClick={() => {

@@ -6,7 +6,7 @@ console.log(props)
 
  
     return (   
-        <button data-id={props.id} onClick={() => {props.SaveButtonClick(props.id)}} className="btn btn-info save-btn">Save</button>
+        <button data-id={props.id} onClick={() => {props.SaveButtonClick(props.id)}} className="btn save-btn">Add</button>
     )
 
 

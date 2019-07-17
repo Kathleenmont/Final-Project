@@ -8,6 +8,7 @@ import Login from "./components/Login";
 import AuthButton from "./components/AuthButton";
 import SignUp from "./components/SignUp";
 import auth from "./utils/auth";
+import Tried from "./pages/tried";
 // import API from "./utils/API"
 // import NoMatch from "./pages/NoMatch";
 import "./App.css";
@@ -54,6 +55,7 @@ class App extends Component {
             <Switch>
               <PrivateRoute exact path="/" component={Search} auth={this.state.auth} currentMap={this.state.currentMap}  userName={this.state.auth.userName} searchClick={this.onSearchClick}/>
               <PrivateRoute exact path="/saved" component={Saved} auth={this.state.auth} userName={this.state.auth.userName} />
+              <PrivateRoute exact path="/tried" component={Tried} auth={this.state.auth} userName={this.state.auth.userName} />
               <Route exact path="/login" 
                            render={(props) => <Login {...props} auth={this.state.auth} />} />
               <Route exact path="/signup" render={(props) => <SignUp {...props} auth={this.state.auth} />}
