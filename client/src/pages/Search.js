@@ -26,42 +26,9 @@ let query;
 const styleNone = { display : "none" };
 
 const styleBlock = { display : "block" };
-const options = {
-  // duration of the scroll per 1000px, default 500
-  speed: 300,
- 
-  // minimum duration of the scroll
-  minDuration: 250,
- 
-  // maximum duration of the scroll
-  maxDuration: 2500,
- 
-  // DOM element to scroll, default window
-  // Pass a reference to a DOM object
-  // Example: document.querySelector('#element-to-scroll'),
-  element: document.querySelector('#searchYelp'),
- 
-  // Additional offset value that gets added to the desiredOffset.  This is
-  // useful when passing a DOM object as the desiredOffset and wanting to adjust
-  // for an fixed nav or to add some padding.
-  offset: 5,
- 
-  // should animated scroll be canceled on user scroll/keypress
-  // if set to "false" user input will be disabled until animated scroll is complete
-  // (when set to false, "passive" will be also set to "false" to prevent Chrome errors)
-  cancelOnUserAction: false,
- 
-  // Set passive event Listeners to be true by default. Stops Chrome from complaining.
-  passive: false,
- 
-  // Scroll horizontally rather than vertically (which is the default)
-  horizontal: false,
- 
-  // function that will be executed when the scroll animation is finished
-  onComplete: function() {}
-};
- 
-const desiredOffset = 1000;
+
+const styleFlex = {display : "flex" };
+
 
 class Search extends Component {
   constructor(props) {
@@ -255,30 +222,7 @@ console.log(e.target)
 
     return (
       <div>
-        {/* <div className="link-container">
-          <a href="#world-map" className="scroll">
-            {" "}
-            world map{" "}
-          </a>
-        </div> */}
-        {/* <div className="link-container">
-          <a href="#continentMap" className="scroll">
-            {" "}
-            continent map{" "}
-          </a>
-        </div> */}
-        {/* <div className="link-container">
-          <a href="#searchCountries" className="scroll">
-            {" "}
-            country search results{" "}
-          </a>
-        </div> */}
-        {/* <div className="link-container">
-          <a href="#searchYelp" className="scroll">
-            {" "}
-            yelp serch results{" "}
-          </a>
-        </div> */}
+       
         <Nav click={this.onSearchClick} currentMap={this.state.currentMap} userName={this.state.userName}/>
         <div id="world-map" className="scroll-section" >
           <WorldMap
@@ -310,15 +254,16 @@ console.log(e.target)
             currentMap={this.state.currentMap}
           />
         </div>
-
-        <div id="searchCountries" className="scroll-section"><br/>
-        <div className="link-container" style={this.state.showSearch ? styleBlock : styleNone}>
+        <div id="searchCountries" className="link-container" style={this.state.showSearch ? styleBlock : styleNone}>
           <a href="#continentMap" className="scroll">
             {" "}
             continent map{" "}
           </a>
         </div>
-          <SearchResultsWrapper showSearch={this.state.showSearch}>
+        <div  className="scroll-section tried-container container-fluid  search-area saved-wrapper"  onClick={this.handleInputClick} style={this.state.showSearch === true ? styleFlex : styleNone}><br/>
+       
+     
+          {/* <SearchResultsWrapper showSearch={this.state.showSearch}> */}
             {this.state.foods.map(food => (
               <SaveCard
                 saveButtonClick={this.saveButtonClick}
@@ -333,7 +278,8 @@ console.log(e.target)
                 button="save"
               />
             ))}
-          </SearchResultsWrapper>
+       
+          {/* </SearchResultsWrapper> */}
         </div>
      
         <div id="searchYelp" className="scroll-section" ><br/>
