@@ -16,6 +16,19 @@ body {
     overflow: auto;
 }
 
+.tried-container {
+    background: white;
+    height: 100%;
+    width: 100%;
+    /* margin: 10px; */
+    display: flex;
+    flex-flow: row wrap;
+    padding: 20px;
+    justify-content: space-around;
+    align-content: flex-start;
+    overflow: auto;
+}
+
 .container-fluid {
     width: 100%
   }

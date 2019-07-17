@@ -9,6 +9,8 @@ import Africa from "../components/Africa";
 import Europe from "../components/Europe";
 import YelpCard from "../components/YelpCard";
 import Asia from "../components/Asia";
+import SaveCard from "../components/SaveCard";
+// import animateScrollTo from 'animated-scroll-to';
 import animateScrollTo from 'animated-scroll-to';
 import "./search.css";
 // import ScrollableAnchor, {
@@ -24,6 +26,42 @@ let query;
 const styleNone = { display : "none" };
 
 const styleBlock = { display : "block" };
+const options = {
+  // duration of the scroll per 1000px, default 500
+  speed: 300,
+ 
+  // minimum duration of the scroll
+  minDuration: 250,
+ 
+  // maximum duration of the scroll
+  maxDuration: 2500,
+ 
+  // DOM element to scroll, default window
+  // Pass a reference to a DOM object
+  // Example: document.querySelector('#element-to-scroll'),
+  element: document.querySelector('#searchYelp'),
+ 
+  // Additional offset value that gets added to the desiredOffset.  This is
+  // useful when passing a DOM object as the desiredOffset and wanting to adjust
+  // for an fixed nav or to add some padding.
+  offset: 5,
+ 
+  // should animated scroll be canceled on user scroll/keypress
+  // if set to "false" user input will be disabled until animated scroll is complete
+  // (when set to false, "passive" will be also set to "false" to prevent Chrome errors)
+  cancelOnUserAction: false,
+ 
+  // Set passive event Listeners to be true by default. Stops Chrome from complaining.
+  passive: false,
+ 
+  // Scroll horizontally rather than vertically (which is the default)
+  horizontal: false,
+ 
+  // function that will be executed when the scroll animation is finished
+  onComplete: function() {}
+};
+ 
+const desiredOffset = 1000;
 
 class Search extends Component {
   constructor(props) {
@@ -80,6 +118,12 @@ class Search extends Component {
     });
     console.log(this.state);
   }
+
+  // default options
+
+ 
+
+
 
   scrollToContinent() {
     const myVar = setTimeout(this.goToContinent, 100);
@@ -146,6 +190,8 @@ class Search extends Component {
     const myVar = setTimeout(this.goToYelp, 1500);
   }
    goToYelp = () => {
+    // animateScrollTo(desiredOffset, options);
+    animateScrollTo(document.querySelector('#searchYelp'))
     animateScrollTo(document.querySelector('#searchYelp'))
   }
 
@@ -209,12 +255,12 @@ console.log(e.target)
 
     return (
       <div>
-        <div className="link-container">
+        {/* <div className="link-container">
           <a href="#world-map" className="scroll">
             {" "}
             world map{" "}
           </a>
-        </div>
+        </div> */}
         {/* <div className="link-container">
           <a href="#continentMap" className="scroll">
             {" "}
@@ -227,13 +273,13 @@ console.log(e.target)
             country search results{" "}
           </a>
         </div> */}
-        <div className="link-container">
+        {/* <div className="link-container">
           <a href="#searchYelp" className="scroll">
             {" "}
             yelp serch results{" "}
           </a>
-        </div>
-        <Nav click={this.onSearchClick} currentMap={this.state.currentMap} />
+        </div> */}
+        <Nav click={this.onSearchClick} currentMap={this.state.currentMap} userName={this.state.userName}/>
         <div id="world-map" className="scroll-section" >
           <WorldMap
             handleInputClick={this.handleInputClick}
@@ -274,7 +320,7 @@ console.log(e.target)
         </div>
           <SearchResultsWrapper showSearch={this.state.showSearch}>
             {this.state.foods.map(food => (
-              <SearchCard
+              <SaveCard
                 saveButtonClick={this.saveButtonClick}
                 key={food.id}
                 id={food.id}

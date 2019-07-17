@@ -39,7 +39,7 @@ class ModalRating extends React.Component {
     console.log(this.state);
     return (
       <>
-        <Button variant="dark" onClick={this.handleShow}>
+        <Button variant="dark" onClick={this.handleShow} className="tried-btn">
           Tried
         </Button>
 

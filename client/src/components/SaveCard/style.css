@@ -3,7 +3,7 @@
     border-radius: 2px;
     position: relative;
     max-width: 500px;
-    min-width: 250px;
+    min-width: 500px;
     height: 500px;
     margin: 0 auto;
     margin-bottom: 15px;
@@ -16,11 +16,13 @@
   .card-header {
       background: black;
       color: white;
+      padding: 0;
+      padding-top: 5px;
   }
   .card-img-top {
       background: black;
       padding-bottom: 20px;
-      border-bottom: 17px solid black;
+      border-bottom: 23px solid black;
       border-radius: 0;
   
   }
@@ -41,7 +43,7 @@
     display: flex;
     justify-content: space-around;
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
   }
 
   .card-body {

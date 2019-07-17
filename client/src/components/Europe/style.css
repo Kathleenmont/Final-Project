@@ -23,20 +23,68 @@
 
   .Spain-dot {
     position: absolute;
-    top: 78%;
-    left: 28%;
-    background: greenyellow;
+    top: 77%;
+    left: 27%;
+    background:  #4ED3B0;
   }
+  #hover-spain {
+    display: none;
+    top: 62%;
+    left: 20%;
+    font-size: 36px;
+    position: absolute;
+    color:  #4ED3B0;
+    /* background: white; */
+    /* border: 3px solid black;
+    border-radius: 8px; */
+    font-weight: 800;
+}
+
+.Spain-dot:hover + #hover-spain {
+    display: block;
+}
   .Greece-dot {
     position: absolute;
-    top: 88%;
+    top: 85%;
     left: 48.5%;
-    background: aqua;
+    background: #D61D6A;
   }
+  #hover-greece {
+    display: none;
+    top: 90%;
+    left: 52%;
+    font-size: 36px;
+    position: absolute;
+    color: #D61D6A;
+    /* background: white; */
+    /* border: 3px solid black;
+    border-radius: 8px; */
+    font-weight: 800;
+}
+
+.Greece-dot:hover + #hover-greece {
+    display: block;
+}
   .Poland-dot {
     position: absolute;
-    top: 61%;
+    top: 58%;
     left: 49%;
-    background: palevioletred;
+    background: #F78C27;
   }
  
+  #hover-poland {
+    display: none;
+    top: 63%;
+    left: 49%;
+    font-size: 36px;
+    position: absolute;
+    color: #F78C27;
+    /* background: white; */
+    /* border: 3px solid black;
+    border-radius: 8px; */
+    font-weight: 800;
+}
+
+.Poland-dot:hover + #hover-poland {
+    display: block;
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import { withRouter} from "react-router-dom";
-import auth from "../../utils/auth.js"
+import auth from "../../utils/auth.js";
+import "./style.css";
 
 
 console.log(auth.isAuthenticated)
@@ -8,13 +9,13 @@ console.log(auth.isAuthenticated)
 
 const AuthButton = withRouter(({ history }, props) =>  (
     auth.isAuthenticated ? (
-      <p>
-        Welcome {auth.userName}! <button onClick={() => {
+      <p className="auth-text-nav navbar-brand">
+        Welcome {auth.userName}! <button className="btn logout-btn" onClick={() => {
           auth.signout(() => history.push('/'))
         }}>Sign out</button>
-      </p>
+      </p >
     ) : (
-      <p>You are not logged in.</p>
+      <p className="auth-text-nav">You are not logged in.</p>
     )
   ))
 export default AuthButton

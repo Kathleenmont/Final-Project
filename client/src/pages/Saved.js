@@ -199,8 +199,8 @@ class Saved extends Component {
     return (
      
       <div id="search-page-container">
-         <Nav click={this.onSearchClick} currentMap={this.state.currentMap}/>
-         <h1>Dishes to TRY!</h1>
+         <Nav click={this.onSearchClick} currentMap={this.state.currentMap} userName={this.state.userName}/>
+         {/* <h1>Dishes to TRY!</h1> */}
         <div className="want-to-try-div container-fluid saved-wrapper">
          
         {/* <Jumbotron /> */}
@@ -235,8 +235,9 @@ class Saved extends Component {
             />
           ))}
         </div>
-        <div className="tried">
         <h1>Dishes I've Tried</h1>
+        <div className="tried-container container-fluid saved-wrapper">
+       
         {this.state.foodsTried.map(foodTried => (
           <TriedCard
             // saveButtonClick={this.saveButtonClick}

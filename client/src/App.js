@@ -48,12 +48,12 @@ class App extends Component {
     return (
       <div>
         <Router>
-          <AuthButton userName={this.state.auth.userName}/>
+          {/* <AuthButton userName={this.state.auth.userName}/> */}
           <div>
             {/* <Nav click={this.onSearchClick} currentMap={this.state.currentMap}/> */}
             <Switch>
-              <PrivateRoute exact path="/" component={Search} auth={this.state.auth} currentMap={this.state.currentMap} searchClick={this.onSearchClick}/>
-              <PrivateRoute exact path="/saved" component={Saved} auth={this.state.auth} />
+              <PrivateRoute exact path="/" component={Search} auth={this.state.auth} currentMap={this.state.currentMap}  userName={this.state.auth.userName} searchClick={this.onSearchClick}/>
+              <PrivateRoute exact path="/saved" component={Saved} auth={this.state.auth} userName={this.state.auth.userName} />
               <Route exact path="/login" 
                            render={(props) => <Login {...props} auth={this.state.auth} />} />
               <Route exact path="/signup" render={(props) => <SignUp {...props} auth={this.state.auth} />}

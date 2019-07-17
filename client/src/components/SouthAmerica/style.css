@@ -20,18 +20,68 @@
   position: absolute;
   top: 35%;
   left: 57%;
-  background: greenyellow;
+  background: #DB3636;;
 }
+#hover-brazil {
+  display: none;
+  top: 40%;
+  left: 52%;
+  font-size: 36px;
+  position: absolute;
+  color: #DB3636;
+  /* background: white; */
+  /* border: 3px solid black; */
+  /* border-radius: 8px; */
+  font-weight: 800;
+} 
+
+.Brazil-dot:hover + #hover-brazil {
+  display: block;
+  border: none;
+}
+
 .Colombia-dot {
   position: absolute;
   top: 9%;
   left: 35%;
-  background: aqua;
+  background: #A51C5C;
+}
+#hover-colombia {
+  display: none;
+  top: 15%;
+  left: 36%;
+  font-size: 36px;
+  position: absolute;
+  color:#A51C5C;
+  /* background: white; */
+  /* border: 3px solid black;
+  border-radius: 8px; */
+  font-weight: 800;
+}
+
+.Colombia-dot:hover + #hover-colombia {
+  display: block;
 }
 .Peru-dot {
   position: absolute;
-  top: 30%;
+  top: 26%;
   left: 33%;
-  background: palevioletred;
+  background: #4ED3B0;
+}
+#hover-peru {
+  display: none;
+  top: 28%;
+  left: 24%;
+  font-size: 36px;
+  position: absolute;
+  color: #4ED3B0;
+  /* background: white; */
+  /* border: 3px solid black;
+  border-radius: 8px; */
+  font-weight: 800;
+}
+
+.Peru-dot:hover + #hover-peru {
+  display: block;
 }
 

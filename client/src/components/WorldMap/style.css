@@ -19,37 +19,134 @@
     position: absolute;
     top: 26%;
     left: 19%;
-    background: blue;
+    /* background: blue; */
+     background: #6D316D;
+    /* background: #832161 */
   }
+
+  #hover-NA {
+    display: none;
+    top: 33%;
+    left: 3%;
+    font-size: 36px;
+    position: absolute;
+    color: #6D316D;
+    /* background: white; */
+    /* border: 3px solid black;
+    border-radius: 8px; */
+    font-weight: 800;
+}
+
+.northAmerica-dot:hover + #hover-NA {
+    display: block;
+}
 
   .southAmerica-dot {
     position: absolute;
     top: 66%;
     left: 32%;
-    background: greenyellow;
+    /* background: greenyellow; */
+    background: #DB3636;
+    /* background: #DA4167; */
   }
+  #hover-SA {
+    display: none;
+    top: 72%;
+    left: 13%;
+    font-size: 36px;
+    position: absolute;
+    color: #DB3636;
+    /* background: white; */
+    /* border: 3px solid black;
+    border-radius: 8px; */
+    font-weight: 800;
+}
+
+.southAmerica-dot:hover + #hover-SA {
+    display: block;
+}
   .africa-dot {
     position: absolute;
-    top: 50%;
+    top: 48%;
     left: 54%;
-    background: aqua;
+    /* background: aqua; */
+    background: #A51C5C;
+    /* background: #DA4167; */
   }
+
+  #hover-Africa {
+    display: none;
+    top: 54%;
+    left: 54%;
+    font-size: 36px;
+    position: absolute;
+    color: #A51C5C;
+    /* background: white; */
+    /* border: 3px solid black;
+    border-radius: 8px; */
+    font-weight: 800;
+}
+
+.africa-dot:hover + #hover-Africa {
+    display: block;
+}
+  
   .europe-dot {
     position: absolute;
-    top: 25%;
+    top: 24%;
     left: 55%;
-    background: palevioletred;
+    /* background: palevioletred; */
+    background: #F78C27;
+    /* background: yellowgreen; */
   }
+
+  #hover-Europe {
+    display: none;
+    top: 17%;
+    left: 59%;
+    font-size: 36px;
+    position: absolute;
+    color: #F78C27;
+    /* background: white; */
+    /* border: 3px solid black;
+    border-radius: 8px; */
+    font-weight: 800;
+}
+
+.europe-dot:hover + #hover-Europe {
+    display: block;
+}
   .asia-dot {
     position: absolute;
     top: 23%;
     left: 82%;
-    background: purple;
+    /* background: purple; */
+    /* background: #6EB79C; */
+    background: #4ED3B0;
   }
+  #hover-Asia {
+    display: none;
+    top: 13%;
+    left: 74%;
+    font-size: 36px;
+    position: absolute;
+    color: #4ED3B0;
+    /* background: white; */
+    /* border: 3px solid black;
+    border-radius: 8px; */
+    font-weight: 800;
+}
+
+.asia-dot:hover + #hover-Asia {
+    display: block;
+}
   .australia-dot {
     position: absolute;
     top: 76%;
     left: 86%;
-    background: yellow;
+    /* background: yellow; */
+    background: #D61D6A;
   }
-
+span:hover {
+  opacity: .7;
+}

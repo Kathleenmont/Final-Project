@@ -1,3 +1,28 @@
-.navbar {
+.navbar  {
     margin-bottom: 20px;
+    position: relative;
+    background: black;
+    color: #A51C5C;
+    justify-content: space-between;
+   
+}
+.navbar-brand {
+    /* color: #DB3636; */
+    color: #A51C5C
+}
+.auth-text-nav {
+    display: flex;
+   align-content: flex-end;
+   color: #A51C5C;
+    margin-bottom: 0;
+    
+}
+h1 {
+    padding-right: 20px;
+    /* font-family: 'Notable', sans-serif; */
+
+    /* font-family: 'Rubik Mono One', sans-serif; */
+    /* font-family: 'Racing Sans One', cursive; */
+    font-family: 'Vast Shadow', cursive;
+
 }

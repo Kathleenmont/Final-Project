@@ -22,20 +22,71 @@
     position: absolute;
     top: 14%;
     left: 58%;
-    background: greenyellow;
+    background: #6D316D;
+  }
+  #hover-egypt {
+    display: none;
+    top: 0%;
+    left: 59%;
+    font-size: 36px;
+    position: absolute;
+    color: #6D316D;
+    /* background: white; */
+    /* border: 3px solid black; */
+    /* border-radius: 8px; */
+    font-weight: 800;
+  } 
+  
+  .Egypt-dot:hover + #hover-egypt {
+    display: block;
+    border: none;
   }
 
   .Nigeria-dot {
     position: absolute;
     top: 39%;
     left: 42%;
-    background: aqua;
+    background: #F78C27;
+  }
+  #hover-nigeria {
+    display: none;
+    top: 43%;
+    left: 42%;
+    font-size: 36px;
+    position: absolute;
+    color: #F78C27;
+    /* background: white; */
+    /* border: 3px solid black; */
+    /* border-radius: 8px; */
+    font-weight: 800;
+  } 
+  
+  .Nigeria-dot:hover + #hover-nigeria {
+    display: block;
+    border: none;
   }
 
   .Ethiopia-dot {
     position: absolute;
     top: 35%;
     left: 66%;
-    background: palevioletred;
+    background: #DB3636;
+  }
+  #hover-ethiopia {
+    display: none;
+    top: 40%;
+    left: 55%;
+    font-size: 36px;
+    position: absolute;
+    color: #DB3636;
+    /* background: white; */
+    /* border: 3px solid black; */
+    /* border-radius: 8px; */
+    font-weight: 800;
+  } 
+  
+  .Ethiopia-dot:hover + #hover-ethiopia {
+    display: block;
+    border: none;
   }
   

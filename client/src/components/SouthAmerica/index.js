@@ -17,18 +17,21 @@ function SouthAmerica(props) {
             data-search="Brazil"
             data-type="Brazilian"
           />
+           <span id="hover-brazil">Brazil</span>
           <span
             className="dot Peru-dot"
             onClick={props.handleInputClick}
             data-search="Peru"
             data-type="Peruvian"
           />
+          <span id="hover-peru">Peru</span>
           <span
             className="dot Colombia-dot"
             onClick={props.handleInputClick}
             data-search="Colombia"
             data-type="Colombian"
           />
+          <span id="hover-colombia">Colombia</span>
          
         </div>
       </div>
