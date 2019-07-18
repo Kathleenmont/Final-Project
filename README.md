@@ -1,29 +1,21 @@
-# Create React Express App
+# First Taste
 
-## About This Boilerplate
+This is a React app for the food adventurous. Find and track food dishes you would like to try from all over the world. 
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+## How it Works
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+Click on a continent dot to get started. Then click on a country to see some dishes. Find dishes that you want to try and add them to your list by clicking ADD, click FIND to see restaurants that may serve that dish in your area (as of now only serving the Philly area). 
 
-## Starting the app locally
+See your list by clicking MY LIST. After you try a dish on your list hit the TRIED button to give a rating to help you track how much you enjoyed it. To see the dishes you have tried and rated go to the TRIED tab on the nav bar. 
 
-Start by installing front and backend dependencies. While in this directory, run the following command:
+## Built With
 
-```
-npm install
-```
+React, Node, Express, JavaScript, HTML, CSS, and Bootstrap.
 
-This should install node modules within the server and the client folder.
+## Author
 
-After both installations complete, run the following command in your terminal:
+Kathleen Montesano
 
-```
-npm start
-```
+## Deployed
 
-Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
-
-## Deployment (Heroku)
-
-To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
+Deployed Project [Here](https://tranquil-mountain-91884.herokuapp.com)
