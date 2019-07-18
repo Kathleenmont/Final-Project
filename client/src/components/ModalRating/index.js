@@ -2,7 +2,7 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import "./style.css";
-import forwardRef from "@restart/context/forwardRef";
+
 
 class ModalRating extends React.Component {
   constructor(props, context) {
@@ -43,7 +43,7 @@ class ModalRating extends React.Component {
           Tried
         </Button>
 
-        <Modal show={this.state.show} onHide={this.handleClose}>
+        <Modal show={this.state.show} size="lg" onHide={this.handleClose}>
           <Modal.Header closeButton>
             <Modal.Title>How was this dish?</Modal.Title>
           </Modal.Header>

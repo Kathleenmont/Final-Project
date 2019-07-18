@@ -7,12 +7,19 @@ import YelpCard from "../components/YelpCard";
 import TriedCard from "../components/TriedCard";
 import Nav from "../components/Nav";
 // import SaveCard from "../components/SaveCard";
-import "./saved.css";
+import "./tried.css";
+import animateScrollTo from 'animated-scroll-to';
+const styleNone = { display : "none" };
 
+const styleBlock = { display : "block" };
+
+const styleFlex = {display : "flex" };
 
 class Tried extends Component {
-
-  state = {
+    constructor(props) {
+        super(props);
+    this.handleInputClickYelpTried = this.handleInputClickYelpTried.bind(this);
+  this.state = {
     yelp: [],
     foodsTried: [],
     continent: "",
@@ -22,9 +29,10 @@ class Tried extends Component {
     image: "",
     userName: this.props.auth.userName,
     userId: this.props.auth.userId,
-    rating: ""
+    rating: "",
+    showYelp: false
   };
-
+    }
   componentDidMount() {
     // this.loadFoods();
     this.loadTriedFoods();
@@ -136,13 +144,25 @@ class Tried extends Component {
 //      this.loadFoods();
 //     //  this.loadTriedFoods();
 //     }
+scrollToYelpSearch() {
+    const myVar = setTimeout(this.goToYelp, 1500);
+  }
+   goToYelp = () => {
+    // animateScrollTo(desiredOffset, options);
+    animateScrollTo(document.querySelector('#searchYelp'))
+    animateScrollTo(document.querySelector('#searchYelp'))
+  }
 
-  handleInputClickYelp = e => {
+
+  handleInputClickYelpTried = e => {
     e.preventDefault();
 
     console.log(e.target.getAttribute("data-name"));
-    const search = { search: e.target.getAttribute("data-name") };
-
+    const type = e.target.getAttribute("data-country");
+    console.log(type)
+    const search = { search: e.target.getAttribute("data-name"), type: type};
+    console.log(search)
+    // const type = e.target.getAttribute("data-type");
     API.search(search)
       .then(res => {
         console.log(res.data.businesses);
@@ -153,12 +173,15 @@ class Tried extends Component {
           country: "",
           dishName: "",
           description: "",
-          image: ""
+          image: "",
+          type: type,
+          showYelp: true
         });
       })
 
       .catch(err => console.log(err));
     console.log(this.state.yelp);
+    this.scrollToYelpSearch();
   };
 
 
@@ -203,7 +226,7 @@ class Tried extends Component {
 
     
       
-        <h1>Dishes I've Tried</h1>
+        <h2 id="tried-list" className="page-heading">Dishes I've Tried</h2>
         <div className="tried-container container-fluid saved-wrapper">
        
         {this.state.foodsTried.map(foodTried => (
@@ -217,15 +240,23 @@ class Tried extends Component {
             description={foodTried.description}
             image={foodTried.image}
             rating={foodTried.UsersFood.rating}
-            yelp={this.handleInputClickYelp}
+            yelpTried={this.handleInputClickYelpTried}
             delete={this.deleteTriedButtonClick}
           />
         ))}
         </div>
 
-        <div className="yelp-results">
+        <div id="searchYelp" className="scroll-section" style={this.state.showYelp ? styleBlock : styleNone}><br/>
+        <div className="link-container">
+          <a href="#tried-list" className="scroll" style={this.state.showYelp ? styleBlock : styleNone}>
+            {" "}
+            Tried List{" "}
+          </a>
+        </div>
+        <div className="yelp-wrapper">
           {this.state.yelp.map(yel => (
             <YelpCard
+            showYelp={this.state.showYelp}
               key={yel.id}
               name={yel.name}
               image={yel.image_url}
@@ -233,6 +264,7 @@ class Tried extends Component {
               yelpLink={yel.url}
             />
           ))}
+          </div>
         </div>
        
       </div>

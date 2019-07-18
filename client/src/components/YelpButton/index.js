@@ -6,7 +6,7 @@ function YelpButton (props) {
     return (
         
        
-        <button className="btn yelp-btn" data-name={props.dishName} onClick={props.yelp}>Search</button>
+        <button className="btn yelp-btn" data-name={props.dishName} onClick={props.yelp} data-country={props.country}>Search</button>
         
     )
     

@@ -28,12 +28,8 @@
     display: none;
     top: 33%;
     left: 3%;
-    font-size: 36px;
     position: absolute;
     color: #6D316D;
-    /* background: white; */
-    /* border: 3px solid black;
-    border-radius: 8px; */
     font-weight: 800;
 }
 
@@ -53,12 +49,8 @@
     display: none;
     top: 72%;
     left: 13%;
-    font-size: 36px;
     position: absolute;
     color: #DB3636;
-    /* background: white; */
-    /* border: 3px solid black;
-    border-radius: 8px; */
     font-weight: 800;
 }
 
@@ -78,12 +70,8 @@
     display: none;
     top: 54%;
     left: 54%;
-    font-size: 36px;
     position: absolute;
     color: #A51C5C;
-    /* background: white; */
-    /* border: 3px solid black;
-    border-radius: 8px; */
     font-weight: 800;
 }
 
@@ -104,12 +92,8 @@
     display: none;
     top: 17%;
     left: 59%;
-    font-size: 36px;
     position: absolute;
     color: #F78C27;
-    /* background: white; */
-    /* border: 3px solid black;
-    border-radius: 8px; */
     font-weight: 800;
 }
 
@@ -120,20 +104,14 @@
     position: absolute;
     top: 23%;
     left: 82%;
-    /* background: purple; */
-    /* background: #6EB79C; */
     background: #4ED3B0;
   }
   #hover-Asia {
     display: none;
     top: 13%;
     left: 74%;
-    font-size: 36px;
     position: absolute;
     color: #4ED3B0;
-    /* background: white; */
-    /* border: 3px solid black;
-    border-radius: 8px; */
     font-weight: 800;
 }
 

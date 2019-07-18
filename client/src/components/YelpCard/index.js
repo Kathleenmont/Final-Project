@@ -6,27 +6,27 @@ const YelpCard = props => {
 
 const styleBlock = { display : "block" };
     return (
-      <div className="container bg-light" style={props.showYelp === true ? styleBlock : styleNone}>
-        <a href={props.yelpLink} target="_blank" rel="noopener noreferrer">
+      // <div className="container bg-light" style={props.showYelp === true ? styleBlock : styleNone}>
+        <a href={props.yelpLink} target="_blank" rel="noopener noreferrer" className="yelp-link">
           <div className="card yelpCard">
             <div className="card-body">
-              <div className="card-header text-center">
-              <p className="card-title">{props.name}</p>
+              <div className="card-header text-center card-header-yelp">
+              <h3 className="card-title">{props.name}</h3>
                 <p className="card-title">{props.address}</p>
               </div>
   
             </div>
-            <div className="card-img-bottom text-center">
+            <div className="card-img-bottom text-center yelp-img-div">
               <img
                 alt={props.name}
                 src={props.image}
-                width="200"
+                width="300"
                 className="image"
               />
             </div>
           </div>
         </a>
-      </div>
+      // </div>
     );
   };
   

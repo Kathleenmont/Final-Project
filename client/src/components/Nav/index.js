@@ -6,8 +6,8 @@ import "./style.css";
 function Nav(props) {
   return (
     <nav className="navbar navbar-expand-lg container-flex">
-      <Link className="navbar-brand" to="/">
-      <h1>First Taste </h1>
+      <Link className="navbar-brand" onClick={props.click} to="/">
+      <h1 className="first-taste">First Taste </h1>
       </Link>
       <div className="nav-link-div">
       <Link className="navbar-brand" onClick={props.click} to="/">

@@ -17,6 +17,11 @@
 .modal-title {
     color: #4ED3B0;
     text-align: center;
+    font-size: 40px;
+}
+
+.modal-body {
+padding: 40px;
 }
 
 input[type=checkbox], input[type=radio] {

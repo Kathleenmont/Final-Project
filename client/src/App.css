@@ -25,10 +25,24 @@ body {
 }
 
 a:hover {
-  color: #4ED3B0
+  color: #4ed3b0;
+}
+
+.country-text {
+  font-size: 36px;
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .country-text {
+    font-size: 60px;
+  }
 }

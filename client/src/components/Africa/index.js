@@ -17,21 +17,21 @@ function Africa(props) {
             data-search="Nigeria"
             data-type="Nigerian"
           />
-           <span id="hover-nigeria">Nigeria</span>
+           <span id="hover-nigeria" className="country-text">Nigeria</span>
           <span
             className="dot Egypt-dot"
             onClick={props.handleInputClick}
             data-search="Egypt"
             data-type="Egyptian"
           />
-           <span id="hover-egypt">Egypt</span>
+           <span id="hover-egypt" className="country-text">Egypt</span>
           <span
             className="dot Ethiopia-dot"
             onClick={props.handleInputClick}
             data-search="Ethiopia"
             data-type="Ethiopian"
           />
-           <span id="hover-ethiopia">Ethiopia</span>
+           <span id="hover-ethiopia" className="country-text">Ethiopia</span>
         </div>
       </div>
     </div>

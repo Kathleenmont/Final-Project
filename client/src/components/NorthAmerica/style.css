@@ -29,7 +29,7 @@
     display: none;
     top: 68%;
     left: 35%;
-    font-size: 36px;
+    /* font-size: 36px; */
     position: absolute;
     color: #F78C27;
     /* background: white; */
@@ -50,9 +50,9 @@
 
   #hover-canada {
     display: none;
-    top: 25%;
+    top: 27%;
     left: 36%;
-    font-size: 36px;
+    /* font-size: 36px; */
     position: absolute;
     color: #4ED3B0;
     /* background: white; */
@@ -74,7 +74,7 @@
     display: none;
     top: 86%;
     left: 43%;
-    font-size: 36px;
+    /* font-size: 36px; */
     position: absolute;
     color: #6D316D;
     /* background: white; */
@@ -88,7 +88,7 @@
 }
   .puertoRico-dot {
     position: absolute;
-    top: 88%;
+    top: 89%;
     left:75%;
     background: #DB3636;
   }
@@ -96,7 +96,7 @@
     display: none;
     top: 92%;
     left: 70%;
-    font-size: 36px;
+    /* font-size: 36px; */
     position: absolute;
     color: #DB3636;
     /* background: white; */

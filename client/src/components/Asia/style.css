@@ -22,20 +22,55 @@
     position: absolute;
     top: 46%;
     left: 69%;
-    background: greenyellow;
+    background: #6D316D;
   }
+  #hover-korea {
+    display: none;
+    top: 49%;
+    left: 72%;
+    position: absolute;
+    color: #6D316D;
+    font-weight: 800;
+}
+
+.Korea-dot:hover + #hover-korea {
+    display: block;
+}
 
   .Indonesia-dot {
     position: absolute;
     top: 83%;
     left: 57%;
-    background: aqua;
+    background: #A51C5C;
   }
+  #hover-indonesia {
+    display: none;
+    top: 88%;
+    left: 44%;
+    position: absolute;
+    color: #A51C5C;
+    font-weight: 800;
+}
+
+.Indonesia-dot:hover + #hover-indonesia {
+    display: block;
+}
 
   .China-dot {
     position: absolute;
     top: 45%;
     left: 52%;
-    background: palevioletred;
+    background: #DB3636;
   }
-  
+  #hover-china {
+    display: none;
+    top: 33%;
+    left: 49%;
+    position: absolute;
+    color:  #DB3636;
+    font-weight: 800;
+}
+
+.China-dot:hover + #hover-china {
+    display: block;
+}

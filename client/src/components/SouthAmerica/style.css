@@ -26,7 +26,7 @@
   display: none;
   top: 40%;
   left: 52%;
-  font-size: 36px;
+  /* font-size: 36px; */
   position: absolute;
   color: #DB3636;
   /* background: white; */
@@ -50,7 +50,7 @@
   display: none;
   top: 15%;
   left: 36%;
-  font-size: 36px;
+  /* font-size: 36px; */
   position: absolute;
   color:#A51C5C;
   /* background: white; */
@@ -72,7 +72,7 @@
   display: none;
   top: 28%;
   left: 24%;
-  font-size: 36px;
+  /* font-size: 36px; */
   position: absolute;
   color: #4ED3B0;
   /* background: white; */

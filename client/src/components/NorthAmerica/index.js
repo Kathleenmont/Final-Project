@@ -20,28 +20,28 @@ function NorthAmerica(props) {
             data-search="United States"
             data-type="American"
           />
-           <span id="hover-US">United States</span>
+           <span id="hover-US" className="country-text">United States</span>
           <span
             className="dot canada-dot"
             onClick={props.handleInputClick}
             data-search="Canada"
             data-type="Canadian"
           />
-          <span id="hover-canada">Canada</span>
+          <span id="hover-canada" className="country-text">Canada</span>
           <span
             className="dot puertoRico-dot"
             onClick={props.handleInputClick}
             data-search="Puerto Rico"
             data-type="Puerto Rican"
           />
-          <span id="hover-PR">Puerto Rico</span>
+          <span id="hover-PR" className="country-text">Puerto Rico</span>
           <span
             className="dot mexico-dot"
             onClick={props.handleInputClick}
             data-search="Mexico"
             data-type="Mexican"
           />
-          <span id="hover-mexico">Mexico</span>
+          <span id="hover-mexico" className="country-text">Mexico</span>
         </div>
       </div>
     </div>

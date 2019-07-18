@@ -8,7 +8,9 @@
 }
 .navbar-brand {
     /* color: #DB3636; */
-    color: #A51C5C
+    color: #A51C5C;
+    font-size: 28px;
+    padding-left: 10px;
 }
 .auth-text-nav {
     display: flex;
@@ -25,4 +27,7 @@ h1 {
     /* font-family: 'Racing Sans One', cursive; */
     font-family: 'Vast Shadow', cursive;
 
+}
+.first-taste {
+font-size: 45px
 }

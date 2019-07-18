@@ -1,55 +1,58 @@
 .card-saved {
-    background: white;
-    border-radius: 2px;
-    position: relative;
-    max-width: 500px;
-    min-width: 500px;
-    height: 500px;
-    margin: 0 auto;
-    margin-bottom: 15px;
+  background: white;
+  border-radius: 2px;
+  position: relative;
+  max-width: 500px;
+  min-width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  margin-bottom: 15px;
 
-    /* margin-left: 10px; */
- 
-    box-shadow: 0 1px 2px rgb(96, 95, 95), 0 3px 6px #999;
-    
-  }
-  .card-header {
-      background: black;
-      color: white;
-      padding: 0;
-      padding-top: 5px;
-  }
-  .card-img-top {
-      background: black;
-      padding-bottom: 20px;
-      border-bottom: 23px solid black;
-      border-radius: 0;
-  
-  }
-  .card-img-top img {
-    border-radius: 2px;
-  }
-  .card-saved > .saved-img-div {
-    height: 60%;
-    overflow: hidden;
-    text-align: center;
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-bottom: 15px;
-    /* background:#6CADDC; */
-  }
+  /* margin-left: 10px; */
 
-  .buttons {
-    display: flex;
-    justify-content: space-around;
-    padding-top: 10px;
-    padding-bottom: 20px;
-  }
+  box-shadow: 0 1px 2px rgb(96, 95, 95), 0 3px 6px #999;
+}
+.card-text {
+  margin: 5px 5px 0px 5px;
+}
+.card-header {
+  background: black;
+  color: white;
+  padding: 0;
+  padding-top: 5px;
+}
+.card-img-top {
+  background: black;
+  padding-bottom: 20px;
+  border-bottom: 25px solid black;
+  border-radius: 0;
+}
+.card-title {
+  padding-bottom: 0px;
+}
+.card-img-top img {
+  border-radius: 2px;
+}
+.card-saved > .saved-img-div {
+  height: 60%;
+  overflow: hidden;
+  text-align: center;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 15px;
+  /* background:#6CADDC; */
+}
 
-  .card-body {
-    
-        height: 160px;
-        overflow: scroll;
-        /* margin: 10px; */
- 
-  }
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.card-body {
+  height: 160px;
+  overflow: scroll;
+  padding: 0px;
+  /* margin: 10px; */
+}

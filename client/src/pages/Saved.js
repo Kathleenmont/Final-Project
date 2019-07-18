@@ -7,7 +7,12 @@ import YelpCard from "../components/YelpCard";
 import TriedCard from "../components/TriedCard";
 import Nav from "../components/Nav";
 import SaveCard from "../components/SaveCard";
+import animateScrollTo from 'animated-scroll-to';
 import "./saved.css";
+const styleNone = { display : "none" };
+
+const styleBlock = { display : "block" };
+
 
 
 class Saved extends Component {
@@ -23,7 +28,8 @@ class Saved extends Component {
     image: "",
     userName: this.props.auth.userName,
     userId: this.props.auth.userId,
-    rating: ""
+    rating: "",
+    showYelp: false
   };
 
   componentDidMount() {
@@ -63,7 +69,7 @@ class Saved extends Component {
       })
       .catch(err => console.log(err));
 
-      this.loadTriedFoods();
+      // this.loadTriedFoods();
   };
 
   deleteButtonClick = key => {
@@ -88,27 +94,27 @@ class Saved extends Component {
     
   }
 
-  deleteTriedButtonClick = key => {
-    console.log(key);
-    let i;
-    for (i = 0; i < this.state.foodsTried.length; i++) {
-      if (key === this.state.foodsTried[i].id) {
-        console.log(
-          "food to delete" + this.state.foodsTried[i]
-        );
-        API.deleteFood({
-          foodId: this.state.foodsTried[i].id,
-          userId: this.state.userId
-        })
+  // deleteTriedButtonClick = key => {
+  //   console.log(key);
+  //   let i;
+  //   for (i = 0; i < this.state.foodsTried.length; i++) {
+  //     if (key === this.state.foodsTried[i].id) {
+  //       console.log(
+  //         "food to delete" + this.state.foodsTried[i]
+  //       );
+  //       API.deleteFood({
+  //         foodId: this.state.foodsTried[i].id,
+  //         userId: this.state.userId
+  //       })
         
-          .catch(err => console.log(err));
+  //         .catch(err => console.log(err));
 
-      }
-    }
-    this.loadFoods();
-    // this.loadTriedFoods();
+  //     }
+  //   }
+  //   this.loadFoods();
+  //   // this.loadTriedFoods();
     
-  }
+  // }
 
   TriedButtonClick = (key, rating )=> {
       console.log(key);
@@ -138,12 +144,48 @@ class Saved extends Component {
     //  this.loadTriedFoods();
     }
 
-  handleInputClickYelp = e => {
+  // handleInputClickYelp = e => {
+  //   e.preventDefault();
+
+  //   console.log(e.target.getAttribute("data-name"));
+  //   const search = { search: e.target.getAttribute("data-name") };
+
+  //   API.search(search)
+  //     .then(res => {
+  //       console.log(res.data.businesses);
+  //       this.setState({
+  //         yelp: res.data.businesses,
+  //         // search: query,
+  //         continent: "",
+  //         country: "",
+  //         dishName: "",
+  //         description: "",
+  //         image: ""
+  //       });
+  //     })
+
+  //     .catch(err => console.log(err));
+  //   console.log(this.state.yelp);
+  // };
+  scrollToYelpSearch() {
+    const myVar = setTimeout(this.goToYelp, 1500);
+  }
+   goToYelp = () => {
+    // animateScrollTo(desiredOffset, options);
+    animateScrollTo(document.querySelector('#searchYelp'))
+    animateScrollTo(document.querySelector('#searchYelp'))
+  }
+
+
+  handleInputClickYelpSaved = e => {
     e.preventDefault();
 
     console.log(e.target.getAttribute("data-name"));
-    const search = { search: e.target.getAttribute("data-name") };
-
+    const type = e.target.getAttribute("data-country");
+    console.log(type)
+    const search = { search: e.target.getAttribute("data-name"), type: type};
+    console.log(search)
+    // const type = e.target.getAttribute("data-type");
     API.search(search)
       .then(res => {
         console.log(res.data.businesses);
@@ -154,53 +196,55 @@ class Saved extends Component {
           country: "",
           dishName: "",
           description: "",
-          image: ""
+          image: "",
+          type: type,
+          showYelp: true
         });
       })
 
       .catch(err => console.log(err));
     console.log(this.state.yelp);
+    this.scrollToYelpSearch();
   };
 
-
-  loadTriedFoods = () => {
-    console.log("WHAT");
-    console.log(this.state.userId);
-    let id = { userId: this.state.userId };
-    API.getSavedFood(id)
-      .then(res => {
-       let triedFoodsArray = []
-       let i;
-       for (i = 0; i < res.data[0].Food.length; i++) {
-         if (res.data[0].Food[i].UsersFood.tried === true) {
-           console.log(res.data[0].Food[i])
-           triedFoodsArray.push(res.data[0].Food[i])
+  // loadTriedFoods = () => {
+  //   console.log("WHAT");
+  //   console.log(this.state.userId);
+  //   let id = { userId: this.state.userId };
+  //   API.getSavedFood(id)
+  //     .then(res => {
+  //      let triedFoodsArray = []
+  //      let i;
+  //      for (i = 0; i < res.data[0].Food.length; i++) {
+  //        if (res.data[0].Food[i].UsersFood.tried === true) {
+  //          console.log(res.data[0].Food[i])
+  //          triedFoodsArray.push(res.data[0].Food[i])
       
-         }
-       }
-          this.setState({
-            foodsTried: triedFoodsArray,
-            // search: query,
-            continent: "",
-            country: "",
-            dishName: "",
-            description: "",
-            image: ""
-          });
-        console.log(res.data[0].Food);
+  //        }
+  //      }
+  //         this.setState({
+  //           foodsTried: triedFoodsArray,
+  //           // search: query,
+  //           continent: "",
+  //           country: "",
+  //           dishName: "",
+  //           description: "",
+  //           image: ""
+  //         });
+  //       console.log(res.data[0].Food);
       
-        console.log(this.state);
-      })
-      .catch(err => console.log(err));
-  };
+  //       console.log(this.state);
+  //     })
+  //     .catch(err => console.log(err));
+  // };
 
 
   render() {
     return (
      
-      <div id="search-page-container">
+      <div id="my-list">
          <Nav click={this.onSearchClick} currentMap={this.state.currentMap} userName={this.state.userName}/>
-         {/* <h1>Dishes to TRY!</h1> */}
+         <h2 className="page-heading">To Try List</h2>
         <div className="want-to-try-div container-fluid saved-wrapper">
          
         {/* <Jumbotron /> */}
@@ -216,17 +260,24 @@ class Saved extends Component {
             description={food.description}
             image={food.image}
             tried={this.TriedButtonClick}
-            yelp={this.handleInputClickYelp}
+            yelp={this.handleInputClickYelpSaved}
             delete={this.deleteButtonClick}
             button="tried"
             
           />
         ))}
       </div >
-        {/* </SearchResultsWrapper> */}
-        <div className="yelp-results">
+      <div id="searchYelp" className="scroll-section" style={this.state.showYelp ? styleBlock : styleNone}><br/>
+        <div className="link-container">
+          <a href="#my-list" className="scroll" style={this.state.showYelp ? styleBlock : styleNone}>
+            {" "}
+            My List {" "}
+          </a>
+        </div>
+        <div className="yelp-wrapper-saved" >
           {this.state.yelp.map(yel => (
             <YelpCard
+            showYelp={this.state.showYelp}
               key={yel.id}
               name={yel.name}
               image={yel.image_url}
@@ -235,7 +286,8 @@ class Saved extends Component {
             />
           ))}
         </div>
-        <h1>Dishes I've Tried</h1>
+        </div>
+        {/* <h1>Dishes I've Tried</h1>
         <div className="tried-container container-fluid saved-wrapper">
        
         {this.state.foodsTried.map(foodTried => (
@@ -253,7 +305,7 @@ class Saved extends Component {
             delete={this.deleteTriedButtonClick}
           />
         ))}
-        </div>
+        </div> */}
        
       </div>
     );

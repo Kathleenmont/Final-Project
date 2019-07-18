@@ -1,6 +1,8 @@
 import React from "react";
 import { Redirect, Route } from "react-router-dom";
 import SignUp from "../SignUp";
+import Nav from "../Nav";
+import "./style.css";
 
 class Login extends React.Component {
   state = {
@@ -65,10 +67,11 @@ class Login extends React.Component {
 
     return (
       <div>
+        <Nav userName={this.state.userName}/>
         <div className="container">
-          <div className="row">
+          <div className="row login-row">
             <div className="col-md-6 col-md-offset-3">
-              <h2>Login Form</h2>
+              <h2 className="login-title">User Login</h2>
               <form className="login">
                 <div className="form-group">
                   <label htmlFor="inputUserNameLogin">User Name</label>
@@ -94,13 +97,13 @@ class Login extends React.Component {
                     placeholder="Password"
                   />
                 </div>
-                <button onClick={this.login} className="btn btn-default">
+                <button onClick={this.login} className="btn signup-btn">
                   Login
                 </button>
               </form>
               <br />
-              <p>
-              Not a user? <a href="/signup">Sign Up</a>
+              <p className="login-text">
+              Not a user? <a href="/signup" className="login-text" className="login-link">Sign Up</a>
               </p>
             </div>
           </div>

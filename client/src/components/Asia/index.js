@@ -17,18 +17,21 @@ function Asia(props) {
             data-search="Korea"
             data-type="Korean"
           />
+            <span id="hover-korea" className="country-text">Korea</span>
           <span
             className="dot Indonesia-dot"
             onClick={props.handleInputClick}
             data-search="Indonesia"
             data-type="Indonesian"
           />
+            <span id="hover-indonesia" className="country-text">Indonesia</span>
           <span
             className="dot China-dot"
             onClick={props.handleInputClick}
             data-search="China"
             data-type="Chinese"
           />
+            <span id="hover-china" className="country-text">China</span>
         </div>
       </div>
     </div>

@@ -57,7 +57,7 @@ class TriedCard extends React.Component {
           <DeleteButton delete={this.props.delete} id={this.props.id} />
           {/* <button data-id={props.id} onClick={() => {props.saveButtonClick(props.id)}} className="btn btn-info save-btn">Save</button> */}
           {/* <SaveButton data-id={props.id} key={props.key} SaveButtonClick={props.SaveButtonClick}/> */}
-          <YelpButton yelp={this.props.yelp} dishName={this.props.dishName} />
+          <YelpButton yelp={this.props.yelpTried} dishName={this.props.dishName} country={this.props.country}/>
           </div>
         </div>
       </span>

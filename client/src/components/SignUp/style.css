@@ -1,0 +1,38 @@
+/* .container {
+    margin: 0;
+} */
+h2 {
+    text-align: center;
+    
+}
+
+.signup-btn {
+    background: #4ED3B0;
+    border: 2px solid  black;
+}
+.signup-btn:hover {
+   background: #A51C5C;
+}
+.login-text {
+    text-align: right;
+}
+
+.login-link {
+    color: #A51C5C;
+}
+
+
+.login-link:hover {
+    color:  #4ED3B0;
+}
+.container {
+    margin: 0 auto;
+}
+
+.login-row {
+    justify-content: center;
+}
+
+.login-title {
+    padding-top: 30px; 
+}

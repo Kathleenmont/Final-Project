@@ -27,7 +27,7 @@ const styleNone = { display : "none" };
 
 const styleBlock = { display : "block" };
 
-const styleFlex = {display : "flex" };
+// const styleFlex = {display : "flex" };
 
 
 class Search extends Component {
@@ -45,6 +45,7 @@ class Search extends Component {
       dishName: "",
       description: "",
       image: "",
+      type: "",
       userName: this.props.auth.userName,
       userId: this.props.auth.userId,
       // worldMap: true,
@@ -224,7 +225,7 @@ console.log(e.target)
       <div>
        
         <Nav click={this.onSearchClick} currentMap={this.state.currentMap} userName={this.state.userName}/>
-        <div id="world-map" className="scroll-section" >
+        <div id="world-map" className="scroll-section" style={this.state.currentMap === "world map" ? styleBlock : styleNone}>
           <WorldMap
             handleInputClick={this.handleInputClick}
             continentOnClick={this.continentOnClick}
@@ -282,13 +283,14 @@ console.log(e.target)
           {/* </SearchResultsWrapper> */}
         {/* </div> */}
      
-        <div id="searchYelp" className="scroll-section" ><br/>
+        <div id="searchYelp" className="scroll-section" style={this.state.showYelp ? styleBlock : styleNone}><br/>
         <div className="link-container">
           <a href="#searchCountries" className="scroll" style={this.state.showYelp ? styleBlock : styleNone}>
             {" "}
             country search results{" "}
           </a>
         </div>
+        <div className="yelp-wrapper" >
           {this.state.yelp.map(yel => (
             <YelpCard
             showYelp={this.state.showYelp}
@@ -299,6 +301,7 @@ console.log(e.target)
               yelpLink={yel.url}
             />
           ))}
+          </div>
         </div>
       </div>
     );

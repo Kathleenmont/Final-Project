@@ -9,3 +9,7 @@
     background: #4ED3B0
   
 }
+
+.welcome-text {
+    text-transform: capitalize;
+}

@@ -16,18 +16,18 @@ body {
     overflow: auto;
 }
 
-.tried-container {
+/* .tried-container {
     background: white;
     height: 100%;
     width: 100%;
     /* margin: 10px; */
-    display: flex;
+    /* display: flex;
     flex-flow: row wrap;
     padding: 20px;
     justify-content: space-around;
     align-content: flex-start;
-    overflow: auto;
-}
+    overflow: auto; */
+/* }  */
 
 .container-fluid {
     width: 100%
@@ -37,3 +37,39 @@ body {
     max-width: 100%;
     /* min-width: 1000px; */
 }
+.yelp-wrapper-saved {
+    /* padding-top: 50px; */
+    background: black;
+    
+    height: 1000px;
+    width: 100%;
+    /* margin: 10px; */
+    display: flex;
+    flex-flow: row wrap;
+    padding: 20px;
+    justify-content: space-around;
+    align-content: space-around;
+    overflow: auto;
+}
+#searchYelp {
+    background: black;
+}
+.card-header-yelp {
+    border-bottom: none;
+    background: white;
+    color: black;
+}
+.want-to-try-div::after {
+    content: "";
+    flex: 0 0 50%;
+    max-width: 500px;
+  }
+  .yelp-wrapper-saved::after {
+    content: "";
+    width: 300px;
+    /* flex: 0 0 45%; */
+    /* max-width: 300px; */
+  }
+
+
+ 

@@ -1,14 +1,30 @@
 a {
     color: pink;
 }
-
+#world-map {
+    height: 1000px;
+}
 .link-container {
     transform: translateY(-50%);
     z-index: 1;
 }
+#search-yelp {
+    background: black;
+    
+}
+
 
 .link-container .scroll {
     text-decoration: none;
+    height: 30px;
+    line-height: 30px;
+    font-size: 24px;
+    background: #4ED3B0;
+    color: black;
+    padding: 2px;
+    padding-right: 8px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 #search-page-container {
@@ -44,3 +60,8 @@ width: 100%;
     align-content: flex-start;
     overflow: auto;
 } */ 
+@media screen and (min-width: 900px) {
+    .country-text {
+      font-size: 60px;
+    }
+  }

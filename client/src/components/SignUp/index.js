@@ -1,7 +1,9 @@
 import React from "react";
 import { Redirect} from "react-router-dom";
-import auth from "../../utils/auth.js";
-import API from "../../utils/API";
+// import auth from "../../utils/auth.js";
+// import API from "../../utils/API";
+import Nav from "../Nav";
+import "./style.css";
 
 class SignUp extends React.Component {
   state = {
@@ -91,10 +93,12 @@ class SignUp extends React.Component {
     }
 
     return (
-      <div className="container">
-        <div className="row">
+      <div className="sign-up-container">
+         <Nav userName={this.state.userName}/>
+         <div className="container">
+        <div className="row login-row">
           <div className="col-md-6 col-md-offset-3">
-            <h2>Sign Up Form</h2>
+            <h2 className="login-title">Sign Up</h2>
             <form className="signup">
               <div className="form-group">
                 <label htmlFor="inputuserNameSignUp">User Name</label>
@@ -133,16 +137,17 @@ class SignUp extends React.Component {
               <button
                 type="submit"
                 onClick={this.signUp}
-                className="btn btn-default"
+                className="btn signup-btn"
               >
                 Sign Up
               </button>
             </form>
             <br />
-            <p>
-               Already a user? <a href="/login">Log in</a>
+            <p className="login-text">
+               Already a user? <a href="/login" className="login-link">Log in</a>
             </p>
           </div>
+        </div>
         </div>
       </div>
     );
