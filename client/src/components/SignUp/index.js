@@ -94,7 +94,7 @@ class SignUp extends React.Component {
 
     return (
       <div className="sign-up-container">
-         <Nav userName={this.state.userName}/>
+         {/* <Nav userName={this.state.userName}/> */}
          <div className="container">
         <div className="row login-row">
           <div className="col-md-6 col-md-offset-3">

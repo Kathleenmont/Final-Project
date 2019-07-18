@@ -33,3 +33,50 @@
   a:hover {
       text-decoration: none;
   }
+
+  .rating-dot {
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .rating-1 {
+    background-color: white;
+    border: 1px solid black;
+  }
+
+  .rating-2 {
+    background-color: #A58694;
+  }
+
+  .rating-3 {
+    background-color: #A54371;
+  }
+
+  .rating-4 {
+    background-color: #A5004D;
+  }
+
+  .rating-box {
+    margin-left: 20px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    width: 275px;
+    grid-column: 3/4;
+    justify-self: end;
+    padding-right: 30px;
+    /* border: 1px solid black; */
+  }
+
+  .tried-heading {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .tried-title {
+    grid-column: 2/3;
+  }

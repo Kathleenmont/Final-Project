@@ -224,7 +224,7 @@ console.log(e.target)
     return (
       <div>
        
-        <Nav click={this.onSearchClick} currentMap={this.state.currentMap} userName={this.state.userName}/>
+        {/* <Nav click={this.onSearchClick} currentMap={this.state.currentMap} userName={this.state.userName}/> */}
         <div id="world-map" className="scroll-section" style={this.state.currentMap === "world map" ? styleBlock : styleNone}>
           <WorldMap
             handleInputClick={this.handleInputClick}

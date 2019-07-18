@@ -21,6 +21,7 @@
 }
 h1 {
     padding-right: 20px;
+
     /* font-family: 'Notable', sans-serif; */
 
     /* font-family: 'Rubik Mono One', sans-serif; */
@@ -31,3 +32,8 @@ h1 {
 .first-taste {
 font-size: 45px
 }
+
+.active {
+    color: #4ED3B0;
+}
+

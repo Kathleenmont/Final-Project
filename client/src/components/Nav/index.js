@@ -1,24 +1,25 @@
 import React from "react";
-import { Link, withRouter } from "react-router-dom";
+import { NavLink, withRouter } from "react-router-dom";
 import AuthButton from "../AuthButton";
 import "./style.css";
+
 
 function Nav(props) {
   return (
     <nav className="navbar navbar-expand-lg container-flex">
-      <Link className="navbar-brand" onClick={props.click} to="/">
+      <NavLink  className="navbar-brand" onClick={props.click} exact to="/">
       <h1 className="first-taste">First Taste </h1>
-      </Link>
+      </NavLink>
       <div className="nav-link-div">
-      <Link className="navbar-brand" onClick={props.click} to="/">
+      <NavLink activeClassName="active" className="navbar-brand" onClick={props.click} exact to="/">
         Find
-      </Link>
-      <Link className="navbar-brand" to="/saved">
+      </NavLink>
+      <NavLink activeClassName="active" className="navbar-brand" exact to="/saved">
         My List
-      </Link>
-      <Link className="navbar-brand" to="/tried">
+      </NavLink>
+      <NavLink activeClassName="active" className="navbar-brand" exact to="/tried">
         Tried
-      </Link>
+      </NavLink>
       </div>
       
       {/* <div className="welcome-text-container"> */}

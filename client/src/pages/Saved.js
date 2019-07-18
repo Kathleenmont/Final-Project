@@ -243,7 +243,7 @@ class Saved extends Component {
     return (
      
       <div id="my-list">
-         <Nav click={this.onSearchClick} currentMap={this.state.currentMap} userName={this.state.userName}/>
+         {/* <Nav click={this.onSearchClick} currentMap={this.state.currentMap} userName={this.state.userName}/> */}
          <h2 className="page-heading">To Try List</h2>
         <div className="want-to-try-div container-fluid saved-wrapper">
          
