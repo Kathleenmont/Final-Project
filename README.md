@@ -10,7 +10,7 @@ See your list by clicking MY LIST. After you try a dish on your list hit the TRI
 
 ## Built With
 
-React, Node, Express, JavaScript, HTML, CSS, and Bootstrap.
+React, Node, Express, Sequelize, JavaScript, HTML, CSS, and Bootstrap.
 
 ## Author
 
