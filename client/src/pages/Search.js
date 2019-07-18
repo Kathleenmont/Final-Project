@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import API from "../utils/API";
-import SearchResultsWrapper from "../components/SearchResultsWrapper";
-import SearchCard from "../components/SearchCard";
 import WorldMap from "../components/WorldMap";
 import NorthAmerica from "../components/NorthAmerica";
 import SouthAmerica from "../components/SouthAmerica";
@@ -10,24 +8,17 @@ import Europe from "../components/Europe";
 import YelpCard from "../components/YelpCard";
 import Asia from "../components/Asia";
 import SaveCard from "../components/SaveCard";
-// import animateScrollTo from 'animated-scroll-to';
 import animateScrollTo from 'animated-scroll-to';
 import "./search.css";
-// import ScrollableAnchor, {
-//   configureAnchors,
-//   goToAnchor
-// } from "react-scrollable-anchor";
-
 import Nav from "../components/Nav";
-import { throws } from "assert";
+
 
 let query;
-// let style;
+
 const styleNone = { display : "none" };
 
 const styleBlock = { display : "block" };
 
-// const styleFlex = {display : "flex" };
 
 
 class Search extends Component {
@@ -35,7 +26,6 @@ class Search extends Component {
     super(props);
     this.handleInputClick = this.handleInputClick.bind(this);
     this.saveButtonClick = this.saveButtonClick.bind(this);
-    // this.state.currentMap =this.state.currentMap.bind(this)
 
     this.state = {
       foods: [],
@@ -48,7 +38,7 @@ class Search extends Component {
       type: "",
       userName: this.props.auth.userName,
       userId: this.props.auth.userId,
-      // worldMap: true,
+
       showSearch: false,
       showYelp: false,
       currentMap: this.props.currentMap
@@ -64,16 +54,27 @@ class Search extends Component {
         showYelp: false
       };
     });
-
-    console.log(this.state);
   }
   onSearchClick = () => {
     this.handleWorldMap();
-    // this.setState({
-    //   currentMap: "world map",
-    //   showSearch: false
-    // });
-    console.log("WORKED!!!!" + JSON.stringify(this.state));
+    this.clearSearch();
+    this.clearSearchYelp();
+
+  };
+
+  clearSearch = () => {
+    this.setState({
+      showSearch: false,
+      showYelp: false,
+      foods: []
+    })
+  };
+
+  clearSearchYelp = () => {
+    this.setState({
+      showYelp: false,
+      yelp: []
+    })
   };
 
   handleContinent(map) {
@@ -84,13 +85,7 @@ class Search extends Component {
         currentMap: map
       };
     });
-    console.log(this.state);
   }
-
-  // default options
-
- 
-
 
 
   scrollToContinent() {
@@ -102,13 +97,7 @@ class Search extends Component {
   continentOnClick = e => {
     e.preventDefault();
     let map = e.target.getAttribute("data-search");
-   
-    // this.setState({
-    //   continent: this.continent,
-    //   currentMap: this.continent
-    // });
     this.handleContinent(map);
-    console.log(this.state);
     this.scrollToContinent();
   };
 
@@ -128,13 +117,11 @@ class Search extends Component {
 }
   handleInputClick = e => {
     e.preventDefault();
-    console.log(e.target.getAttribute("data-search"));
     query = e.target.getAttribute("data-search");
     const type = e.target.getAttribute("data-type");
     const search = { coun: query };
     API.getFoodsByCountry(search)
       .then(res => {
-        console.log(res);
         this.setState({
           foods: res.data,
           showSearch: true,
@@ -147,35 +134,24 @@ class Search extends Component {
         });
       })
       .catch(err => console.log(err));
-
-      // animateScrollTo(document.querySelector('#searchCountries'));
       this.scrollToFoodSearch();
 
-      // animateScrollTo(document.querySelector('#searchCountries'));
   };
 
   scrollToYelpSearch() {
     const myVar = setTimeout(this.goToYelp, 1500);
   }
    goToYelp = () => {
-    // animateScrollTo(desiredOffset, options);
-    animateScrollTo(document.querySelector('#searchYelp'))
     animateScrollTo(document.querySelector('#searchYelp'))
   }
 
   handleInputClickYelp = e => {
     e.preventDefault();
-console.log(e.target)
     const search = { search: e.target.getAttribute("data-name"), type: this.state.type};
-    // const type = {type: e.target.getAttribute("data-type")}
     API.search(search)
       
       .then(res => 
         {
-          // if (res.data.businesses.length <=3) {
-
-          // }
-        console.log(res.data.businesses);
         this.setState({
           yelp: res.data.businesses,
           continent: "",
@@ -192,23 +168,10 @@ console.log(e.target)
   };
 
   saveButtonClick = key => {
-    console.log(key);
-    console.log(this.state);
     let i;
     for (i = 0; i < this.state.foods.length; i++) {
       if (key === this.state.foods[i].id) {
-        console.log("SAVED this passed in" + this.state.foods[i]);
 
-        const newFood = {
-          id: this.state.foods[i].id,
-          continent: this.state.foods[i].continent,
-          country: this.state.foods[i].country,
-          dishName: this.state.foods[i].dishName,
-          description: this.state.foods[i].description,
-          image: this.state.foods[i].image,
-          saved: true
-        };
-        console.log(newFood);
         API.saveFood({
           foodId: this.state.foods[i].id,
           userId: this.state.userId
@@ -218,13 +181,11 @@ console.log(e.target)
   };
 
   render() {
-    console.log(this.props);
-    // configureAnchors({offset: -60, scrollDuration: 200})
 
     return (
       <div>
        
-        {/* <Nav click={this.onSearchClick} currentMap={this.state.currentMap} userName={this.state.userName}/> */}
+        <Nav click={this.onSearchClick} currentMap={this.state.currentMap} userName={this.state.userName}/>
         <div id="world-map" className="scroll-section" style={this.state.currentMap === "world map" ? styleBlock : styleNone}>
           <WorldMap
             handleInputClick={this.handleInputClick}
@@ -256,15 +217,14 @@ console.log(e.target)
           />
         </div>
         <div id="searchCountries" className="link-container" style={this.state.showSearch ? styleBlock : styleNone}>
-          <a href="#continentMap" className="scroll">
+          <a href="#continentMap" className="scroll" onClick={this.clearSearch}>
             {" "}
-            continent map{" "}
+            Continent{" "}
           </a>
         </div>
-        {/* <div  className="scroll-section tried-container container-fluid  search-area saved-wrapper"  onClick={this.handleInputClick} style={this.state.showSearch === true ? styleFlex : styleNone}><br/> */}
+
       <div className="tried-container container-fluid saved-wrapper">
      
-          {/* <SearchResultsWrapper showSearch={this.state.showSearch}> */}
             {this.state.foods.map(food => (
               <SaveCard
                 saveButtonClick={this.saveButtonClick}
@@ -280,16 +240,15 @@ console.log(e.target)
               />
             ))}
        </div>
-          {/* </SearchResultsWrapper> */}
-        {/* </div> */}
-     
+
         <div id="searchYelp" className="scroll-section" style={this.state.showYelp ? styleBlock : styleNone}><br/>
         <div className="link-container">
-          <a href="#searchCountries" className="scroll" style={this.state.showYelp ? styleBlock : styleNone}>
+          <a href="#searchCountries" className="scroll" onClick={this.clearSearchYelp} style={this.state.showYelp ? styleBlock : styleNone}>
             {" "}
-            country search results{" "}
+            Dishes{" "}
           </a>
         </div>
+        
         <div className="yelp-wrapper" >
           {this.state.yelp.map(yel => (
             <YelpCard

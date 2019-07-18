@@ -19,9 +19,7 @@
     position: absolute;
     top: 26%;
     left: 19%;
-    /* background: blue; */
      background: #6D316D;
-    /* background: #832161 */
   }
 
   #hover-NA {
@@ -41,10 +39,9 @@
     position: absolute;
     top: 66%;
     left: 32%;
-    /* background: greenyellow; */
     background: #DB3636;
-    /* background: #DA4167; */
   }
+
   #hover-SA {
     display: none;
     top: 72%;
@@ -61,9 +58,7 @@
     position: absolute;
     top: 48%;
     left: 54%;
-    /* background: aqua; */
     background: #A51C5C;
-    /* background: #DA4167; */
   }
 
   #hover-Africa {
@@ -83,9 +78,7 @@
     position: absolute;
     top: 24%;
     left: 55%;
-    /* background: palevioletred; */
     background: #F78C27;
-    /* background: yellowgreen; */
   }
 
   #hover-Europe {
@@ -106,9 +99,10 @@
     left: 82%;
     background: #4ED3B0;
   }
+  
   #hover-Asia {
     display: none;
-    top: 6%;
+    top: 4%;
     left: 74%;
     position: absolute;
     color: #4ED3B0;

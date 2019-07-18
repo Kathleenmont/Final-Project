@@ -5,9 +5,10 @@ import "./style.css";
 
 
 function Nav(props) {
+  console.log(props)
   return (
     <nav className="navbar navbar-expand-lg container-flex">
-      <NavLink  className="navbar-brand" onClick={props.click} exact to="/">
+      <NavLink  className="navbar-brand" onClick={props.click}  to="/">
       <h1 className="first-taste">First Taste </h1>
       </NavLink>
       <div className="nav-link-div">

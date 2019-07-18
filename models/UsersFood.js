@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
     const UsersFood = sequelize.define("UsersFood", {
-      // The email cannot be null, and must be a proper email before creation
+    
       userId: {
           type: DataTypes.INTEGER,
           allowNull: false,
@@ -29,13 +29,7 @@ module.exports = function(sequelize, DataTypes) {
    
     }, {timestamps: false});
    
-    // UsersFood.associate = function(models) {
-    //   UsersFood.belongsToMany(models.User, {
-    //     through: "User",
-    //       as: "tried",
-    //       foreignKey: "tried"
-    //   });
-    // };
+
     return UsersFood;
   };
   

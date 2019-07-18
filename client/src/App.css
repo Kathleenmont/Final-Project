@@ -46,3 +46,10 @@ a:hover {
     font-size: 60px;
   }
 }
+
+
+@media screen and (max-width: 1000px) {
+  .country-text {
+    font-size: 60px;
+  }
+}

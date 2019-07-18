@@ -87,7 +87,7 @@ class ModalRating extends React.Component {
                 this.props.tried(this.props.id, this.state.selectedOption);
               }}
             >
-              Save Changes
+              Move to Tried
             </Button>
           </Modal.Footer>
         </Modal>

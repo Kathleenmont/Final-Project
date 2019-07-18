@@ -1,7 +1,7 @@
 .yelpCard {
     width: 300px;
     height: 350px;
-    background: black;
+    background: white;
     border-radius: 2px;
     position: relative;
     max-width: 300px;
@@ -10,11 +10,6 @@
     margin: 0 auto;
     margin-bottom: 15px;
     padding: 0;
-    
-    /* border: none; */
-
-    /* margin-left: 10px; */
- 
     box-shadow: 0 1px 1px rgb(96, 95, 95), 0 2px 4px #999;
 }
 .card-body .card-header-yelp {
@@ -32,8 +27,4 @@ padding-top: 20px;
     height: 80%;
     overflow: hidden;
     text-align: center;
-    /* padding-left: 25px; */
-    /* padding-right: 25px; */
-    /* padding-bottom: 15px; */
-    /* background:#6CADDC; */
   }

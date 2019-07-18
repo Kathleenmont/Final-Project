@@ -20,8 +20,6 @@ class Login extends React.Component {
       value = value.substring(0, 15);
     }
 
-    console.log("name " + name);
-    console.log("value " + value);
     // Updating the input's state
     this.setState({
       [name]: value
@@ -56,7 +54,6 @@ class Login extends React.Component {
 
 
   render() {
-    // console.log(this.props.location.state.from.pathname)
     const { from } = this.props.location.state || { from: { pathname: "/" } };
     const { redirectToReferrer } = this.state;
 
@@ -67,7 +64,7 @@ class Login extends React.Component {
 
     return (
       <div>
-        {/* <Nav userName={this.state.userName}/> */}
+        <Nav userName={this.state.userName}/>
         <div className="container">
           <div className="row login-row">
             <div className="col-md-6 col-md-offset-3">
@@ -76,7 +73,6 @@ class Login extends React.Component {
                 <div className="form-group">
                   <label htmlFor="inputUserNameLogin">User Name</label>
                   <input
-                    // value={this.state.userName}
                     name="userName"
                     onChange={this.handleInputChange}
                     type="userName"
@@ -88,7 +84,6 @@ class Login extends React.Component {
                 <div className="form-group">
                   <label htmlFor="inputPasswordLogin">Password</label>
                   <input
-                    // value={this.state.password}
                     name="password"
                     onChange={this.handleInputChange}
                     type="password"

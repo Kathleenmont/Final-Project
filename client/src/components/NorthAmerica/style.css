@@ -50,14 +50,10 @@
 
   #hover-canada {
     display: none;
-    top: 27%;
+    top: 25%;
     left: 36%;
-    /* font-size: 36px; */
     position: absolute;
     color: #4ED3B0;
-    /* background: white; */
-    /* border: 3px solid black;
-    border-radius: 8px; */
     font-weight: 800;
 }
 

@@ -31,12 +31,8 @@
     display: none;
     top: 62%;
     left: 20%;
-    font-size: 36px;
     position: absolute;
     color:  #4ED3B0;
-    /* background: white; */
-    /* border: 3px solid black;
-    border-radius: 8px; */
     font-weight: 800;
 }
 
@@ -53,12 +49,8 @@
     display: none;
     top: 90%;
     left: 52%;
-    font-size: 36px;
     position: absolute;
     color: #D61D6A;
-    /* background: white; */
-    /* border: 3px solid black;
-    border-radius: 8px; */
     font-weight: 800;
 }
 
@@ -76,12 +68,8 @@
     display: none;
     top: 63%;
     left: 49%;
-    font-size: 36px;
     position: absolute;
     color: #F78C27;
-    /* background: white; */
-    /* border: 3px solid black;
-    border-radius: 8px; */
     font-weight: 800;
 }
 

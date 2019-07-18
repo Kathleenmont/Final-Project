@@ -7,9 +7,8 @@
    
 }
 .navbar-brand {
-    /* color: #DB3636; */
     color: #A51C5C;
-    font-size: 28px;
+    font-size: 25px;
     padding-left: 10px;
 }
 .auth-text-nav {
@@ -21,16 +20,18 @@
 }
 h1 {
     padding-right: 20px;
-
     /* font-family: 'Notable', sans-serif; */
-
     /* font-family: 'Rubik Mono One', sans-serif; */
     /* font-family: 'Racing Sans One', cursive; */
     font-family: 'Vast Shadow', cursive;
 
 }
 .first-taste {
-font-size: 45px
+font-size: 45px;
+color: #A51C5C;
+}
+.first-taste:hover {
+    color: #4ED3B0;
 }
 
 .active {

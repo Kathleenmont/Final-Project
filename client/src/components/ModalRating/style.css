@@ -36,21 +36,23 @@ input[type=checkbox], input[type=radio] {
 }
 
 .close-btn {
-background: white;
+background: #A51C5C;
 color: black;
 }
 .close-btn:hover {
-    background: #A51C5C
+    background: white;
+    color: black;
 }
 
 .rate-btn {
-    background: white;
+    background: #4ED3B0;
     color: black;
     border: 2px black;
 }
 
 .rate-btn:hover {
-    background: #4ED3B0;
+    background: white;
+    color: black;
 }
 /* .radio3 {
     width: 5px;
