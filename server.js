@@ -9,6 +9,10 @@ const path = require("path");
 require("dotenv").config();
 const tempApiKey = process.env.APIKeyYelp;
 var db = require("./models");
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
+const myPlaintextPassword = 's0/\/\P4$$w0rD';
+const someOtherPlaintextPassword = 'not_bacon';
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -42,13 +46,29 @@ app.post("/api/foods/country", function(req, res) {
   });
 });
 
+
+  //... fetch user from a db etc.
+  //communicate to the db to find the username from the db
+
 app.post("/api/user", function(req, res) {
   console.log(JSON.stringify(req.body));
+  const username = req.body.userName;
+  const password = req.body.password;
   db.User.findOne({
-    where: { userName: req.body.userName, password: req.body.password }
-  }).then(function(dbPost) {
-    res.json(dbPost);
-  });
+    where: { userName: username }
+  }).then(function(user) {
+    if(!user) {
+      res.json(null);
+    } else {
+      bcrypt.compare(req.body.password, user.password, function (err, result) {
+        if (result == true) {
+          res.json(user);
+        } else {
+          res.json(null)
+        }
+      });
+    }
+});
 });
 
 app.post("/api/username", function(req, res) {
@@ -97,9 +117,14 @@ app.post("/api/foods/tried", function(req, res) {
 
 app.post("/api/signup", function(req, res) {
   console.log(JSON.stringify(req.body));
-  db.User.create(req.body).then(function(dbPost) {
-    res.json(dbPost);
-  });
+  // console.log(hash)
+  bcrypt.hash(req.body.password, saltRounds, function(err, hash) {
+    // Store hash in your password DB.
+    db.User.create({"userName" : req.body.userName, "password": hash}).then(function(dbPost) {
+      res.json(dbPost);
+    });
+});
+ 
 });
 
 app.post("/api/getsaved", function(req, res) {
