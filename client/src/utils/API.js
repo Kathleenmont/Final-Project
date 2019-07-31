@@ -1,85 +1,62 @@
 import axios from "axios";
 
 export default {
-  getFoodsSaved: function() {
-    return axios.get("/api/foods/saved");
-  },
+  // // gets saved foods to load 
+  // getFoodsSaved: function() {
+  //   return axios.get("/api/foods/saved");
+  // },
 
-  // Gets all books
+  // Gets all foods
   getFoods: function() {
-    console.log("HERE get foods!");
     return axios.get("/api/foods");
   },
 
-  getSavedFood: function(userId) {
-    console.log("HERE get foods saved!" + JSON.stringify(userId));
+// retrieves saved food based on user id
+  getSavedFood: function(userId) {;
     return axios.post("/api/getsaved", userId);
   },
 
+  // checks users login to see if correct 
   checkUserLogin: function(userInfo) {
-    console.log("in check userinfo" + JSON.stringify(userInfo));
     return axios.post("/api/user", userInfo);
   },
 
+  // checks to see if user name is taken
   checkForUserName: function(userInfo) {
     console.log("in check userName" + JSON.stringify(userInfo));
     return axios.post("/api/username", userInfo);
   },
 
+  // signs up a new user
   signUpUser: function(userInfo) {
-    console.log("in user sign up" + JSON.stringify(userInfo));
     return axios.post("/api/signup", userInfo);
   },
 
+  // get foods by coutry name
   getFoodsByCountry: function(search) {
-    console.log("HERE!");
     return axios.post("/api/foods/country", search);
   },
 
+  // yelp search 
   search: function(search) {
-    console.log("in API SEARCH: " + JSON.stringify(search))
     return axios.post("/search", search, yelpResults => {
-      console.log("in API SEARCH: " + yelpResults);
       return yelpResults;
     });
   },
 
-  // search2: function(search) {
-  //   console.log("in API SEARCH2: " + JSON.stringify(search))
-  //   return axios.post("/searchtype", search, yelpResults => {
-  //     console.log("in API SEARCH: " + yelpResults);
-  //     return yelpResults;
-  //   });
-  // },
-
+  // saves food using food id
   saveFood: function(foodId) {
-    console.log("IN SAVE FOOD!" + JSON.stringify(foodId));
     return axios.post("/api/foods/save", foodId);
   },
 
+  // deletes food using food id
   deleteFood: function(foodId) {
-    console.log("IN delete FOOD!" + JSON.stringify(foodId));
     return axios.post("/api/foods/delete", foodId);
   },
 
+  // moves food to tried 
   triedFood: function(foodId) {
-    console.log("In tried FOOD " + JSON.stringify(foodId));
     return axios.post("/api/foods/tried", foodId)
   }
 
-  // Gets the book with the given id
-  // getFood: function(id) {
-  //   // console.log("inside /api/lskfj")
-  //   return axios.get("/api/food/" + id);
-  // },
-  // Saves a book to the database
-  // saveFood: function(foodData) {
-  //   console.log(foodData)
-  //   return axios.post("/api/food", foodData);
-  // },
-
-  // // Deletes the book with the given id
-  // deleteBook: function(id) {
-  //   return axios.delete("/api/food/" + id);
-  // }
 };
