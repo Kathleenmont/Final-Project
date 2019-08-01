@@ -1,10 +1,6 @@
 import axios from "axios";
 
 export default {
-  // // gets saved foods to load 
-  // getFoodsSaved: function() {
-  //   return axios.get("/api/foods/saved");
-  // },
 
   // Gets all foods
   getFoods: function() {
