@@ -84,7 +84,7 @@ app.post("/api/foods/tried", function(req, res) {
   db.UsersFood.create({
     userId: req.body.userId,
     foodId: req.body.foodId,
-    tried: true,
+    tried: 1,
     rating: req.body.rating
   }).then(function(dbPost) {
     res.json(dbPost);
