@@ -19,7 +19,7 @@
     "passport-local": "^1.0.0",
     "react-bootstrap": "^1.0.0-beta.9",
     "react-scroll": "^1.7.12",
-    "sequelize": "^5.9.4",
+    "sequelize": "^5.15.1",
     "sequelize-cli": "^5.5.0"
   },
   "devDependencies": {
