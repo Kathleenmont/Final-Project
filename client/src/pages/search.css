@@ -6,11 +6,25 @@
 .link-container {
     transform: translateY(-50%);
     z-index: 1;
+    flex: 1;
 }
 
 #search-yelp {
     background: black;
     
+}
+
+.pop-up {
+    background: #A51C5C;
+    color: white;
+    font-size: 15px;
+    width: 250px;
+    padding: 20px;
+    height: 70px;
+   position: fixed;
+   bottom: 25;
+   right: 0;
+   z-index: 3000;
 }
 
 .link-container .scroll {
@@ -34,6 +48,11 @@
 #search-page-container {
     width: 100%
 } */
+
+.saved-wrapper {
+    position: relative;
+    flex: 1;
+}
 
  #search-page-container .scroll-section {
 position: relative;

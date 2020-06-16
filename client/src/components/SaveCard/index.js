@@ -15,7 +15,7 @@ const SaveCard = props => {
         {/* <div className="row row"> */}
           {/* <div className="col-sm-4"> */}
             <div className="card card-saved ">
-            <div className="card-header text-center">
+            <div  className="card-header text-center">
                 <h3 className="card-title">{props.country}</h3>
                 <p className="card-text">{props.dishName}</p>
                 </div>
